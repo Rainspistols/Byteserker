@@ -1,0 +1,47 @@
+@mixin textshadow {
+  text-shadow: 0 0 5px 5px #000000;
+}
+
+@mixin line {
+  &::after {
+    position: absolute;
+    content: "";
+    width: 50%;
+    height: 1px;
+    background: $white;
+    bottom: -15px;
+    left: 0;
+  }
+}
+
+@mixin text_index_big {
+  @include myriad--black;
+  font-size: 40px;
+  color: $white;
+  margin: 0;
+  margin-bottom: 30px;
+  padding-top: 105px;
+  text-align: left;
+  position: relative;
+  @include line;
+  letter-spacing: -0.05em;
+  line-height: 36px;
+}
+
+@mixin text_index_small {
+  @include myriad--regular;
+  font-size: 14px;
+  line-height: 14px;
+  color: $white;
+  margin: 0 0 12px;
+}
+
+@mixin transition--05_easy_in_out {
+  transition: all 0.5s ease-in-out;
+}
+
+.container--mobile {
+  width: 260px;
+  margin: auto;
+  text-align: center;
+}

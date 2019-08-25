@@ -1,0 +1,113 @@
+.main-btn {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  left: calc(50% - 25px);
+  border-radius: 50px;
+  top: 35px;
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  outline: none;
+  z-index: 10;
+  &:active &::after {
+    background-color: $cherry;
+    box-shadow: 0 9px 0 0 $cherry, 0 18px 0 0 $cherry;
+  }
+  &__circle {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  &__sandwitch {
+    display: inline-block;
+    cursor: pointer;
+    position: absolute;
+    top: calc(50% - 12.5px);
+    left: calc(50% - 14px);
+    &__bar1,
+    &__bar2,
+    &__bar3 {
+      width: 28px;
+      height: 7px;
+      background-color: $white;
+      margin: 0 0 2px 0;
+      transition: $transition04;
+      border-radius: 50px;
+    }
+    &__bar3 {
+      margin-bottom: 0px;
+    }
+  }
+  &::-moz-focus-inner {
+    border: none;
+  }
+  // Animation for menu
+  /* Rotate first bar */
+  .change &__sandwitch__bar1 {
+    -webkit-transform: rotate(-45deg) translate(-7px, 7px);
+    transform: rotate(-45deg) translate(-7px, 7px);
+  }
+  /* Fade out the second bar */
+  .change &__sandwitch__bar2 {
+    opacity: 0;
+  }
+  /* Rotate last bar */
+  .change &__sandwitch__bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -6px);
+    transform: rotate(45deg) translate(-6px, -6px);
+  }
+}
+
+.btn_halfround {
+  background-color: transparent;
+  border-radius: 0 50px 50px 0;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  color: $cherry;
+  font-size: 10px;
+  padding: 0;
+  width: auto;
+  height: 30px;
+  width: 130px;
+  box-sizing: border-box;
+  @include myriad--black;
+  z-index: 1;
+  display: block;
+  text-transform: uppercase;
+  outline: none;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  & span {
+    position: relative;
+    z-index: 2;
+    @include transition--05_easy_in_out;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    left: 10px;
+    top: 0;
+    height: 490%;
+    width: 140%;
+    background: $cherry;
+    @include transition--05_easy_in_out;
+    -webkit-transform: translateX(-98%) translateY(-25%) rotate(45deg);
+    transform: translateX(-98%) translateY(-25%) rotate(45deg);
+  }
+  &:hover:after,
+  &:focus:after {
+    -webkit-transform: translateX(-9%) translateY(-25%) rotate(45deg);
+    transform: translateX(-9%) translateY(-25%) rotate(45deg);
+  }
+  &:hover span,
+  &:focus span {
+    color: $white;
+  }
+  &:hover,
+  &:focus {
+    border: 1px solid $cherry;
+  }
+}

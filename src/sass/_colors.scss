@@ -1,0 +1,30 @@
+$white: #ffffff;
+$black: #000000;
+$cherry: #f90d3e;
+
+@mixin gradient--black_to_gray {
+  background: #000000;
+  background: linear-gradient(
+    145deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(67, 67, 67, 1) 100%
+  );
+}
+
+@mixin gradient--black_to_blue {
+  background: #053243;
+  background: linear-gradient(
+    325deg,
+    #060606 ,
+    #044f6b
+  );
+}
+
+@mixin gradient--black_to_green {
+    background: #0c1916;
+    background: linear-gradient(
+      325deg,
+      #1f4037 ,
+      #000000
+    );
+  }
