@@ -1,3 +1,9 @@
+.container {
+  margin: auto;
+  width: 260px;
+  position: relative;
+  height: 100%; }
+
 .container--mobile {
   width: 260px;
   margin: auto;
@@ -8,12 +14,11 @@
   height: 100vh;
   box-sizing: border-box;
   position: relative;
-  min-height: 423px; }
-  .swiper__slide__container {
-    margin: auto;
-    width: 260px;
-    position: relative;
-    height: 100%; }
+  min-height: 423px;
+  overflow: hidden; }
+  .swiper__slide__text--vital {
+    color: #f90d3e;
+    font-weight: inherit; }
 
 .swiper__slide1 {
   text-align: center;
@@ -21,7 +26,7 @@
   background: #000000;
   background: linear-gradient(145deg, black 0%, #434343 100%); }
   .swiper__slide1__text1 {
-    font-family: myriad-pro, sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
     font-style: normal;
     font-weight: 900;
     font-size: 200px;
@@ -33,7 +38,7 @@
     margin-right: 20px; }
   .swiper__slide1__text2 {
     color: #ffffff;
-    font-family: myriad-pro, sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
     font-style: italic;
     font-weight: 400;
     font-size: 16px;
@@ -56,38 +61,6 @@
 .swiper__slide2 {
   background: #053243;
   background: linear-gradient(325deg, #060606, #044f6b); }
-  .swiper__slide2__text1 {
-    font-family: myriad-pro, sans-serif;
-    font-style: normal;
-    font-weight: 900;
-    font-size: 40px;
-    color: #ffffff;
-    margin: 0;
-    margin-bottom: 30px;
-    padding-top: 105px;
-    text-align: left;
-    position: relative;
-    letter-spacing: -0.05em;
-    line-height: 36px; }
-    .swiper__slide2__text1::after {
-      position: absolute;
-      content: "";
-      width: 50%;
-      height: 1px;
-      background: #ffffff;
-      bottom: -15px;
-      left: 0; }
-  .swiper__slide2__text2 {
-    font-family: myriad-pro, sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 14px;
-    color: #ffffff;
-    margin: 0 0 12px; }
-    .swiper__slide2__text2__vital {
-      color: #f90d3e;
-      font-weight: normal; }
   .swiper__slide2__img {
     position: absolute;
     left: 84px;
@@ -95,39 +68,7 @@
 
 .swiper__slide3 {
   background: #0c1916;
-  background: linear-gradient(325deg, #1f4037, #000000);
-  overflow: hidden; }
-  .swiper__slide3__text1 {
-    font-family: myriad-pro, sans-serif;
-    font-style: normal;
-    font-weight: 900;
-    font-size: 40px;
-    color: #ffffff;
-    margin: 0;
-    margin-bottom: 30px;
-    padding-top: 105px;
-    text-align: left;
-    position: relative;
-    letter-spacing: -0.05em;
-    line-height: 36px; }
-    .swiper__slide3__text1::after {
-      position: absolute;
-      content: "";
-      width: 50%;
-      height: 1px;
-      background: #ffffff;
-      bottom: -15px;
-      left: 0; }
-    .swiper__slide3__text1__vital {
-      color: #f90d3e; }
-  .swiper__slide3__text2 {
-    font-family: myriad-pro, sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 14px;
-    color: #ffffff;
-    margin: 0 0 12px; }
+  background: linear-gradient(325deg, #1f4037, #000000); }
   .swiper__slide3__img {
     position: absolute;
     bottom: -52px;
@@ -135,43 +76,41 @@
 
 .swiper__slide4 {
   background: #0c1916;
-  background: linear-gradient(325deg, #1f4037, #000000);
-  overflow: hidden; }
-  .swiper__slide4__text1 {
-    font-family: myriad-pro, sans-serif;
-    font-style: normal;
-    font-weight: 900;
-    font-size: 40px;
-    color: #ffffff;
-    margin: 0;
-    margin-bottom: 30px;
-    padding-top: 105px;
-    text-align: left;
-    position: relative;
-    letter-spacing: -0.05em;
-    line-height: 36px; }
-    .swiper__slide4__text1::after {
-      position: absolute;
-      content: "";
-      width: 50%;
-      height: 1px;
-      background: #ffffff;
-      bottom: -15px;
-      left: 0; }
-    .swiper__slide4__text1__vital {
-      color: #f90d3e; }
-  .swiper__slide4__text2 {
-    font-family: myriad-pro, sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 14px;
-    color: #ffffff;
-    margin: 0 0 12px; }
+  background: linear-gradient(325deg, #1f4037, #000000); }
   .swiper__slide4__img {
     position: absolute;
     right: -20px;
     bottom: -25px; }
+
+.swiper__slide__text1 {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 40px;
+  color: #ffffff;
+  margin: 0;
+  margin-bottom: 30px;
+  padding-top: 105px;
+  text-align: left;
+  position: relative;
+  line-height: 36px; }
+  .swiper__slide__text1::after {
+    position: absolute;
+    content: "";
+    width: 50%;
+    height: 1px;
+    background: #ffffff;
+    bottom: -15px;
+    left: 0; }
+
+.swiper__slide__text2 {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #ffffff;
+  margin: 0 0 12px; }
 
 .main-btn {
   position: fixed;
@@ -234,7 +173,7 @@
   height: 30px;
   width: 130px;
   box-sizing: border-box;
-  font-family: myriad-pro, sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   font-style: normal;
   font-weight: 900;
   z-index: 1;
@@ -243,7 +182,8 @@
   outline: none;
   overflow: hidden;
   position: relative;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); }
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  font-size: 13px; }
   .btn_halfround span {
     position: relative;
     z-index: 2;
@@ -273,14 +213,15 @@
   position: relative;
   background: #000000; }
   .footer__slogan {
-    font-family: myriad-pro, sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
     font-style: normal;
     font-weight: 900;
-    font-size: 24px;
-    letter-spacing: -0.08em;
+    font-size: 30px;
+    letter-spacing: -0.05em;
     color: #ffffff;
     margin: 0 0 20px;
-    padding-top: 50px; }
+    padding-top: 50px;
+    text-align: center; }
     .footer__slogan span {
       color: #f90d3e; }
   .footer__nav {
@@ -289,18 +230,93 @@
     .footer__nav__item {
       color: #ffffff;
       opacity: 0.5;
-      font-family: myriad-pro, sans-serif;
+      font-family: 'Source Sans Pro', sans-serif;
       font-style: normal;
       font-weight: 900;
       font-size: 20px;
       text-decoration: none;
       margin-bottom: 50px;
-      letter-spacing: -0.1em;
+      letter-spacing: -0.03em;
       margin-right: 5px; }
     .footer__nav__item:last-child {
       margin-right: 0; }
+
+.menu {
+  background: #000000;
+  background: linear-gradient(145deg, #232526, #414345);
+  width: 100%;
+  height: 100vh;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden; }
+  .menu .company-name {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 40px;
+    color: #ffffff;
+    margin: 0;
+    margin-bottom: 30px;
+    padding-top: 105px;
+    text-align: left;
+    position: relative;
+    line-height: 36px;
+    font-size: 42px;
+    color: #f90d3e;
+    padding-top: 115px;
+    margin-bottom: 60px;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: -0.05em; }
+  .menu__list {
+    list-style: none;
+    position: relative;
+    padding-left: 21px; }
+    .menu__list::after, .menu__list::before {
+      position: absolute;
+      content: "";
+      width: calc(50% + 30px);
+      height: 1px;
+      background: #ffffff; }
+    .menu__list::after {
+      bottom: -20px;
+      right: -30px; }
+    .menu__list::before {
+      top: -20px;
+      left: -30px; }
+    .menu__list a {
+      color: #ffffff;
+      text-decoration: none;
+      font-family: 'Source Sans Pro', sans-serif;
+      font-style: normal;
+      font-weight: 900;
+      font-size: 40px;
+      color: #ffffff;
+      margin: 0;
+      margin-bottom: 30px;
+      padding-top: 105px;
+      text-align: left;
+      position: relative;
+      line-height: 36px;
+      font-size: 42px;
+      text-transform: uppercase;
+      line-height: 42px;
+      letter-spacing: -0.05em;
+      margin: 0;
+      padding: 0; }
 
 body {
   margin: 0;
   padding: 0;
   min-width: 320px; }
+
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden; }

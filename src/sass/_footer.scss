@@ -4,11 +4,12 @@
   background: $black;
   &__slogan {
     @include myriad--black;
-    font-size: 24px;
-    letter-spacing: -0.08em;
+    font-size: 30px;
+    letter-spacing: -0.05em;
     color: $white;
     margin: 0 0 20px;
     padding-top: 50px;
+    text-align: center;
     & span {
       color: $cherry;
     }
@@ -23,7 +24,7 @@
       font-size: 20px;
       text-decoration: none;
       margin-bottom: 50px;
-      letter-spacing: -0.1em;
+      letter-spacing: -0.03em;
       margin-right: 5px;
     }
     &__item:last-child {

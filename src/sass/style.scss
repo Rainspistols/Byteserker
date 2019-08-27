@@ -4,6 +4,13 @@ $mobile-width-only: 767px;
 
 $transition04: 0.4s;
 
+.container {
+  margin: auto;
+  width: 260px;
+  position: relative;
+  height: 100%;
+}
+
 @import "fonts";
 @import "colors";
 @import "other";
@@ -11,10 +18,21 @@ $transition04: 0.4s;
 @import "swiper";
 @import "buttons";
 @import "footer";
-
+@import "menu";
 
 body {
   margin: 0;
   padding: 0;
   min-width: 320px;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
 }

@@ -1,17 +1,17 @@
 @mixin myriad--black {
-  font-family: myriad-pro, sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   font-style: normal;
   font-weight: 900;
 }
 
 @mixin myriad--italic {
-  font-family: myriad-pro, sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   font-style: italic;
   font-weight: 400;
 }
 
 @mixin myriad--regular {
-  font-family: myriad-pro, sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   font-style: normal;
   font-weight: 400;
 }

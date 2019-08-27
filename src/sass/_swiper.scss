@@ -4,11 +4,10 @@
   box-sizing: border-box;
   position: relative;
   min-height: 423px;
-  &__container {
-    margin: auto;
-    width: 260px;
-    position: relative;
-    height: 100%;
+  overflow: hidden;
+  &__text--vital {
+    color:$cherry;
+    font-weight: inherit
   }
 }
 
@@ -51,16 +50,6 @@
 
 .swiper__slide2 {
   @include gradient--black_to_blue;
-  &__text1 {
-    @include text_index_big;
-  }
-  &__text2 {
-    @include text_index_small;
-    &__vital {
-      color: $cherry;
-      font-weight: normal;
-    }
-  }
   &__img {
     position: absolute;
     left: 84px;
@@ -70,16 +59,6 @@
 
 .swiper__slide3 {
   @include gradient--black_to_green;
-  overflow: hidden;
-  &__text1 {
-    @include text_index_big;
-    &__vital {
-      color: $cherry;
-    }
-  }
-  &__text2 {
-    @include text_index_small;
-  }
   &__img {
     position: absolute;
     bottom: -52px;
@@ -89,19 +68,18 @@
 
 .swiper__slide4 {
   @include gradient--black_to_green;
-  overflow: hidden;
-  &__text1 {
-    @include text_index_big;
-    &__vital {
-      color: $cherry;
-    }
-  }
-  &__text2 {
-    @include text_index_small;
-  }
   &__img {
     position: absolute;
     right: -20px;
     bottom: -25px;
   }
 }
+
+.swiper__slide__text1 {
+  @include text_index_big;
+}
+
+.swiper__slide__text2 {
+  @include text_index_small;
+}
+

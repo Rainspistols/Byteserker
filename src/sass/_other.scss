@@ -24,14 +24,25 @@
   text-align: left;
   position: relative;
   @include line;
-  letter-spacing: -0.05em;
+  line-height: 36px;
+}
+
+@mixin text_big_without-line {
+  @include myriad--black;
+  font-size: 40px;
+  color: $white;
+  margin: 0;
+  margin-bottom: 30px;
+  padding-top: 105px;
+  text-align: left;
+  position: relative;
   line-height: 36px;
 }
 
 @mixin text_index_small {
   @include myriad--regular;
   font-size: 14px;
-  line-height: 14px;
+  line-height: 16px;
   color: $white;
   margin: 0 0 12px;
 }
