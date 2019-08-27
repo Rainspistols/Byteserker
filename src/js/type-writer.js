@@ -1,0 +1,5 @@
+const typeWriter = {
+	write(txt) {
+
+	}
+};
