@@ -5,7 +5,7 @@
 @mixin line {
   &::after {
     position: absolute;
-    content: "";
+    content: '';
     width: 50%;
     height: 1px;
     background: $white;

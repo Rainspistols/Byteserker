@@ -4,13 +4,13 @@ $mobile-width-only: 767px;
 
 $transition04: 0.4s;
 
-@import "fonts";
-@import "colors";
-@import "other";
-@import "nav";
-@import "swiper";
-@import "buttons";
-@import "footer";
+@import 'fonts';
+@import 'colors';
+@import 'other';
+@import 'nav';
+@import 'swiper';
+@import 'buttons';
+@import 'footer';
 
 body {
   margin: 0;

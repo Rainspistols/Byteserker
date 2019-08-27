@@ -13,18 +13,10 @@ $cherry: #f90d3e;
 
 @mixin gradient--black_to_blue {
   background: #053243;
-  background: linear-gradient(
-    325deg,
-    #060606 ,
-    #044f6b
-  );
+  background: linear-gradient(325deg, #060606, #044f6b);
 }
 
 @mixin gradient--black_to_green {
-    background: #0c1916;
-    background: linear-gradient(
-      325deg,
-      #1f4037 ,
-      #000000
-    );
-  }
+  background: #0c1916;
+  background: linear-gradient(325deg, #1f4037, #000000);
+}
