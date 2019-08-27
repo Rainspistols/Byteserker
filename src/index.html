@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+  <title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Document</title>
+    <title>Byteserker</title>
     <link rel="stylesheet" href="css/style.css" />
   </head>
 
@@ -18,7 +18,7 @@
           width="50px"
           height="50px"
         />
-        <div class="main-btn__sandwitch" onclick="myFunction(this)">
+        <div class="main-btn__sandwitch">
           <div class="main-btn__sandwitch__bar1"></div>
           <div class="main-btn__sandwitch__bar2"></div>
           <div class="main-btn__sandwitch__bar3"></div>
@@ -29,15 +29,21 @@
     <main>
       <!-- main first slide\page -->
       <section class="swiper">
-
         <section class="swiper__slide swiper__slide1">
-          <div class="swiper__slide__container">
+            <h1 class="visually-hidden">
+              Byteserker main page with list of our advantages
+            </h1>
             <p class="swiper__slide1__text1">Hi</p>
-            <p class="swiper__slide1__text2">explore Mock it up</p>
-          </div>
+            <p class="swiper__slide1__text2">
+              <span>explore</span>
+              <span>Byteserker</span>
+            </p>
         </section>
 
         <section class="swiper__slide swiper__slide2">
+          <h2 class="visually-hidden">
+            Our first advantage
+          </h2>
           <div class="swiper__slide__container">
             <p class="swiper__slide2__text1">Digital First</p>
             <p class="swiper__slide2__text2">
@@ -51,13 +57,14 @@
               src="img/354725-PB9YZI-103.svg"
               alt="how we work"
               class="swiper__slide2__img"
-              width="205px"
+              width="250px"
               height="auto"
             />
           </div>
         </section>
 
         <section class="swiper__slide swiper__slide3">
+          <h2 class="visually-hidden">Our second advantage</h2>
           <div class="swiper__slide__container">
             <p class="swiper__slide3__text1">
               Young <b class="swiper__slide3__text1__vital">Blood</b>
@@ -79,6 +86,7 @@
         </section>
 
         <section class="swiper__slide swiper__slide4">
+          <h2 class="visually-hidden">Our third advantage</h2>
           <div class="swiper__slide__container">
             <p class="swiper__slide4__text1">
               Ready for <b class="swiper__slide4__text1__vital">Challenge</b>
@@ -112,6 +120,6 @@
       </footer>
     </main>
 
-    <script src="js/nav.js" async></script>
+    <script src="js/nav.js"></script>
   </body>
 </html>
