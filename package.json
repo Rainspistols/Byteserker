@@ -29,7 +29,8 @@
     "gulp-rename": "^1.4.0",
     "gulp-sass": "^4.0.2",
     "gulp-svgo": "^2.1.1",
-    "gulp-watch": "^5.0.1"
+    "gulp-watch": "^5.0.1",
+    "prettier": "1.18.2"
   },
   "dependencies": {
     "del": "^5.0.0"
