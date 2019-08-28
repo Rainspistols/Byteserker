@@ -1,6 +1,7 @@
 $white: #ffffff;
 $black: #000000;
 $cherry: #f90d3e;
+$grey: #909090;
 
 @mixin gradient--black_to_gray {
   background: #000000;
@@ -24,4 +25,9 @@ $cherry: #f90d3e;
 @mixin gradient--darkgray_to_gray {
   background: #000000;
   background: linear-gradient(145deg, #232526, #414345);
+}
+
+@mixin gradient--white_to_whitegray {
+  background: #ece9e6;
+  background: linear-gradient(145deg, #ece9e6, #ffffff);
 }

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Byteserker contact-us</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300i,400,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav class="nav contact-page__nav">
+      <button class="main-btn main-btn--contact-page">
+        <img
+          src="../img/menu-circle.png"
+          alt="menu button"
+          class="main-btn__circle"
+          width="50px"
+          height="50px"
+        />
+        <div class="main-btn__sandwitch" onclick="myFunction(this)">
+          <div class="main-btn__sandwitch__bar1"></div>
+          <div class="main-btn__sandwitch__bar2"></div>
+          <div class="main-btn__sandwitch__bar3"></div>
+        </div>
+      </button>
+    </nav>
+    <main class="contact-page">
+      <div class="container">
+        <img
+          class="contact-page__boy-img"
+          src="../img/boy-with-pen.svg"
+          alt=""
+          width="138px"
+          height="182px"
+        />
+        <form action="https://echo.htmlacademy.ru" method="get">
+          <p class="contact-page__slogan">Drop us a line.</p>
+          <input type="text" name="name" id="name" placeholder="Full Name" />
+          <span></span
+          ><input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Email Address"
+          /><span></span>
+          <input
+            type="text"
+            name="company"
+            id="company"
+            placeholder="Company"
+          /><span></span>
+          <input
+            type="text"
+            name="message"
+            id="message"
+            placeholder="Message"
+          /><span></span>
+          <button class="contact-page__btn" type="submit">Submit</button>
+        </form>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p class="footer__slogan"><span>BYTESERKER</span> | Get Real</p>
+        <nav class="footer__nav">
+          <a class="footer__nav__item" href="../index.html">Salute</a>
+          <a class="footer__nav__item" href="work.html">Work</a>
+          <a class="footer__nav__item" href="team.html">Team</a>
+          <a class="footer__nav__item" href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -3,8 +3,8 @@
   position: relative;
   background: $black;
   &__slogan {
-    @include myriad--black;
-    font-size: 30px;
+    @include text_big_without-line;
+    font-size: 28px;
     letter-spacing: -0.05em;
     color: $white;
     margin: 0 0 20px;
@@ -18,9 +18,9 @@
     display: flex;
     justify-content: space-around;
     &__item {
+      @include myriad--black;
       color: $white;
       opacity: 0.5;
-      @include myriad--black;
       font-size: 20px;
       text-decoration: none;
       margin-bottom: 50px;

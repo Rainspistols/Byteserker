@@ -58,6 +58,13 @@
     -webkit-transform: rotate(45deg) translate(-8px, -6px);
     transform: rotate(45deg) translate(-6px, -6px);
   }
+  &--contact-page {
+    .main-btn__sandwitch__bar1,
+    .main-btn__sandwitch__bar2,
+    .main-btn__sandwitch__bar3 {
+      background-color: $grey;
+    }
+  }
 }
 
 .btn_halfround {

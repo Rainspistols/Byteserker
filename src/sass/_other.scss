@@ -25,6 +25,7 @@
   position: relative;
   @include line;
   line-height: 36px;
+  letter-spacing: -0.03em;
 }
 
 @mixin text_big_without-line {
@@ -37,6 +38,7 @@
   text-align: left;
   position: relative;
   line-height: 36px;
+  letter-spacing: -0.03em;
 }
 
 @mixin text_index_small {
