@@ -57,6 +57,8 @@
     color: $white;
     border-radius: 0 10px 10px 0;
     margin-bottom: 30px;
+    @include transition--05_easy_in_out;
+    cursor: pointer;
   }
   &__btn:focus,
   &__btn:active {

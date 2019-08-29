@@ -125,10 +125,7 @@
   padding: 0;
   cursor: pointer;
   outline: none;
-  z-index: 10;
-  /* Rotate first bar */
-  /* Fade out the second bar */
-  /* Rotate last bar */ }
+  z-index: 10; }
   .main-btn:active .main-btn::after {
     background-color: #f90d3e;
     box-shadow: 0 9px 0 0 #f90d3e, 0 18px 0 0 #f90d3e; }
@@ -141,7 +138,10 @@
     cursor: pointer;
     position: absolute;
     top: calc(50% - 12.5px);
-    left: calc(50% - 14px); }
+    left: calc(50% - 14px);
+    /* Rotate first bar */
+    /* Fade out the second bar */
+    /* Rotate last bar */ }
     .main-btn__sandwitch__bar1, .main-btn__sandwitch__bar2, .main-btn__sandwitch__bar3 {
       width: 28px;
       height: 7px;
@@ -151,20 +151,22 @@
       border-radius: 50px; }
     .main-btn__sandwitch__bar3 {
       margin-bottom: 0px; }
-  .main-btn::-moz-focus-inner {
-    border: none; }
-  .change .main-btn__sandwitch__bar1 {
-    -webkit-transform: rotate(-45deg) translate(-7px, 7px);
-    transform: rotate(-45deg) translate(-7px, 7px); }
-  .change .main-btn__sandwitch__bar2 {
-    opacity: 0; }
-  .change .main-btn__sandwitch__bar3 {
-    -webkit-transform: rotate(45deg) translate(-8px, -6px);
-    transform: rotate(45deg) translate(-6px, -6px); }
-  .main-btn--contact-page .main-btn__sandwitch__bar1,
-  .main-btn--contact-page .main-btn__sandwitch__bar2,
-  .main-btn--contact-page .main-btn__sandwitch__bar3 {
+    .main-btn__sandwitch::-moz-focus-inner {
+      border: none; }
+    .change .main-btn__sandwitch__sandwitch__bar1 {
+      -webkit-transform: rotate(-45deg) translate(-7px, 7px);
+      transform: rotate(-45deg) translate(-7px, 7px); }
+    .change .main-btn__sandwitch__sandwitch__bar2 {
+      opacity: 0; }
+    .change .main-btn__sandwitch__sandwitch__bar3 {
+      -webkit-transform: rotate(45deg) translate(-8px, -6px);
+      transform: rotate(45deg) translate(-6px, -6px); }
+  .main-btn__sandwitch--grey .main-btn__sandwitch__bar1,
+  .main-btn__sandwitch--grey .main-btn__sandwitch__bar2,
+  .main-btn__sandwitch--grey .main-btn__sandwitch__bar3 {
     background-color: #909090; }
+  .main-btn--absolute {
+    position: absolute; }
 
 .btn_halfround {
   background-color: transparent;
@@ -251,9 +253,12 @@
       text-decoration: none;
       margin-bottom: 50px;
       letter-spacing: -0.03em;
-      margin-right: 5px; }
+      margin-right: 5px;
+      transition: all 0.5s ease-in-out; }
     .footer__nav__item:last-child {
       margin-right: 0; }
+    .footer__nav__item:active, .footer__nav__item:focus {
+      opacity: 0.3; }
 
 .menu {
   background: #000000;
@@ -286,7 +291,8 @@
   .menu__list {
     list-style: none;
     position: relative;
-    padding-left: 21px; }
+    padding-left: 21px;
+    height: auto; }
     .menu__list::after, .menu__list::before {
       position: absolute;
       content: "";
@@ -320,6 +326,10 @@
       letter-spacing: -0.05em;
       margin: 0;
       padding: 0; }
+    .menu__list a:active,
+    .menu__list a:focus {
+      opacity: 0.5;
+      transition: all 0.5s ease-in-out; }
 
 .contact-page {
   background: #ece9e6;
@@ -377,12 +387,103 @@
     height: 40px;
     color: #ffffff;
     border-radius: 0 10px 10px 0;
-    margin-bottom: 30px; }
+    margin-bottom: 30px;
+    transition: all 0.5s ease-in-out;
+    cursor: pointer; }
   .contact-page__btn:focus, .contact-page__btn:active {
     opacity: 0.5;
     outline: none; }
   .contact-page__btn::-moz-focus-inner {
     border: 0; }
+
+.work {
+  background: #000000; }
+  .work__slogan {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 40px;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: -0.05em;
+    line-height: 30px;
+    padding-top: 115px;
+    margin-bottom: 30px; }
+    .work__slogan span {
+      color: #f90d3e; }
+  .work__item {
+    position: relative;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: auto;
+    width: 320px; }
+    .work__item::after {
+      position: absolute;
+      font-family: 'Source Sans Pro', sans-serif;
+      font-style: normal;
+      font-weight: 900;
+      font-size: 32px;
+      color: #ffffff;
+      bottom: 30px;
+      left: 30px;
+      text-transform: uppercase;
+      letter-spacing: -0.03em;
+      line-height: 25px;
+      transition: all 0.5s ease-in-out; }
+  .work__item--borodinski::after {
+    content: "barber shop borodinski"; }
+  .work__item:focus.work__item::after, .work__item:active.work__item::after {
+    color: #f90d3e; }
+
+.team {
+  background: #ece9e6;
+  background: linear-gradient(-90deg, #ece9e6, #ffffff); }
+  .team__slogan {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin: 0 0 42px;
+    padding-top: 115px;
+    text-align: center;
+    color: #a79376;
+    font-size: 40px;
+    line-height: 30px; }
+  .team__img {
+    display: block;
+    margin: auto;
+    margin-bottom: 16px; }
+  .team__name {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    display: block;
+    color: #a79376;
+    text-align: center;
+    font-size: 18px;
+    line-height: 14px; }
+  .team__about {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 15px;
+    color: #909090;
+    display: block;
+    margin-bottom: 10px;
+    text-align: center; }
+  .team__icons {
+    display: flex;
+    padding-bottom: 50px;
+    align-items: center; }
+    .team__icons img {
+      opacity: 0.7;
+      margin-right: 20px;
+      cursor: pointer;
+      transition: all 0.5s ease-in-out; }
+    .team__icons img:active,
+    .team__icons img:focus {
+      opacity: 0.3; }
 
 body {
   margin: 0;

@@ -26,9 +26,14 @@
       margin-bottom: 50px;
       letter-spacing: -0.03em;
       margin-right: 5px;
+      @include transition--05_easy_in_out;
     }
     &__item:last-child {
-        margin-right: 0;
+      margin-right: 0;
+    }
+    &__item:active,
+    &__item:focus {
+      opacity: 0.3;
     }
   }
 }

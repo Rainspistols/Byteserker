@@ -1,0 +1,42 @@
+.work {
+  background: $black;
+  &__slogan {
+    @include myriad--black;
+    font-size: 40px;
+    color: $white;
+    text-transform: uppercase;
+    letter-spacing: -0.05em;
+    line-height: 30px;
+    padding-top: 115px;
+    margin-bottom: 30px;
+    & span {
+      color: $cherry;
+    }
+  }
+  &__item {
+    position: relative;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: auto;
+    width: 320px;
+    &::after {
+      position: absolute;
+      @include myriad--black;
+      font-size: 32px;
+      color: $white;
+      bottom: 30px;
+      left: 30px;
+      text-transform: uppercase;
+      letter-spacing: -0.03em;
+      line-height: 25px;
+      @include transition--05_easy_in_out;
+    }
+  }
+  &__item--borodinski::after {
+    content: "barber shop borodinski";
+  }
+  &__item:focus.work__item::after,
+  &__item:active.work__item::after {
+      color: $cherry;
+  }
+}

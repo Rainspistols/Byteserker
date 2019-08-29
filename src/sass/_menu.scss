@@ -19,6 +19,7 @@
     list-style: none;
     position: relative;
     padding-left: 21px;
+    height: auto;
     &::after,
     &::before {
         position: absolute;
@@ -45,6 +46,11 @@
       letter-spacing: -0.05em;
       margin: 0;
       padding: 0;
+    }
+    & a:active,
+    & a:focus {
+      opacity: 0.5;
+      @include transition--05_easy_in_out;
     }
   }
 }

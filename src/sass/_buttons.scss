@@ -39,31 +39,34 @@
     &__bar3 {
       margin-bottom: 0px;
     }
+    &::-moz-focus-inner {
+      border: none;
+    }
+    // Animation for menu
+    /* Rotate first bar */
+    .change &__sandwitch__bar1 {
+      -webkit-transform: rotate(-45deg) translate(-7px, 7px);
+      transform: rotate(-45deg) translate(-7px, 7px);
+    }
+    /* Fade out the second bar */
+    .change &__sandwitch__bar2 {
+      opacity: 0;
+    }
+    /* Rotate last bar */
+    .change &__sandwitch__bar3 {
+      -webkit-transform: rotate(45deg) translate(-8px, -6px);
+      transform: rotate(45deg) translate(-6px, -6px);
+    }
   }
-  &::-moz-focus-inner {
-    border: none;
-  }
-  // Animation for menu
-  /* Rotate first bar */
-  .change &__sandwitch__bar1 {
-    -webkit-transform: rotate(-45deg) translate(-7px, 7px);
-    transform: rotate(-45deg) translate(-7px, 7px);
-  }
-  /* Fade out the second bar */
-  .change &__sandwitch__bar2 {
-    opacity: 0;
-  }
-  /* Rotate last bar */
-  .change &__sandwitch__bar3 {
-    -webkit-transform: rotate(45deg) translate(-8px, -6px);
-    transform: rotate(45deg) translate(-6px, -6px);
-  }
-  &--contact-page {
+  &__sandwitch--grey {
     .main-btn__sandwitch__bar1,
     .main-btn__sandwitch__bar2,
     .main-btn__sandwitch__bar3 {
       background-color: $grey;
     }
+  }
+  &--absolute {
+    position: absolute;
   }
 }
 
