@@ -13,18 +13,11 @@
   </head>
   <body>
     <nav class="nav">
-      <button class="main-btn">
-        <img
-          src="../img/menu-circle.png"
-          alt="menu button"
-          class="main-btn__circle"
-          width="50px"
-          height="50px"
-        />
-        <div class="main-btn__sandwitch" onclick="myFunction(this)">
-          <div class="main-btn__sandwitch__bar1"></div>
-          <div class="main-btn__sandwitch__bar2"></div>
-          <div class="main-btn__sandwitch__bar3"></div>
+      <button class="main-btn main-btn--absolute" onclick="myFunction(this)">
+        <div class="main-btn__sandwitch">
+          <div class="main-btn__sandwitch__bar main-btn__sandwitch__bar1"></div>
+          <div class="main-btn__sandwitch__bar main-btn__sandwitch__bar2"></div>
+          <div class="main-btn__sandwitch__bar main-btn__sandwitch__bar3"></div>
         </div>
       </button>
     </nav>
@@ -33,7 +26,7 @@
       <div class="container">
         <h1 class="visually-hidden"><span>Byteserker main menu</span></h1>
         <p class="company-name">Byteserker</p>
-        <ul class="menu__list container">
+        <ul class="menu__list">
           <li class="menu__item">
             <a href="../index.html" class="menu__item__link">Salute.</a>
           </li>
@@ -49,5 +42,7 @@
         </ul>
       </div>
     </main>
+
+    <script src="../js/nav.js" async></script>
   </body>
 </html>

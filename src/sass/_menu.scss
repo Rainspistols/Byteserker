@@ -7,50 +7,77 @@
   overflow: hidden;
   .company-name {
     @include text_big_without-line;
-    font-size: 42px;
+    font-size: 50px;
     color: $cherry;
     padding-top: 115px;
     margin-bottom: 60px;
     text-transform: uppercase;
-    text-align: center;
+    text-align: left;
     letter-spacing: -0.05em;
+    position: relative;
   }
   &__list {
     list-style: none;
     position: relative;
-    padding-left: 21px;
+    padding-left: 0;
     height: auto;
-    &::after,
-    &::before {
-        position: absolute;
-        content: "";
-        width: calc(50% + 30px);
-        height: 1px;
-        background: $white;
+  }
+  &__item__link {
+    color: $white;
+    text-decoration: none;
+    @include text_big_without-line;
+    font-size: 42px;
+    text-transform: uppercase;
+    line-height: 42px;
+    letter-spacing: -0.05em;
+    margin: 0;
+    padding: 0;
+    z-index: 1;
+    outline: none;
+    &:after {
+      content: "";
+      width: 200vw;
+      height: 65%;
+      position: absolute;
+      top: 50%;
+      left: -100vw;
+      transform: translateY(-45%) scaleY(0);
+      z-index: -1;
+      background: $cherry;
+      transition: all 0.3s ease;
     }
-    &::after {
-        bottom: -20px;
-        right: -30px;
+  }
+  &__item__link:focus::after {
+    transform: translateY(-45%) scaleY(0.1);
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .menu {
+    .company-name {
+      padding-top: 250px;
+      font-size: 60px;
+      margin-bottom: 110px;
+      text-align: left;
+      padding-left: 75px;
     }
-    &::before {
-        top: -20px;
-        left: -30px;
-    }
-    & a {
-      color: $white;
-      text-decoration: none;
-      @include text_big_without-line;
-      font-size: 42px;
-      text-transform: uppercase;
-      line-height: 42px;
-      letter-spacing: -0.05em;
-      margin: 0;
-      padding: 0;
-    }
-    & a:active,
-    & a:focus {
-      opacity: 0.5;
-      @include transition--05_easy_in_out;
+    &__list {
+      padding-left: 75px;
+      &::after {
+        width: 0;
+        height: 0;
+      }
+      &::before {
+        width: 0;
+        height: 0;
+      }
+      & a {
+        font-size: 125px;
+        line-height: 100px;
+      }
     }
   }
 }
+
+
+

@@ -27,13 +27,49 @@
       letter-spacing: -0.03em;
       margin-right: 5px;
       @include transition--05_easy_in_out;
+      outline: 0;
     }
     &__item:last-child {
       margin-right: 0;
     }
-    &__item:active,
-    &__item:focus {
-      opacity: 0.3;
+    &__item[href]:hover,
+    &__item[href]:focus {
+      opacity: 1;
+    }
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .footer {
+    &__slogan {
+      font-size: 60px;
+      margin-bottom: 50px;
+      padding-top: 75px;
+    }
+    &__nav__item {
+      font-size: 50px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .footer {
+    .container {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+    &__slogan {
+      padding: 0;
+      margin: 85px 0 100px;
+    }
+    &__nav__item {
+      font-size: 30px;
+      margin: 0 10px 0 0;
+    }
+    &__nav {
+      margin: 85px 0 100px;
     }
   }
 }

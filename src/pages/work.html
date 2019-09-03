@@ -13,18 +13,11 @@
   </head>
   <body>
     <nav class="nav">
-      <button class="main-btn">
-        <img
-          src="../img/menu-circle.png"
-          alt="menu button"
-          class="main-btn__circle"
-          width="50px"
-          height="50px"
-        />
-        <div class="main-btn__sandwitch" onclick="myFunction(this)">
-          <div class="main-btn__sandwitch__bar1"></div>
-          <div class="main-btn__sandwitch__bar2"></div>
-          <div class="main-btn__sandwitch__bar3"></div>
+      <button class="main-btn main-btn--absolute" onclick="myFunction(this)">
+        <div class="main-btn__sandwitch">
+          <div class="main-btn__sandwitch__bar main-btn__sandwitch__bar1"></div>
+          <div class="main-btn__sandwitch__bar main-btn__sandwitch__bar2"></div>
+          <div class="main-btn__sandwitch__bar main-btn__sandwitch__bar3"></div>
         </div>
       </button>
     </nav>
@@ -34,14 +27,34 @@
       <h2 class="work__slogan container">
         <span>Make</span> something you love.
       </h2>
-      <div class="work__item work__item--borodinski">
-        <img
-          src="../img/barbershop-bor.jpg"
-          width="320px"
-          height="auto"
-          alt="barbershop-borodinski"
-          class="work__img"
-        />
+      <div class="work__list">
+        <a href="#" class="work__item work__item--borodinski">
+          <img
+            src="../img/barbershop-bor.jpg"
+            width="320px"
+            height="auto"
+            alt="barbershop-borodinski"
+            class="work__img"
+          />
+        </a>
+        <a href="#" class="work__item work__item--borodinski">
+          <img
+            src="../img/barbershop-bor.jpg"
+            width="320px"
+            height="auto"
+            alt="barbershop-borodinski"
+            class="work__img"
+          />
+        </a>
+        <a href="#" class="work__item work__item--borodinski">
+          <img
+            src="../img/barbershop-bor.jpg"
+            width="320px"
+            height="auto"
+            alt="barbershop-borodinski"
+            class="work__img"
+          />
+        </a>
       </div>
     </main>
 
@@ -50,11 +63,12 @@
         <p class="footer__slogan"><span>BYTESERKER</span> | Get Real</p>
         <nav class="footer__nav">
           <a class="footer__nav__item" href="../index.html">Salute</a>
-          <a class="footer__nav__item" href="work.html">Work</a>
+          <a class="footer__nav__item">Work</a>
           <a class="footer__nav__item" href="team.html">Team</a>
           <a class="footer__nav__item" href="contact.html">Contact</a>
         </nav>
       </div>
     </footer>
+    <script src="../js/nav.js" async></script>
   </body>
 </html>

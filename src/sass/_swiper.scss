@@ -6,8 +6,8 @@
   min-height: 423px;
   overflow: hidden;
   &__text--vital {
-    color:$cherry;
-    font-weight: inherit
+    color: $cherry;
+    font-weight: inherit;
   }
 }
 
@@ -20,10 +20,12 @@
     font-size: 200px;
     color: $white;
     letter-spacing: -0.1em;
-    margin: 0;
-    padding-top: calc(213px - 100px);
-    display: inline-block;
-    margin-right: 20px;
+    top: calc(50% - 75px);
+    text-align: center;
+    margin: 0 20px 0 0;
+    position: absolute;
+    width: 100%;
+    line-height: 150px;
   }
   &__text2 {
     color: $white;
@@ -52,8 +54,8 @@
   @include gradient--black_to_blue;
   &__img {
     position: absolute;
-    left: 84px;
-    bottom: 12px;
+    left: 110px;
+    top: 250px;
   }
 }
 
@@ -61,8 +63,8 @@
   @include gradient--black_to_green;
   &__img {
     position: absolute;
-    bottom: -52px;
-    left: 88px;
+    top: 243px;
+    left: 130px;
   }
 }
 
@@ -70,8 +72,8 @@
   @include gradient--black_to_green;
   &__img {
     position: absolute;
-    right: -20px;
-    bottom: -25px;
+    right: 8px;
+    top: 250px;
   }
 }
 
@@ -83,3 +85,73 @@
   @include text_index_small;
 }
 
+@media (min-width: $tablet-width) {
+  .swiper__slide1 {
+    &__text2 {
+      font-size: 27px;
+    }
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .swiper {
+    &__slide__text2 {
+      width: 50%;
+    }
+    &__slide2 {
+      &__img {
+        width: 600px;
+        left: 260px;
+        top: 452px;
+      }
+    }
+    &__slide3 {
+      &__img {
+        top: 450px;
+        left: 302px;
+        width: 500px;
+      }
+    }
+    &__slide4 {
+      &__img {
+        top: 410px;
+        left: 314px;
+        width: 600px;
+      }
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .swiper {
+    &__slide1__text1 {
+      font-size: 250px;
+      line-height: 190px;
+      top: calc(50% - 85px);
+    }
+    &__slide__text2 {
+      width: 33%;
+    }
+    &__slide2 {
+      &__img {
+        width: 700px;
+        left: 484px;
+        top: 209px;
+      }
+    }
+    &__slide3 {
+      &__img {
+        top: 212px;
+        left: 498px;
+        width: 600px;
+      }
+    }
+    &__slide4 {
+      &__img {
+        top: 210px;
+        left: 515px;
+        width: 600px;
+      }
+    }
+  }
+}

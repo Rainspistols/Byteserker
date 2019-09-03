@@ -13,7 +13,8 @@
     letter-spacing: -0.03em;
     margin: 20px 0 50px;
   }
-  & input {
+  & input,
+  & textarea {
     width: 100%;
     font-size: 20px;
     @include myriad--black;
@@ -67,5 +68,43 @@
   }
   &__btn::-moz-focus-inner {
     border: 0;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .contact-page {
+    .container {
+      display: flex;
+      padding-top: 150px;
+      padding-bottom: 100px;
+    }
+    &__boy-img {
+      width: 355px;
+      margin-left: 0;
+      margin-right: 30px;
+      padding: 0;
+    }
+    &__slogan {
+      font-size: 50px;
+    }
+  }
+}
+
+@media (min-width:$desktop-width) {
+  .contact-page {
+    .container {
+      justify-content: space-around;
+    }
+    .contact-form {
+      width: 33%;
+      padding-top: 30px;
+    }
+    &__boy__img {
+      width: 400px;
+    }
+    & input,
+  & textarea {
+    font-size: 26px;
+  }
   }
 }

@@ -23,9 +23,33 @@
   padding-top: 105px;
   text-align: left;
   position: relative;
-  @include line;
+  &::after {
+    position: absolute;
+    content: "";
+    width: 50%;
+    height: 1px;
+    background: $white;
+    bottom: -15px;
+    left: 0;
+  }
   line-height: 36px;
   letter-spacing: -0.03em;
+  text-shadow: 0px 2px 4px $cherry;
+  @media (min-width: $tablet-width) {
+    font-size: 65px;
+    margin-bottom: 45px;
+    padding-top: 240px;
+    text-align: left;
+    position: relative;
+    line-height: 40px;
+    &::after {
+      width: 0;
+      height: 0;
+    }
+  }
+  @media (min-width: $desktop-width) {
+    padding-top: 215px;
+  }
 }
 
 @mixin text_big_without-line {
@@ -47,14 +71,14 @@
   line-height: 16px;
   color: $white;
   margin: 0 0 12px;
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+    margin: 0 0 45px;
+  }
 }
 
 @mixin transition--05_easy_in_out {
   transition: all 0.5s ease-in-out;
 }
 
-.container--mobile {
-  width: 260px;
-  margin: auto;
-  text-align: center;
-}

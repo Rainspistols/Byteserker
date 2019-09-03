@@ -10,41 +10,189 @@
     font-size: 40px;
     line-height: 30px;
   }
+  &__list {
+    width: 300px;
+    margin: auto;
+  }
   &__img {
-      display: block;
-      margin: auto;
-      margin-bottom: 16px;
+    display: block;
+    margin: auto;
+    margin-bottom: 16px;
   }
   &__name {
     @include myriad--black;
-    display: block; 
+    display: block;
     color: $gold;
     text-align: center;
     font-size: 18px;
     line-height: 14px;
   }
   &__about {
-      @include myriad--regular;
-      font-size: 15px;
-      line-height: 15px;
-      color: $grey;
-      display: block;
-      margin-bottom: 10px;
-      text-align: center;
+    @include myriad--regular;
+    font-size: 15px;
+    line-height: 15px;
+    color: $grey;
+    display: block;
+    margin-bottom: 10px;
+    text-align: center;
   }
   &__icons {
     display: flex;
     padding-bottom: 50px;
     align-items: center;
-    & img {
-      opacity: 0.7;
-      margin-right: 20px;
-      cursor: pointer;
-      @include transition--05_easy_in_out;
+    height: auto;
+    flex-wrap: wrap;
+  }
+  &__icon {
+    opacity: 0.7;
+    margin-right: 20px;
+    cursor: pointer;
+    @include transition--05_easy_in_out;
+    outline: 0;
+  }
+  &__icon:active,
+  &__icon:focus {
+    opacity: 0.3;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .team {
+    .container {
+      padding-left: 30px;
+      padding-right: 30px;
+      height: auto;
+      width: 300px;
     }
-    & img:active,
-    & img:focus {
-      opacity: 0.3;
+    &__slogan {
+      padding-top: 180px;
+      margin-bottom: 30px;
+    }
+    &__list {
+      width: $tablet-width;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-around;
+    }
+    &__item {
+      width: 300px;
+    }
+    &__img {
+      width: 300px;
+      margin: 0;
+      margin-bottom: 16px;
+    }
+    &__name {
+      font-size: 22px;
+      line-height: 18px;
+    }
+    &__about {
+      font-size: 18px;
+      line-height: 18px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .team {
+    &__list {
+      width: $desktop-width;
+    }
+    &__item {
+      position: relative;
+      width: 325px;
+      cursor: pointer;
+    }
+    &__img {
+      width: 325px;
+    }
+    .container {
+      width: 325px;
+    }
+    &__name {
+      font-size: 30px;
+      margin-bottom: 15px;
+    }
+    &__about {
+      font-size: 22px;
+      line-height: 20px;
+      margin-bottom: 25px;
+    }
+    &__icons {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: calc(100% - 117px);
+      background: $black;
+      padding: 0;
+      flex-wrap: wrap;
+      padding-left: 60px;
+      padding-right: 60px;
+      box-sizing: border-box;
+      align-content: flex-start;
+      opacity: 0;
+      @include transition--05_easy_in_out;
+      & img {
+        z-index: 3;
+        position: relative;
+        width: 40px;
+      }
+    }
+    &__icon {
+      position: relative;
+      margin-right: 40px;
+      margin-top: 75px;
+      opacity: 1;
+      &:nth-child(3n) {
+        margin-right: 0;
+      }
+      // white circle
+      &::before {
+        content: "";
+        position: absolute;
+        width: 60px;
+        height: 60px;
+        background: $white;
+        border-radius: 50px;
+        opacity: 1;
+        right: -10px;
+        top: -10px;
+      }
+      // title of icon
+      &::after {
+        position: absolute;
+        top: -40px;
+        left: -40px;
+        color: $white;
+        font-size: 18px;
+        @include myriad--black;
+        opacity: 0;
+        white-space: nowrap;
+        @include transition--05_easy_in_out;
+      }
+    }
+    &__icon__about::after {
+      content: "About me";
+      left: -18px;
+    }
+    &__icon__linked::after {
+      content: "Linkedin";
+      left: -18px;
+    }
+    &__icon__pinterest::after {
+      content: "Pinterest";
+      left: -18px;
+    }
+    &__icon__github::after {
+      content: "Github";
+      left: -9px;
+    }
+    &__icon:hover::after {
+      opacity: 1;
+    }
+    &__item:hover &__icons {
+      opacity: 1;
     }
   }
 }

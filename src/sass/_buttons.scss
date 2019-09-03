@@ -6,19 +6,54 @@
   border-radius: 50px;
   top: 35px;
   background: transparent;
-  border: none;
   padding: 0;
   cursor: pointer;
   outline: none;
   z-index: 10;
-  &:active &::after {
-    background-color: $cherry;
-    box-shadow: 0 9px 0 0 $cherry, 0 18px 0 0 $cherry;
+  box-sizing: border-box;
+  border: 5px solid #8b8b8b;
+  @include transition--05_easy_in_out;
+  &::-moz-focus-inner {
+    border: 0;
   }
-  &__circle {
+  // outer-shadow-inside circle
+  &::after {
+    content: "";
     position: absolute;
-    left: 0;
-    top: 0;
+    left: 0px;
+    top: 0px;
+    box-shadow: 0 2px 3px 0px rgba(0, 0, 0, 0.7);
+    width: 40.5px;
+    height: 40.5px;
+    border-radius: 50px;
+    transition: box-shadow 0.1s ease;
+    z-index: 2;
+  }
+  // inner-shadow-outside circle
+  &::before {
+    content: "";
+    position: absolute;
+    left: -5px;
+    top: -5px;
+    width: 50px;
+    height: 50px;
+    box-shadow: inset 0 2px 3px 0px rgba(0, 0, 0, 0.7);
+    border-radius: 50px;
+  }
+  // clicking effect
+  &:active::after {
+    box-shadow: 0 0 2px 0px black;
+  }
+  &:active &__sandwitch__bar {
+    box-shadow: inset 0 0 1px 0px rgba(0, 0, 0, 0.3);
+  }
+  &:hover,
+  &:focus {
+    border: 5px solid $cherry;
+  }
+  &:hover &__sandwitch__bar,
+  &:focus &__sandwitch__bar {
+    background: $cherry;
   }
   &__sandwitch {
     display: inline-block;
@@ -26,37 +61,39 @@
     position: absolute;
     top: calc(50% - 12.5px);
     left: calc(50% - 14px);
-    &__bar1,
-    &__bar2,
-    &__bar3 {
+    z-index: 3;
+    &__bar {
       width: 28px;
       height: 7px;
       background-color: $white;
       margin: 0 0 2px 0;
-      transition: $transition04;
       border-radius: 50px;
+      box-shadow: inset 0 0 1px 0px rgba(0, 0, 0, 0.3);
+      @include transition--05_easy_in_out;
     }
-    &__bar3 {
+    &__bar:last-child {
       margin-bottom: 0px;
     }
-    &::-moz-focus-inner {
-      border: none;
-    }
-    // Animation for menu
-    /* Rotate first bar */
-    .change &__sandwitch__bar1 {
-      -webkit-transform: rotate(-45deg) translate(-7px, 7px);
-      transform: rotate(-45deg) translate(-7px, 7px);
-    }
-    /* Fade out the second bar */
-    .change &__sandwitch__bar2 {
-      opacity: 0;
-    }
-    /* Rotate last bar */
-    .change &__sandwitch__bar3 {
-      -webkit-transform: rotate(45deg) translate(-8px, -6px);
-      transform: rotate(45deg) translate(-6px, -6px);
-    }
+  }
+  // Animation for menu
+  /* Rotate first bar */
+  .change &__sandwitch__bar1 {
+    -webkit-transform: rotate(-45deg) translate(-7px, 7px);
+    transform: rotate(-45deg) translate(-7px, 7px);
+    box-shadow: none;
+    margin: 0;
+  }
+  /* Fade out the second bar */
+  .change &__sandwitch__bar2 {
+    opacity: 0;
+    margin: 0;
+  }
+  /* Rotate last bar */
+  .change &__sandwitch__bar3 {
+    -webkit-transform: rotate(45deg) translate(-3px, -3px);
+    transform: rotate(45deg) translate(-3px, -3px);
+    box-shadow: none;
+    margin: 0;
   }
   &__sandwitch--grey {
     .main-btn__sandwitch__bar1,
@@ -80,7 +117,7 @@
   padding: 0;
   width: auto;
   height: 30px;
-  width: 130px;
+  width: 50%;
   box-sizing: border-box;
   @include myriad--black;
   z-index: 1;
@@ -91,6 +128,7 @@
   position: relative;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   font-size: 13px;
+  box-shadow: 0 2px 4px 0 $black;
   & span {
     position: relative;
     z-index: 2;
@@ -99,19 +137,19 @@
   &::after {
     content: "";
     position: absolute;
-    left: 10px;
+    left: -8px;
     top: 0;
-    height: 490%;
-    width: 140%;
+    height: 200px;
+    width: 200px;
     background: $cherry;
     @include transition--05_easy_in_out;
-    -webkit-transform: translateX(-98%) translateY(-25%) rotate(45deg);
-    transform: translateX(-98%) translateY(-25%) rotate(45deg);
+    -webkit-transform: translateX(-100%) translateY(-25%) rotate(45deg);
+    transform: translateX(-100%) translateY(-25%) rotate(45deg);
   }
   &:hover:after,
   &:focus:after {
-    -webkit-transform: translateX(-9%) translateY(-25%) rotate(45deg);
-    transform: translateX(-9%) translateY(-25%) rotate(45deg);
+    -webkit-transform: translateX(-10%) translateY(-25%) rotate(45deg);
+    transform: translateX(-10%) translateY(-25%) rotate(45deg);
   }
   &:hover span,
   &:focus span {
@@ -120,5 +158,73 @@
   &:hover,
   &:focus {
     border: 1px solid $cherry;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .main-btn {
+    left: calc(50% - 37.5px);
+    top: 35px;
+    width: 75px;
+    height: 75px;
+    border: 8px solid #8b8b8b;
+    &::after {
+      width: 59px;
+      height: 59px;
+      left: 0;
+      bottom: 0;
+    }
+    &::before {
+      left: -8px;
+      top: -8px;
+      height: 75px;
+      width: 75px;
+    }
+    &:hover,
+    &:focus {
+      border: 8px solid $cherry;
+    }
+    &__sandwitch {
+      top: calc(50% - 17px);
+      left: calc(50% - 21px);
+      &__bar {
+        width: 42px;
+        height: 11px;
+      }
+    }
+    .change &__sandwitch__bar1 {
+      -webkit-transform: rotate(-45deg) translate(-9px, 9px);
+      transform: rotate(-45deg) translate(-9px, 9px);
+    }
+    /* Rotate last bar */
+    .change &__sandwitch__bar3 {
+      -webkit-transform: rotate(45deg) translate(-6px, -6px);
+      transform: rotate(45deg) translate(-6px, -6px);
+    }
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .btn_halfround {
+    font-size: 30px;
+    height: 65px;
+    border-radius: 0 20px 20px 0;
+    box-shadow: 0 4px 8px 0 $black;
+    &::after {
+      height: 600px;
+      width: 600px;
+    }
+  }
+}
+
+@media(min-width: $desktop-width) {
+  .btn_halfround {
+    width: 33%;
+  }
+}
+
+@media (min-width:$desktop-width) {
+  .main-btn {
+    top: 75px;
   }
 }

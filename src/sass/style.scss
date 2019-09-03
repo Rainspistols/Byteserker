@@ -2,13 +2,30 @@ $tablet-width: 768px;
 $desktop-width: 1200px;
 $mobile-width-only: 767px;
 
-$transition04: 0.4s;
-
 .container {
   margin: auto;
-  width: 260px;
+  width: 320px;
+  padding-left: 30px;
+  padding-right: 30px;
   position: relative;
   height: 100%;
+  box-sizing: border-box;
+}
+
+@media (min-width:$tablet-width) {
+  .container {
+    width: $tablet-width;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+@media(min-width: $desktop-width) {
+  .container {
+    width: $desktop-width;
+    padding-left: 100px;
+    padding-right: 100px;
+  }
 }
 
 @import "fonts";
@@ -26,6 +43,7 @@ body {
   margin: 0;
   padding: 0;
   min-width: 320px;
+  width: 100%;
 }
 
 .visually-hidden {
