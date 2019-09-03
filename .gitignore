@@ -1,2 +1,12 @@
-node_modules
+# Packages
+node_modules/
+
+# IDE - PyCharm
 .idea/
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json

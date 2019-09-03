@@ -44,25 +44,27 @@
     letter-spacing: -0.1em;
     top: calc(50% - 75px);
     text-align: center;
-    margin: 0 20px 0 0;
-    position: absolute;
     width: 100%;
-    line-height: 150px; }
+    line-height: 150px;
+    position: absolute;
+    margin: 0; }
   .swiper__slide1__text2 {
     color: #ffffff;
     font-family: 'Source Sans Pro', sans-serif;
     font-style: italic;
     font-weight: 400;
     font-size: 16px;
-    width: 19%;
     letter-spacing: -0.08em;
-    margin: auto auto 35px;
     position: absolute;
-    bottom: 0;
-    left: calc(50% - 9.5%); }
+    width: 100%;
+    bottom: 35px;
+    margin: 0 auto;
+    line-height: 14px; }
+    .swiper__slide1__text2 span {
+      display: block; }
   .swiper__slide1::after {
     position: absolute;
-    content: "";
+    content: '';
     width: 2px;
     height: 25px;
     border-radius: 50px 50px 0 0;
@@ -300,7 +302,7 @@
     z-index: 2;
     transition: all 0.5s ease-in-out; }
   .btn_halfround::after {
-    content: "";
+    content: '';
     position: absolute;
     left: -8px;
     top: 0;
