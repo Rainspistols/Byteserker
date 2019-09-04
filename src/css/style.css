@@ -19,6 +19,14 @@
     padding-left: 100px;
     padding-right: 100px; } }
 
+.swiper__snap {
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory; }
+  .swiper__snap .swiper__slide,
+  .swiper__snap .footer {
+    scroll-snap-align: end; }
+
 .swiper__slide {
   width: 100%;
   height: 100vh;
@@ -149,7 +157,8 @@
 
 @media (min-width: 768px) {
   .swiper__slide1__text2 {
-    font-size: 27px; } }
+    font-size: 27px;
+    line-height: 24px; } }
 
 @media (min-width: 768px) {
   .swiper__slide__text2 {
@@ -373,7 +382,6 @@
     top: 75px; } }
 
 .footer {
-  width: 100%;
   position: relative;
   background: #000000; }
   .footer__slogan {
@@ -499,7 +507,7 @@
     z-index: 1;
     outline: none; }
     .menu__item__link:after {
-      content: "";
+      content: '';
       width: 200vw;
       height: 65%;
       position: absolute;
@@ -615,16 +623,18 @@
     font-size: 50px; } }
 
 @media (min-width: 1200px) {
-  .contact-page .container {
-    justify-content: space-around; }
-  .contact-page .contact-form {
-    width: 33%;
-    padding-top: 30px; }
-  .contact-page__boy__img {
-    width: 400px; }
-  .contact-page input,
-  .contact-page textarea {
-    font-size: 26px; } }
+  .contact-page {
+    height: 100vh; }
+    .contact-page .container {
+      justify-content: space-around; }
+    .contact-page .contact-form {
+      width: 33%;
+      padding-top: 30px; }
+    .contact-page__boy__img {
+      width: 400px; }
+    .contact-page input,
+    .contact-page textarea {
+      font-size: 26px; } }
 
 .work {
   background: #000000; }
@@ -675,6 +685,18 @@
       transition: border-width 0.3s ease; }
   .work__item--borodinski::after {
     content: "barber shop borodinski"; }
+  .work__item--cat-energy::after {
+    content: "Cat-energy"; }
+  .work__item--device::after {
+    content: "Device"; }
+  .work__item--cat-energy-logo {
+    width: 87px;
+    height: 72px;
+    display: block;
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    background-image: url(../img/cat-en-logo.svg); }
   .work__item:focus::after, .work__item:active::after {
     color: #f90d3e; }
   .work__item:hover::before, .work__item:focus::before {
@@ -707,11 +729,14 @@
     font-size: 90px;
     line-height: 70px; }
   .work__item {
-    width: 25%; }
+    width: 25%;
+    margin: 0; }
   .work__list {
     width: 1200px; }
   .work__item:hover::before, .work__item:focus::before {
-    border-width: 15px; } }
+    border-width: 15px; }
+  .work__img {
+    width: 300px; } }
 
 .team {
   background: #ece9e6;
@@ -803,7 +828,8 @@
     width: 325px;
     cursor: pointer; }
   .team__img {
-    width: 325px; }
+    width: 325px;
+    height: 420px; }
   .team .container {
     width: 325px; }
   .team__name {
@@ -818,7 +844,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: calc(100% - 117px);
+    height: calc(100% - 114px);
     background: #000000;
     padding: 0;
     flex-wrap: wrap;
@@ -881,8 +907,7 @@
 body {
   margin: 0;
   padding: 0;
-  min-width: 320px;
-  width: 100%; }
+  min-width: 320px; }
 
 .visually-hidden {
   position: absolute !important;

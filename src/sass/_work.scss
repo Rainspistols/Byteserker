@@ -49,6 +49,21 @@
   &__item--borodinski::after {
     content: "barber shop borodinski";
   }
+  &__item--cat-energy::after {
+    content: "Cat-energy";
+  }
+  &__item--device::after {
+    content: "Device";
+  }
+  &__item--cat-energy-logo {
+    width: 87px;
+    height: 72px;
+    display: block;
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    background-image: url(../img/cat-en-logo.svg);
+  }
   &__item:focus::after,
   &__item:active::after {
     color: $cherry;
@@ -97,6 +112,7 @@
     }
     &__item {
       width: 25%;
+      margin: 0;
     }
     &__list {
       width: 1200px;
@@ -104,6 +120,9 @@
     &__item:hover::before,
     &__item:focus::before {
       border-width: 15px;
+    }
+    &__img {
+      width: 300px;
     }
   }
 }

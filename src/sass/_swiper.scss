@@ -1,14 +1,12 @@
-// .swiper__snap {
-//   height: 100vh;
-//   overflow-y: scroll;
-//   scroll-snap-type: y mandatory;
-//   .swiper__slide,
-//   .footer {
-//     scroll-snap-align: start;
-//   }
-// }
-// Не работает футер.
-// Попробуй кликни на ссылку в футере с этой включной штукой
+.swiper__snap {
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  .swiper__slide,
+  .footer {
+    scroll-snap-align: end;
+  }
+}
 
 .swiper__slide {
   width: 100%;
@@ -104,6 +102,7 @@
   .swiper__slide1 {
     &__text2 {
       font-size: 27px;
+      line-height: 24px;
     }
   }
 }

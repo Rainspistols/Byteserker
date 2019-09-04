@@ -35,7 +35,7 @@
     z-index: 1;
     outline: none;
     &:after {
-      content: "";
+      content: '';
       width: 200vw;
       height: 65%;
       position: absolute;
@@ -78,6 +78,3 @@
     }
   }
 }
-
-
-

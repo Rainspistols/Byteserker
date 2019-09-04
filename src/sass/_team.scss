@@ -105,6 +105,7 @@
     }
     &__img {
       width: 325px;
+      height: 420px;
     }
     .container {
       width: 325px;
@@ -123,7 +124,7 @@
       top: 0;
       left: 0;
       width: 100%;
-      height: calc(100% - 117px);
+      height: calc(100% - 114px);
       background: $black;
       padding: 0;
       flex-wrap: wrap;

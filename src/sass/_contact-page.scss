@@ -90,8 +90,10 @@
   }
 }
 
-@media (min-width:$desktop-width) {
+@media (min-width: $desktop-width) {
   .contact-page {
+    height: 100vh;
+
     .container {
       justify-content: space-around;
     }
@@ -103,8 +105,8 @@
       width: 400px;
     }
     & input,
-  & textarea {
-    font-size: 26px;
-  }
+    & textarea {
+      font-size: 26px;
+    }
   }
 }
