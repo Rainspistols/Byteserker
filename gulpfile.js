@@ -35,7 +35,7 @@ function imageMinify() {
         }),
       ])
     )
-    .pipe(gulp.dest('dist/img'));
+    .pipe(gulp.dest('docs/img'));
 }
 
 function copyToDocs() {
@@ -80,7 +80,7 @@ function watchFunc() {
 }
 
 function cleanUp() {
-  return del('dist');
+  return del('docs');
 }
 
 // Создает в папке src css файл который необходим для html
