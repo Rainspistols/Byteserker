@@ -289,7 +289,7 @@
   cursor: pointer;
   color: #f90d3e;
   font-size: 10px;
-  padding: 0;
+  padding: 12px 0;
   width: auto;
   height: 30px;
   width: 50%;
@@ -305,7 +305,9 @@
   position: relative;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   font-size: 13px;
-  box-shadow: 0 2px 4px 0 #000000; }
+  box-shadow: 0 2px 4px 0 #000000;
+  text-align: center;
+  text-decoration: none; }
   .btn_halfround span {
     position: relative;
     z-index: 2;
@@ -623,18 +625,16 @@
     font-size: 50px; } }
 
 @media (min-width: 1200px) {
-  .contact-page {
-    height: 100vh; }
-    .contact-page .container {
-      justify-content: space-around; }
-    .contact-page .contact-form {
-      width: 33%;
-      padding-top: 30px; }
-    .contact-page__boy__img {
-      width: 400px; }
-    .contact-page input,
-    .contact-page textarea {
-      font-size: 26px; } }
+  .contact-page .container {
+    justify-content: space-around; }
+  .contact-page .contact-form {
+    width: 33%;
+    padding-top: 30px; }
+  .contact-page__boy__img {
+    width: 400px; }
+  .contact-page input,
+  .contact-page textarea {
+    font-size: 26px; } }
 
 .work {
   background: #000000; }
@@ -657,7 +657,8 @@
     margin-left: auto;
     margin-right: auto;
     width: 320px;
-    display: flex; }
+    display: flex;
+    outline: none; }
     .work__item::after {
       position: absolute;
       font-family: 'Source Sans Pro', sans-serif;
