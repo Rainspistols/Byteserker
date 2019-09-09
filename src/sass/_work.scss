@@ -1,29 +1,23 @@
 .work {
   background: $black;
   &__slogan {
-    @include myriad--black;
-    font-size: 40px;
+    @extend %myriad--black;
     color: $white;
     text-transform: uppercase;
     letter-spacing: -0.05em;
-    line-height: 30px;
-    padding-top: 115px;
-    margin-bottom: 30px;
     & span {
       color: $cherry;
     }
   }
   &__item {
     position: relative;
+    margin: 0;
     cursor: pointer;
-    margin-left: auto;
-    margin-right: auto;
-    width: 320px;
     display: flex;
     outline: none;
     &::after {
       position: absolute;
-      @include myriad--black;
+      @extend %myriad--black;
       font-size: 32px;
       color: $white;
       bottom: 30px;
@@ -31,10 +25,10 @@
       text-transform: uppercase;
       letter-spacing: -0.03em;
       line-height: 25px;
-      @include transition--05_easy_in_out;
+      @extend %transition--05_easy_in_out;
     }
     &::before {
-      content: "";
+      content: '';
       position: absolute;
       width: 100%;
       height: 100%;
@@ -44,17 +38,17 @@
       pointer-events: 0;
       border: 0 solid $black;
       z-index: 2;
-      transition: border-width 0.3s ease;
+      transition: border-width 0.3s ease-in-out;
     }
   }
   &__item--borodinski::after {
-    content: "barber shop borodinski";
+    content: 'barber shop borodinski';
   }
   &__item--cat-energy::after {
-    content: "Cat-energy";
+    content: 'Cat-energy';
   }
   &__item--device::after {
-    content: "Device";
+    content: 'Device';
   }
   &__item--cat-energy-logo {
     width: 87px;
@@ -66,12 +60,23 @@
     background-image: url(../img/cat-en-logo.svg);
   }
   &__item:focus::after,
-  &__item:active::after {
+  &__item:active::after,
+  &__item:hover::after {
     color: $cherry;
   }
-  &__item:hover::before,
-  &__item:focus::before {
-    border-width: 10px;
+}
+
+@media (max-width: $mobile-width-only) {
+  .work {
+    &__slogan {
+      font-size: 40px;
+      line-height: 30px;
+      padding-top: 115px;
+      margin-bottom: 30px;
+    }
+    &__item {
+      width: 320px;
+    }
   }
 }
 
@@ -79,27 +84,41 @@
   .work {
     &__slogan {
       padding-top: 190px;
-      font-size: 65px;
-      line-height: 50px;
       text-align: center;
-      margin-bottom: 40px;
     }
     &__list {
       display: flex;
       flex-wrap: wrap;
       margin: auto;
-      width: 768px;
     }
-    &__img {
-      width: 384px;
-      margin: 0;
-    }
-    &__item--borodinski {
-      margin: 0;
+  }
+}
+
+@media (min-width: $tablet-width) and (max-width: $tablet-width-only) {
+  .work {
+    &__slogan {
+      margin-bottom: 40px;
+      font-size: 65px;
+      line-height: 50px;
     }
     &__item {
       width: auto;
-      display: flex;
+      margin: auto;
+    }
+    &__list {
+      width: 768px; 
+    }
+    &__img {
+      width: 384px;
+    }
+  }
+}
+
+@media (max-width: $tablet-width-only) {
+  .work {
+    &__item:hover::before,
+    &__item:focus::before {
+      border-width: 10px;
     }
   }
 }
@@ -113,7 +132,6 @@
     }
     &__item {
       width: 25%;
-      margin: 0;
     }
     &__list {
       width: 1200px;

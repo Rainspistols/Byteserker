@@ -1,21 +1,5 @@
-@mixin textshadow {
-  text-shadow: 0 0 5px 5px #000000;
-}
-
-@mixin line {
-  &::after {
-    position: absolute;
-    content: '';
-    width: 50%;
-    height: 1px;
-    background: $white;
-    bottom: -15px;
-    left: 0;
-  }
-}
-
-@mixin text_index_big {
-  @include myriad--black;
+%text_index_big {
+  @extend %myriad--black;
   font-size: 40px;
   color: $white;
   margin: 0;
@@ -25,7 +9,7 @@
   position: relative;
   &::after {
     position: absolute;
-    content: "";
+    content: '';
     width: 50%;
     height: 1px;
     background: $white;
@@ -35,6 +19,7 @@
   line-height: 36px;
   letter-spacing: -0.03em;
   text-shadow: 0px 2px 4px $cherry;
+
   @media (min-width: $tablet-width) {
     font-size: 65px;
     margin-bottom: 45px;
@@ -47,30 +32,19 @@
       height: 0;
     }
   }
+
   @media (min-width: $desktop-width) {
     padding-top: 215px;
   }
 }
 
-@mixin text_big_without-line {
-  @include myriad--black;
-  font-size: 40px;
-  color: $white;
-  margin: 0;
-  margin-bottom: 30px;
-  padding-top: 105px;
-  text-align: left;
-  position: relative;
-  line-height: 36px;
-  letter-spacing: -0.03em;
-}
-
-@mixin text_index_small {
-  @include myriad--regular;
+%text_index_small {
+  @extend %myriad--regular;
   font-size: 14px;
   line-height: 16px;
   color: $white;
   margin: 0 0 12px;
+
   @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 20px;
@@ -78,7 +52,41 @@
   }
 }
 
-@mixin transition--05_easy_in_out {
+%transition--05_easy_in_out {
   transition: all 0.5s ease-in-out;
 }
 
+.container {
+  margin: auto;
+  position: relative;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+@media (max-width: $mobile-width-only) {
+  .container {
+    width: 320px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+@media (min-width:$tablet-width) and (max-width:$tablet-width-only) {
+  .container {
+    width: $tablet-width;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+@media(min-width: $desktop-width) {
+  .container {
+    width: $desktop-width;
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+}
+
+.js-overflow-hidden {
+  overflow: hidden;
+}

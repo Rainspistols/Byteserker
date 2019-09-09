@@ -1,15 +1,12 @@
 .contact-page {
-  @include gradient--white_to_whitegray;
+  @extend %gradient--white_to_whitegray;
   &__boy-img {
-    padding-top: 100px;
-    margin: 0 auto 20px;
     display: block;
     color: black;
   }
   &__slogan {
-    @include myriad--black;
+    @extend %myriad--black;
     color: #616160;
-    font-size: 40px;
     letter-spacing: -0.03em;
     margin: 20px 0 50px;
   }
@@ -17,22 +14,12 @@
   & textarea {
     width: 100%;
     font-size: 20px;
-    @include myriad--black;
+    @extend %myriad--black;
     color: #616160;
     &::-webkit-input-placeholder {
-      /* WebKit browsers */
-      color: #999896;
-    }
-    &:-moz-placeholder {
-      /* Mozilla Firefox 4 to 18 */
       color: #999896;
     }
     &::-moz-placeholder {
-      /* Mozilla Firefox 19+ */
-      color: #999896;
-    }
-    &:-ms-input-placeholder {
-      /* Internet Explorer 10+ */
       color: #999896;
     }
     border: none;
@@ -50,7 +37,7 @@
   }
   &__btn {
     width: 50%;
-    @include myriad--black;
+    @extend %myriad--black;
     font-size: 26px;
     background: $cherry;
     border: none;
@@ -58,7 +45,7 @@
     color: $white;
     border-radius: 0 10px 10px 0;
     margin-bottom: 30px;
-    @include transition--05_easy_in_out;
+    @extend %transition--05_easy_in_out;
     cursor: pointer;
   }
   &__btn:focus,
@@ -71,17 +58,27 @@
   }
 }
 
+@media (max-width: $mobile-width-only) {
+  .contact-page {
+    &__boy-img {
+      padding-top: 100px;
+      margin: 0 auto 20px;
+    }
+    &__slogan {
+      font-size: 40px;
+    }
+  }
+}
+
 @media (min-width: $tablet-width) {
   .contact-page {
     .container {
       display: flex;
       padding-top: 150px;
       padding-bottom: 100px;
+      justify-content: space-between;
     }
     &__boy-img {
-      width: 355px;
-      margin-left: 0;
-      margin-right: 30px;
       padding: 0;
     }
     &__slogan {
@@ -90,17 +87,22 @@
   }
 }
 
+@media (min-width: $tablet-width) and (max-width: $tablet-width-only) {
+  .contact-page {
+    &__boy-img {
+      width: 355px;
+    }
+  }
+}
+
 @media (min-width: $desktop-width) {
   .contact-page {
-    .container {
-      justify-content: space-around;
-    }
     .contact-form {
-      width: 33%;
+      width: 40%;
       padding-top: 30px;
     }
-    &__boy__img {
-      width: 400px;
+    &__boy-img {
+      width: 40%;
     }
     & input,
     & textarea {

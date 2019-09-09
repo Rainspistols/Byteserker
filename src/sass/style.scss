@@ -1,32 +1,7 @@
 $tablet-width: 768px;
 $desktop-width: 1200px;
 $mobile-width-only: 767px;
-
-.container {
-  margin: auto;
-  width: 320px;
-  padding-left: 30px;
-  padding-right: 30px;
-  position: relative;
-  height: 100%;
-  box-sizing: border-box;
-}
-
-@media (min-width:$tablet-width) {
-  .container {
-    width: $tablet-width;
-    padding-left: 40px;
-    padding-right: 40px;
-  }
-}
-
-@media(min-width: $desktop-width) {
-  .container {
-    width: $desktop-width;
-    padding-left: 100px;
-    padding-right: 100px;
-  }
-}
+$tablet-width-only: 1199px;
 
 @import "fonts";
 @import "colors";
@@ -55,3 +30,4 @@ body {
   width: 1px !important;
   overflow: hidden;
 }
+

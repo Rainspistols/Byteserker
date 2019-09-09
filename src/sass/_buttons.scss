@@ -1,42 +1,30 @@
 .main-btn {
   position: fixed;
-  width: 50px;
-  height: 50px;
-  left: calc(50% - 25px);
   border-radius: 50px;
-  top: 35px;
   background: transparent;
   padding: 0;
   cursor: pointer;
   outline: none;
-  z-index: 10;
+  z-index: 4;
   box-sizing: border-box;
-  border: 5px solid #8b8b8b;
-  @include transition--05_easy_in_out;
+  @extend %transition--05_easy_in_out;
+  border: none;
   &::-moz-focus-inner {
     border: 0;
   }
   // outer-shadow-inside circle
   &::after {
-    content: "";
+    content: '';
     position: absolute;
-    left: 0px;
-    top: 0px;
     box-shadow: 0 2px 3px 0px rgba(0, 0, 0, 0.7);
-    width: 40.5px;
-    height: 40.5px;
     border-radius: 50px;
     transition: box-shadow 0.1s ease;
     z-index: 2;
   }
   // inner-shadow-outside circle
   &::before {
-    content: "";
+    content: '';
     position: absolute;
-    left: -5px;
-    top: -5px;
-    width: 50px;
-    height: 50px;
     box-shadow: inset 0 2px 3px 0px rgba(0, 0, 0, 0.7);
     border-radius: 50px;
   }
@@ -47,29 +35,19 @@
   &:active &__sandwitch__bar {
     box-shadow: inset 0 0 1px 0px rgba(0, 0, 0, 0.3);
   }
-  &:hover,
-  &:focus {
-    border: 5px solid $cherry;
-  }
-  &:hover &__sandwitch__bar,
-  &:focus &__sandwitch__bar {
+  &:hover &__sandwitch__bar {
     background: $cherry;
   }
   &__sandwitch {
-    display: inline-block;
     cursor: pointer;
     position: absolute;
-    top: calc(50% - 12.5px);
-    left: calc(50% - 14px);
     z-index: 3;
     &__bar {
-      width: 28px;
-      height: 7px;
       background-color: $white;
       margin: 0 0 2px 0;
       border-radius: 50px;
       box-shadow: inset 0 0 1px 0px rgba(0, 0, 0, 0.3);
-      @include transition--05_easy_in_out;
+      @extend %transition--05_easy_in_out;
     }
     &__bar:last-child {
       margin-bottom: 0px;
@@ -78,7 +56,6 @@
   // Animation for menu
   /* Rotate first bar */
   .change &__sandwitch__bar1 {
-    -webkit-transform: rotate(-45deg) translate(-7px, 7px);
     transform: rotate(-45deg) translate(-7px, 7px);
     box-shadow: none;
     margin: 0;
@@ -90,7 +67,6 @@
   }
   /* Rotate last bar */
   .change &__sandwitch__bar3 {
-    -webkit-transform: rotate(45deg) translate(-3px, -3px);
     transform: rotate(45deg) translate(-3px, -3px);
     box-shadow: none;
     margin: 0;
@@ -107,66 +83,42 @@
   }
 }
 
-.btn_halfround {
-  background-color: transparent;
-  border-radius: 0 50px 50px 0;
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  cursor: pointer;
-  color: $cherry;
-  font-size: 10px;
-  padding: 12px 0;
-  width: auto;
-  height: 30px;
-  width: 50%;
-  box-sizing: border-box;
-  @include myriad--black;
-  z-index: 1;
-  display: block;
-  text-transform: uppercase;
-  outline: none;
-  overflow: hidden;
-  position: relative;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-  font-size: 13px;
-  box-shadow: 0 2px 4px 0 $black;
-  text-align: center;
-  text-decoration: none;
-  & span {
-    position: relative;
-    z-index: 2;
-    @include transition--05_easy_in_out;
-  }
-  &::after {
-    content: '';
-    position: absolute;
-    left: -8px;
-    top: 0;
-    height: 200px;
-    width: 200px;
-    background: $cherry;
-    @include transition--05_easy_in_out;
-    -webkit-transform: translateX(-100%) translateY(-25%) rotate(45deg);
-    transform: translateX(-100%) translateY(-25%) rotate(45deg);
-  }
-  &:hover:after,
-  &:focus:after {
-    -webkit-transform: translateX(-10%) translateY(-25%) rotate(45deg);
-    transform: translateX(-10%) translateY(-25%) rotate(45deg);
-  }
-  &:hover span,
-  &:focus span {
-    color: $white;
-  }
-  &:hover,
-  &:focus {
-    border: 1px solid $cherry;
+@media (max-width: $mobile-width-only) {
+  .main-btn {
+    width: 50px;
+    height: 50px;
+    left: calc(50% - 25px);
+    top: 35px;
+    border: 5px solid #8b8b8b;
+    &::after {
+      left: 0px;
+      top: 0px;
+      width: 40.5px;
+      height: 40.5px;
+    }
+    &::before {
+      left: -5px;
+      top: -5px;
+      width: 50px;
+      height: 50px;
+    }
+    &:hover {
+      border: 5px solid $cherry;
+    }
+    &__sandwitch {
+      top: calc(50% - 12.5px);
+      left: calc(50% - 14px);
+      &__bar {
+        width: 28px;
+        height: 7px;
+      }
+    }
   }
 }
 
 @media (min-width: $tablet-width) {
   .main-btn {
     left: calc(50% - 37.5px);
-    top: 35px;
     width: 75px;
     height: 75px;
     border: 8px solid #8b8b8b;
@@ -182,8 +134,7 @@
       height: 75px;
       width: 75px;
     }
-    &:hover,
-    &:focus {
+    &:hover {
       border: 8px solid $cherry;
     }
     &__sandwitch {
@@ -195,13 +146,81 @@
       }
     }
     .change &__sandwitch__bar1 {
-      -webkit-transform: rotate(-45deg) translate(-9px, 9px);
       transform: rotate(-45deg) translate(-9px, 9px);
     }
     /* Rotate last bar */
     .change &__sandwitch__bar3 {
-      -webkit-transform: rotate(45deg) translate(-6px, -6px);
       transform: rotate(45deg) translate(-6px, -6px);
+    }
+  }
+}
+
+@media (min-width: $tablet-width) and (max-width: $tablet-width-only) {
+  .main-btn {
+    top: 35px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .main-btn {
+    top: 75px;
+  }
+}
+
+.btn_halfround {
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  color: $cherry;
+  width: 50%;
+  box-sizing: border-box;
+  @extend %myriad--black;
+  z-index: 1;
+  display: block;
+  text-transform: uppercase;
+  outline: none;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  & span {
+    position: relative;
+    z-index: 2;
+    @extend %transition--05_easy_in_out;
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    left: -8px;
+    top: 0;
+    background: $cherry;
+    @extend %transition--05_easy_in_out;
+    transform: translateX(-100%) translateY(-25%) rotate(45deg);
+  }
+  &:hover:after,
+  &:focus:after {
+    transform: translateX(-10%) translateY(-25%) rotate(45deg);
+  }
+  &:hover span,
+  &:focus span {
+    color: $white;
+  }
+  &:hover,
+  &:focus {
+    border: 1px solid $cherry;
+  }
+}
+
+@media (max-width: $mobile-width-only) {
+  .btn_halfround {
+    font-size: 13px;
+    padding: 6px 0;
+    height: 30px;
+    box-shadow: 0 2px 4px 0 $black;
+    border-radius: 0 50px 50px 0;
+    &::after {
+      height: 200px;
+      width: 200px;
     }
   }
 }
@@ -212,6 +231,7 @@
     height: 65px;
     border-radius: 0 20px 20px 0;
     box-shadow: 0 4px 8px 0 $black;
+    padding: 12px 0;
     &::after {
       height: 600px;
       width: 600px;
@@ -219,14 +239,8 @@
   }
 }
 
-@media(min-width: $desktop-width) {
+@media (min-width: $desktop-width) {
   .btn_halfround {
     width: 33%;
-  }
-}
-
-@media (min-width:$desktop-width) {
-  .main-btn {
-    top: 75px;
   }
 }

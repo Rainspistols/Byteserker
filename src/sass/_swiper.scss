@@ -13,7 +13,6 @@
   height: 100vh;
   box-sizing: border-box;
   position: relative;
-  min-height: 423px;
   overflow: hidden;
   &__text--vital {
     color: $cherry;
@@ -24,9 +23,9 @@
 .swiper__slide1 {
   text-align: center;
   position: relative;
-  @include gradient--black_to_gray;
+  @extend %gradient--black_to_gray;
   &__text1 {
-    @include myriad--black;
+    @extend %myriad--black;
     font-size: 200px;
     color: $white;
     letter-spacing: -0.1em;
@@ -35,18 +34,16 @@
     width: 100%;
     line-height: 150px;
     position: absolute;
-    margin: 0;
+    margin: 0 0 0 -10px;
   }
   &__text2 {
     color: $white;
-    @include myriad--italic;
-    font-size: 16px;
+    @extend %myriad--italic;
     letter-spacing: -0.08em;
     position: absolute;
     width: 100%;
     bottom: 35px;
     margin: 0 auto;
-    line-height: 14px;
     & span {
       display: block;
     }
@@ -63,51 +60,74 @@
   }
 }
 
-.swiper__slide2 {
-  @include gradient--black_to_blue;
-  &__img {
-    position: absolute;
-    left: 110px;
-    top: 250px;
+.swiper {
+  &__slide2 {
+    @extend %gradient--black_to_blue;
+    &__img {
+      position: absolute;
+    }
+  }
+  &__slide3 {
+    @extend %gradient--black_to_green;
+    &__img {
+      position: absolute;
+    }
+  }
+  &__slide4 {
+    @extend %gradient--black_to_purple;
+    &__img {
+      position: absolute;
+    }
+  }
+  &__slide__text1 {
+    @extend %text_index_big;
+  }
+  &__slide__text2 {
+    @extend %text_index_small;
   }
 }
 
-.swiper__slide3 {
-  @include gradient--black_to_green;
-  &__img {
-    position: absolute;
-    top: 243px;
-    left: 130px;
-  }
-}
-
-.swiper__slide4 {
-  @include gradient--black_to_green;
-  &__img {
-    position: absolute;
-    right: 8px;
-    top: 250px;
-  }
-}
-
-.swiper__slide__text1 {
-  @include text_index_big;
-}
-
-.swiper__slide__text2 {
-  @include text_index_small;
-}
-
-@media (min-width: $tablet-width) {
-  .swiper__slide1 {
-    &__text2 {
-      font-size: 27px;
-      line-height: 24px;
+@media (max-width: $mobile-width-only) {
+  .swiper {
+    &__slide1 {
+      &__text2 {
+        font-size: 16px;
+        line-height: 14px;
+      }
+    }
+    &__slide2 {
+      &__img {
+        left: 110px;
+        top: 250px;
+      }
+    }
+    &__slide3 {
+      &__img {
+        top: 243px;
+        left: 130px;
+      }
+    }
+    &__slide4 {
+      &__img {
+        right: 8px;
+        top: 250px;
+      }
     }
   }
 }
 
 @media (min-width: $tablet-width) {
+  .swiper {
+    &__slide1 {
+      &__text2 {
+        font-size: 27px;
+        line-height: 24px;
+      }
+    }
+  }
+}
+
+@media (min-width: $tablet-width) and (max-width: $tablet-width-only) {
   .swiper {
     &__slide__text2 {
       width: 50%;

@@ -1,54 +1,44 @@
 .team {
-  @include gradient--white_to_whitegray--reverse;
+  @extend %gradient--white_to_whitegray--reverse;
   &__slogan {
-    @include myriad--black;
+    @extend %myriad--black;
     text-transform: uppercase;
-    margin: 0 0 42px;
-    padding-top: 115px;
     text-align: center;
     color: $gold;
     font-size: 40px;
     line-height: 30px;
   }
   &__list {
-    width: 300px;
     margin: auto;
   }
   &__img {
     display: block;
-    margin: auto;
-    margin-bottom: 16px;
   }
   &__name {
-    @include myriad--black;
+    @extend %myriad--black;
     display: block;
     color: $gold;
     text-align: center;
-    font-size: 18px;
-    line-height: 14px;
   }
   &__about {
-    @include myriad--regular;
-    font-size: 15px;
-    line-height: 15px;
+    @extend %myriad--regular;
     color: $grey;
     display: block;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     text-align: center;
   }
   &__icons {
     display: flex;
-    padding-bottom: 50px;
     align-items: center;
-    height: auto;
     flex-wrap: wrap;
+    @extend %transition--05_easy_in_out;
+    margin: auto;
   }
   &__icon {
-    opacity: 0.7;
-    margin-right: 20px;
     cursor: pointer;
-    @include transition--05_easy_in_out;
+    @extend %transition--05_easy_in_out;
     outline: 0;
+    height: 30px;
   }
   &__icon:active,
   &__icon:focus {
@@ -56,39 +46,94 @@
   }
 }
 
-@media (min-width: $tablet-width) {
+@media (max-width: $mobile-width-only) {
   .team {
-    .container {
-      padding-left: 30px;
-      padding-right: 30px;
-      height: auto;
-      width: 300px;
-    }
     &__slogan {
-      padding-top: 180px;
-      margin-bottom: 30px;
+      margin: 0 0 42px;
+      padding-top: 115px; 
     }
     &__list {
-      width: $tablet-width;
+      width: 300px;
+    }
+    &__img {
+      margin: auto auto 16px;
+    }
+    &__name {
+      font-size: 18px;
+      line-height: 14px;
+      margin-bottom: 5px;
+    }
+    &__about {
+      font-size: 15px;
+      line-height: 15px;
+    }
+    &__icons {
+      width: 300px;
+    }
+    &__icon {
+      margin-right: 24px;
+      margin-bottom: 10px;
+      &:nth-child(6n) {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .team {
+    &__slogan {
+      padding-top: 180px;
+      margin: 0 0 30px;
+    }
+    &__list {
       display: flex;
       flex-flow: row wrap;
       justify-content: space-around;
+    }
+    &__img {
+      margin: 0 0 16px;
+    }
+    &__name {
+      line-height: 18px;
+    }
+  }
+}
+
+@media (min-width: $tablet-width) and (max-width: $tablet-width-only) {
+  .team {
+    &__list {
+      width: $tablet-width;
     }
     &__item {
       width: 300px;
     }
     &__img {
       width: 300px;
-      margin: 0;
-      margin-bottom: 16px;
     }
     &__name {
       font-size: 22px;
-      line-height: 18px;
     }
     &__about {
       font-size: 18px;
       line-height: 18px;
+    }
+  }
+}
+
+@media (max-width: $tablet-width-only) {
+  .team {
+    &__icons {
+      height: auto;
+      padding-bottom: 50px;
+    }
+    &__icon {
+      opacity: 0.7;
+      margin-right: 24px;
+      margin-bottom: 10px;
+      &:nth-child(6n) {
+        margin-right: 0;
+      }
     }
   }
 }
@@ -107,9 +152,6 @@
       width: 325px;
       height: 420px;
     }
-    .container {
-      width: 325px;
-    }
     &__name {
       font-size: 30px;
       margin-bottom: 15px;
@@ -126,14 +168,10 @@
       width: 100%;
       height: calc(100% - 114px);
       background: $black;
-      padding: 0;
-      flex-wrap: wrap;
-      padding-left: 60px;
-      padding-right: 60px;
+      padding: 0 60px;
       box-sizing: border-box;
       align-content: flex-start;
       opacity: 0;
-      @include transition--05_easy_in_out;
       & img {
         z-index: 3;
         position: relative;
@@ -170,7 +208,7 @@
         @include myriad--black;
         opacity: 0;
         white-space: nowrap;
-        @include transition--05_easy_in_out;
+        transition: all 0.5s ease-in-out;
       }
     }
     &__icon__about::after {
