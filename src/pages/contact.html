@@ -12,8 +12,9 @@
     />
   </head>
   <body class="lol">
+    <h1 class="visually-hidden">Contact us page</h1>
     <nav class="nav">
-      <button class="main-btn main-btn--absolute">
+      <button class="main-btn main-btn--absolute" aria-label="menu button">
         <div class="main-btn__sandwitch main-btn__sandwitch--grey">
           <div class="main-btn__sandwitch__bar main-btn__sandwitch__bar1"></div>
           <div class="main-btn__sandwitch__bar main-btn__sandwitch__bar2"></div>
@@ -24,7 +25,6 @@
       <section class="menu">
         <h2 class="visually-hidden">Byteserker menu</h2>
         <div class="container">
-          <h1 class="visually-hidden"><span>Byteserker main menu</span></h1>
           <p class="company-name">Byteserker</p>
           <ul class="menu__list">
             <li class="menu__item">
@@ -44,14 +44,12 @@
       </section>
     </nav>
     <main class="contact-page">
-      <h1 class="visually-hidden">Contact Us</h1>
       <div class="container">
         <img
           class="contact-page__boy-img"
           src="../img/boy-with-pen.svg"
           alt=""
-          width="138px"
-          height="auto"
+          width="138"
         />
         <form
           class="contact-form"
@@ -85,7 +83,6 @@
           />
           <span></span>
           <textarea
-            type="textarea"
             name="message"
             rows="2"
             placeholder="Message"

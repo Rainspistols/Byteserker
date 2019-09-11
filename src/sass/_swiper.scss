@@ -26,13 +26,9 @@
   @extend %gradient--black_to_gray;
   &__text1 {
     @extend %myriad--black;
-    font-size: 200px;
     color: $white;
     letter-spacing: -0.1em;
-    top: calc(50% - 75px);
-    text-align: center;
     width: 100%;
-    line-height: 150px;
     position: absolute;
     margin: 0 0 0 -10px;
   }
@@ -151,6 +147,18 @@
         top: 410px;
         left: 314px;
         width: 600px;
+      }
+    }
+  }
+}
+
+@media (max-width: $tablet-width-only) {
+  .swiper{
+    &__slide1 {
+      &__text1 {
+        top: calc(50% - 75px);
+        font-size: 200px;
+        line-height: 150px;
       }
     }
   }

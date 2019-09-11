@@ -6,11 +6,7 @@ $gold: #a79376;
 
 %gradient--black_to_gray {
   background: #000000;
-  background: linear-gradient(
-    145deg,
-    rgba(0, 0, 0, 1) 0%,
-    rgba(67, 67, 67, 1) 100%
-  );
+  background-image: linear-gradient(145deg, #000000, #424242);
 }
 
 %gradient--black_to_blue {

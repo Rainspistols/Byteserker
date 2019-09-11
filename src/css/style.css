@@ -16,7 +16,7 @@
 
 .swiper__slide1 {
   background: #000000;
-  background: linear-gradient(145deg, black 0%, #434343 100%); }
+  background-image: linear-gradient(145deg, #000000, #424242); }
 
 .swiper__slide2 {
   background: #053243;
@@ -139,13 +139,9 @@
   text-align: center;
   position: relative; }
   .swiper__slide1__text1 {
-    font-size: 200px;
     color: #ffffff;
     letter-spacing: -0.1em;
-    top: calc(50% - 75px);
-    text-align: center;
     width: 100%;
-    line-height: 150px;
     position: absolute;
     margin: 0 0 0 -10px; }
   .swiper__slide1__text2 {
@@ -210,6 +206,12 @@
     top: 410px;
     left: 314px;
     width: 600px; } }
+
+@media (max-width: 1199px) {
+  .swiper__slide1__text1 {
+    top: calc(50% - 75px);
+    font-size: 200px;
+    line-height: 150px; } }
 
 @media (min-width: 1200px) {
   .swiper__slide1__text1 {
