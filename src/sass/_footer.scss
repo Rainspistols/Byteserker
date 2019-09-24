@@ -22,13 +22,15 @@
     justify-content: space-around;
     &__item {
       @extend %myriad--black;
-      color: $white;
-      opacity: 0.5;
       text-decoration: none;
       letter-spacing: -0.03em;
       margin-right: 5px;
       @extend %transition--05_easy_in_out;
       outline: 0;
+    }
+    &__item[href] {
+      opacity: 0.5;
+      color: $white;
     }
     &__item:last-child {
       margin-right: 0;
@@ -36,6 +38,9 @@
     &__item[href]:hover,
     &__item[href]:focus {
       opacity: 1;
+    }
+    &__item:not([href]) {
+      color: $cherry;
     }
   }
 }

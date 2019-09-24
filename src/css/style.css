@@ -438,16 +438,19 @@
     display: flex;
     justify-content: space-around; }
     .footer__nav__item {
-      color: #ffffff;
-      opacity: 0.5;
       text-decoration: none;
       letter-spacing: -0.03em;
       margin-right: 5px;
       outline: 0; }
+    .footer__nav__item[href] {
+      opacity: 0.5;
+      color: #ffffff; }
     .footer__nav__item:last-child {
       margin-right: 0; }
     .footer__nav__item[href]:hover, .footer__nav__item[href]:focus {
       opacity: 1; }
+    .footer__nav__item:not([href]) {
+      color: #f90d3e; }
 
 @media (max-width: 767px) {
   .footer__slogan {
