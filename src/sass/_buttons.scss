@@ -84,22 +84,23 @@
 
 @media (max-width: $mobile-width-only) {
   .main-btn {
-    width: 60px;
+    width: 100%;
     height: 60px;
-    left: calc(50% - 30px);
-    top: 4.6948%;
     border: 6px solid #8b8b8b;
+    border-radius: 0;
     &::after {
       left: 0px;
       top: 0px;
-      width: 48px;
+      width: 100%;
       height: 48px;
+      border-radius: 0;
     }
     &::before {
-      left: -6px;
-      top: -6px;
-      width: 60px;
+      left: -8px;
+      top: -8px;
+      width: calc(100% + 16px);
       height: 60px;
+      border-radius: 0;
     }
     &:hover {
       border: 6px solid $cherry;

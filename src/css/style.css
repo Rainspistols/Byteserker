@@ -275,21 +275,22 @@
 
 @media (max-width: 767px) {
   .main-btn {
-    width: 60px;
+    width: 100%;
     height: 60px;
-    left: calc(50% - 30px);
-    top: 4.6948%;
-    border: 6px solid #8b8b8b; }
+    border: 6px solid #8b8b8b;
+    border-radius: 0; }
     .main-btn::after {
       left: 0px;
       top: 0px;
-      width: 48px;
-      height: 48px; }
+      width: 100%;
+      height: 48px;
+      border-radius: 0; }
     .main-btn::before {
-      left: -6px;
-      top: -6px;
-      width: 60px;
-      height: 60px; }
+      left: -8px;
+      top: -8px;
+      width: calc(100% + 16px);
+      height: 60px;
+      border-radius: 0; }
     .main-btn:hover {
       border: 6px solid #f90d3e; }
     .main-btn__sandwitch {
