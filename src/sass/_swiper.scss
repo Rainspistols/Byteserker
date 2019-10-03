@@ -23,7 +23,7 @@
 .swiper__slide1 {
   text-align: center;
   position: relative;
-  @extend %gradient--black_to_gray;
+  background: #141414;
   &__text1 {
     @extend %myriad--black;
     color: $white;
@@ -58,19 +58,19 @@
 
 .swiper {
   &__slide2 {
-    @extend %gradient--black_to_blue;
+    background: #051a22;
     &__img {
       position: absolute;
     }
   }
   &__slide3 {
-    @extend %gradient--black_to_green;
+    background: #101b19;
     &__img {
       position: absolute;
     }
   }
   &__slide4 {
-    @extend %gradient--black_to_purple;
+    background: #1B0F1C;
     &__img {
       position: absolute;
     }
@@ -153,7 +153,7 @@
 }
 
 @media (max-width: $tablet-width-only) {
-  .swiper{
+  .swiper {
     &__slide1 {
       &__text1 {
         top: calc(50% - 75px);

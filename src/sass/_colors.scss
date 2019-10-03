@@ -3,38 +3,3 @@ $black: #000000;
 $cherry: #f90d3e;
 $grey: #909090;
 $gold: #a79376;
-
-%gradient--black_to_gray {
-  background: #000000;
-  background-image: linear-gradient(145deg, #000000, #424242);
-}
-
-%gradient--black_to_blue {
-  background: #053243;
-  background: linear-gradient(325deg, #060606, #044f6b);
-}
-
-%gradient--black_to_green {
-  background: #0c1916;
-  background: linear-gradient(325deg, #1f4037, #000000);
-}
-
-%gradient--black_to_purple {
-  background: #241425;
-  background: linear-gradient(325deg, #000000, #39203b);
-}
-
-%gradient--darkgray_to_gray {
-  background: #000000;
-  background: linear-gradient(145deg, #232526, #414345);
-}
-
-%gradient--white_to_whitegray {
-  background: #ece9e6;
-  background: linear-gradient(145deg, #ece9e6, #ffffff);
-}
-
-%gradient--white_to_whitegray--reverse {
-  background: #ece9e6;
-  background: linear-gradient(-90deg, #ece9e6, #ffffff);
-}

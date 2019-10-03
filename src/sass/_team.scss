@@ -1,5 +1,5 @@
 .team {
-  @extend %gradient--white_to_whitegray--reverse;
+  background: #F4F2F0;
   &__slogan {
     @extend %myriad--black;
     text-transform: uppercase;
