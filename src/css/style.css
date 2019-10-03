@@ -221,7 +221,6 @@
   outline: none;
   z-index: 4;
   box-sizing: border-box;
-  border: none;
   /* Rotate first bar */
   /* Fade out the second bar */
   /* Rotate last bar */ }
@@ -257,7 +256,7 @@
     .main-btn__sandwitch__bar:last-child {
       margin-bottom: 0px; }
   .change .main-btn__sandwitch__bar1 {
-    transform: rotate(-45deg) translate(-7px, 7px);
+    transform: rotate(-45deg) translate(-8px, 8px);
     box-shadow: none;
     margin: 0; }
   .change .main-btn__sandwitch__bar2 {

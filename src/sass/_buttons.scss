@@ -8,7 +8,6 @@
   z-index: 4;
   box-sizing: border-box;
   @extend %transition--05_easy_in_out;
-  border: none;
   &::-moz-focus-inner {
     border: 0;
   }
@@ -56,7 +55,7 @@
   // Animation for menu
   /* Rotate first bar */
   .change &__sandwitch__bar1 {
-    transform: rotate(-45deg) translate(-7px, 7px);
+    transform: rotate(-45deg) translate(-8px, 8px);
     box-shadow: none;
     margin: 0;
   }
