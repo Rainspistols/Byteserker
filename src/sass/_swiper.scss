@@ -38,7 +38,7 @@
     letter-spacing: -0.08em;
     position: absolute;
     width: 100%;
-    bottom: 8.2159%;
+    bottom: 30px;
     margin: 0 auto;
     & span {
       display: block;
@@ -47,7 +47,7 @@
   &::after {
     position: absolute;
     content: '';
-    width: 2px;
+    width: 0.6vw;
     height: 25px;
     border-radius: 50px 50px 0 0;
     bottom: 0px;
@@ -86,9 +86,14 @@
 @media (max-width: $mobile-width-only) {
   .swiper {
     &__slide1 {
+      &__text1 {
+        top: calc(50% - 30vw);
+        font-size: 60vw;
+        line-height: 60vw;
+      }
       &__text2 {
-        font-size: 16px;
-        line-height: 14px;
+        font-size: 5.5vw;
+        line-height: 5vw;
       }
     }
     &__slide2 {
@@ -153,15 +158,13 @@
 }
 
 @media (max-width: $tablet-width-only) {
-  .swiper {
-    &__slide1 {
-      &__text1 {
-        top: calc(50% - 75px);
-        font-size: 200px;
-        line-height: 150px;
-      }
-    }
-  }
+  // .swiper {
+  //   &__slide1 {
+  //     &__text1 {
+
+  //     }
+  //   }
+  // }
 }
 
 @media (min-width: $desktop-width) {
