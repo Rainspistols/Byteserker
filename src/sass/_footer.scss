@@ -3,16 +3,10 @@
   background: $black;
   &__slogan {
     @extend %myriad--black;
-    font-size: 40px;
-    color: $white;
-    margin-bottom: 0 0 30px;
-    padding-top: 105px;
-    text-align: left;
     position: relative;
-    line-height: 36px;
     letter-spacing: -0.05em;
-    color: $white;
     text-align: center;
+    color: $white;
     & span {
       color: $cherry;
     }
@@ -48,13 +42,14 @@
 @media (max-width: $mobile-width-only) {
   .footer {
     &__slogan {
-      font-size: 28px;
-      margin: 0 0 20px;
-      padding-top: 25px;
+      font-size: 8vw;
+      margin: 0 0 6.25vw;
+      padding-top: 8vw;
+      line-height: 8vw;
     }
     &__nav__item {
-      font-size: 20px;
-      margin-bottom: 25px;
+      font-size: 6vw;
+      margin-bottom: 8vw;
     }
   }
 }

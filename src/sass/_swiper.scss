@@ -70,7 +70,7 @@
     }
   }
   &__slide4 {
-    background: #1B0F1C;
+    background: #1b0f1c;
     &__img {
       position: absolute;
     }
@@ -98,20 +98,23 @@
     }
     &__slide2 {
       &__img {
-        left: 110px;
-        top: 250px;
+        left: -30vw;
+        top: 150vw;
+        width: 160vw;
       }
     }
     &__slide3 {
       &__img {
-        top: 243px;
-        left: 130px;
+        left: -30vw;
+        top: 125vw;
+        width: 160vw;
       }
     }
     &__slide4 {
       &__img {
-        right: 8px;
-        top: 250px;
+        left: -30vw;
+        top: 125vw;
+        width: 160vw;
       }
     }
   }

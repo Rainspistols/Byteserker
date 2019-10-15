@@ -1,10 +1,11 @@
 %text_index_big {
   @extend %myriad--black;
-  font-size: 40px;
+  font-size: 12.5vw;
+  line-height: 12.5vw;
   color: $white;
   margin: 0;
-  margin-bottom: 30px;
-  padding-top: 105px;
+  margin-bottom: 10vw;
+  padding-top: 35vw;
   text-align: left;
   position: relative;
   &::after {
@@ -13,10 +14,9 @@
     width: 50%;
     height: 1px;
     background: $white;
-    bottom: -15px;
+    bottom: -7vw;
     left: 0;
   }
-  line-height: 36px;
   letter-spacing: -0.03em;
   text-shadow: 0px 2px 4px $cherry;
 
@@ -40,15 +40,15 @@
 
 %text_index_small {
   @extend %myriad--regular;
-  font-size: 14px;
-  line-height: 16px;
+  font-size: 6.5vw;
+  line-height: 10vw;
   color: $white;
-  margin: 0 0 12px;
+  margin: 0 0 3.75vw;
+  width: 70vw;
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 20px;
-    margin: 0 0 45px;
   }
 }
 
@@ -65,9 +65,9 @@
 
 @media (max-width: $mobile-width-only) {
   .container {
-    width: 320px;
-    padding-left: 30px;
-    padding-right: 30px;
+    min-width: 320px;
+    padding-left: 10vw;
+    padding-right: 10vw;
   }
 }
 
