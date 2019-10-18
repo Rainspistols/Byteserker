@@ -17,14 +17,10 @@
     &::after {
       position: absolute;
       @extend %myriad--black;
-      font-size: 32px;
       color: $white;
-      bottom: 30px;
-      left: 30px;
       text-transform: uppercase;
       letter-spacing: -0.03em;
-      line-height: 25px;
-      @extend %transition--05_easy_in_out;
+      transition: color 0.3s ease;
     }
     &::before {
       content: '';
@@ -34,7 +30,6 @@
       top: 0;
       left: 0;
       box-sizing: border-box;
-      pointer-events: 0;
       border: 0 solid $black;
       z-index: 2;
       transition: border-width 0.3s ease-in-out;
@@ -68,14 +63,23 @@
 @media (max-width: $mobile-only) {
   .work {
     &__slogan {
-      font-size: 40px;
-      line-height: 30px;
-      padding-top: 115px;
-      margin-bottom: 30px;
+      font-size: 4vh;
+      line-height: 3vh;
+      padding-top: 14vh;
+      margin: 0 0 4vh 0;
     }
     &__item {
-      width: 320px;
+      width: 100vw !important;
       margin: 0 auto;
+      &::after {
+        font-size: 32px;
+        bottom: 30px;
+        left: 30px;
+        line-height: 25px;
+      }
+    }
+    &__img {
+      width: 100vw;
     }
   }
 }
@@ -83,7 +87,6 @@
 @media (min-width: $tablet) {
   .work {
     &__slogan {
-      padding-top: 190px;
       text-align: center;
     }
     &__list {
@@ -97,19 +100,26 @@
 @media (min-width: $tablet) and (max-width: $tablet-only) {
   .work {
     &__slogan {
-      margin-bottom: 40px;
-      font-size: 65px;
-      line-height: 50px;
+      margin-bottom: 4vh;
+      font-size: 6.5vh;
+      line-height: 5vh;
+      padding-top: 140px;
     }
     &__item {
       width: auto;
       margin: auto;
+      &::after {
+        font-size: 3.2vh;
+        bottom: 3vh;
+        left: 3vh;
+        line-height: 2.5vh;
+      }
     }
     &__list {
-      width: 768px; 
+      width: 100vw;
     }
     &__img {
-      width: 384px;
+      width: 50vw;
     }
   }
 }
@@ -118,7 +128,7 @@
   .work {
     &__item:hover::before,
     &__item:focus::before {
-      border-width: 10px;
+      border-width: 2vh;
     }
   }
 }
@@ -126,22 +136,34 @@
 @media (min-width: $desktop) {
   .work {
     &__slogan {
-      margin-bottom: 50px;
-      font-size: 90px;
-      line-height: 70px;
+      margin-bottom: 3vh;
+      font-size: 5vw;
+      line-height: 6vw;
+      padding-top: 160px;
     }
     &__item {
-      width: 25%;
-    }
-    &__list {
-      width: 1200px;
+      width: 25vw;
+      &::after {
+        font-size: 2.5vw;
+        bottom: 3vh;
+        left: 3vh;
+        line-height: 2vw;
+      }
     }
     &__item:hover::before,
     &__item:focus::before {
       border-width: 15px;
     }
     &__img {
-      width: 300px;
+      width: 25vw;
+    }
+  }
+}
+
+@media (min-width:$desktop2k) {
+  .work {
+    &__slogan {
+      padding-top: 16vh;
     }
   }
 }

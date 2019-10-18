@@ -94,7 +94,7 @@
       margin: 0 0 3vw 0;
       width: 40%; } }
 
-.main-btn, .main-btn__sandwitch__bar, .btn_halfround span, .btn_halfround::after, .footer__nav__item, .menu, .contact-page__btn, .work__item::after, .team__icons, .team__icon {
+.main-btn, .main-btn__sandwitch__bar, .btn_halfround span, .btn_halfround::after, .footer__nav__item, .menu, .contact-page__btn, .team__icons, .team__icon {
   transition: all 0.5s ease-in-out; }
 
 .container {
@@ -504,7 +504,7 @@
     .footer__nav__item {
       text-decoration: none;
       letter-spacing: -0.03em;
-      margin-right: 5px;
+      margin-right: 5vw;
       outline: 0; }
     .footer__nav__item[href] {
       opacity: 0.5;
@@ -520,28 +520,31 @@
   .footer__slogan {
     font-size: 8vw;
     line-height: 8vw;
-    margin: 0 0 6.25vw;
+    margin: 0 0 3.25vw;
     padding-top: 8vw; }
   .footer__nav__item {
     font-size: 6vw;
     margin-bottom: 8vw; } }
 
 @media (min-width: 1000px) {
-  .footer .container {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    align-items: baseline; }
-  .footer__slogan {
-    padding: 0;
-    margin: 85px 0 100px;
-    font-size: 4vw;
-    line-height: 4vw; }
-  .footer__nav__item {
-    margin: 0 10px 0 0;
-    font-size: 2.5vw; }
-  .footer__nav {
-    margin: 85px 0 100px; } }
+  .footer {
+    min-height: 200px;
+    height: 10vw; }
+    .footer .container {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      align-items: center; }
+    .footer__slogan {
+      padding: 0;
+      margin: 0;
+      font-size: 4vw;
+      line-height: 4vw; }
+    .footer__nav__item {
+      margin: 0 1vw 0 0;
+      font-size: 2.5vw; }
+    .footer__nav {
+      margin: 10px 0 0; } }
 
 .menu {
   background: #323435;
@@ -745,13 +748,10 @@
     outline: none; }
     .work__item::after {
       position: absolute;
-      font-size: 32px;
       color: #ffffff;
-      bottom: 30px;
-      left: 30px;
       text-transform: uppercase;
       letter-spacing: -0.03em;
-      line-height: 25px; }
+      transition: color 0.3s ease; }
     .work__item::before {
       content: '';
       position: absolute;
@@ -760,7 +760,6 @@
       top: 0;
       left: 0;
       box-sizing: border-box;
-      pointer-events: 0;
       border: 0 solid #000000;
       z-index: 2;
       transition: border-width 0.3s ease-in-out; }
@@ -783,17 +782,23 @@
 
 @media (max-width: 767px) {
   .work__slogan {
-    font-size: 40px;
-    line-height: 30px;
-    padding-top: 115px;
-    margin-bottom: 30px; }
+    font-size: 4vh;
+    line-height: 3vh;
+    padding-top: 14vh;
+    margin: 0 0 4vh 0; }
   .work__item {
-    width: 320px;
-    margin: 0 auto; } }
+    width: 100vw !important;
+    margin: 0 auto; }
+    .work__item::after {
+      font-size: 32px;
+      bottom: 30px;
+      left: 30px;
+      line-height: 25px; }
+  .work__img {
+    width: 100vw; } }
 
 @media (min-width: 768px) {
   .work__slogan {
-    padding-top: 190px;
     text-align: center; }
   .work__list {
     display: flex;
@@ -802,34 +807,48 @@
 
 @media (min-width: 768px) and (max-width: 999px) {
   .work__slogan {
-    margin-bottom: 40px;
-    font-size: 65px;
-    line-height: 50px; }
+    margin-bottom: 4vh;
+    font-size: 6.5vh;
+    line-height: 5vh;
+    padding-top: 140px; }
   .work__item {
     width: auto;
     margin: auto; }
+    .work__item::after {
+      font-size: 3.2vh;
+      bottom: 3vh;
+      left: 3vh;
+      line-height: 2.5vh; }
   .work__list {
-    width: 768px; }
+    width: 100vw; }
   .work__img {
-    width: 384px; } }
+    width: 50vw; } }
 
 @media (max-width: 999px) {
   .work__item:hover::before, .work__item:focus::before {
-    border-width: 10px; } }
+    border-width: 2vh; } }
 
 @media (min-width: 1000px) {
   .work__slogan {
-    margin-bottom: 50px;
-    font-size: 90px;
-    line-height: 70px; }
+    margin-bottom: 3vh;
+    font-size: 5vw;
+    line-height: 6vw;
+    padding-top: 160px; }
   .work__item {
-    width: 25%; }
-  .work__list {
-    width: 1200px; }
+    width: 25vw; }
+    .work__item::after {
+      font-size: 2.5vw;
+      bottom: 3vh;
+      left: 3vh;
+      line-height: 2vw; }
   .work__item:hover::before, .work__item:focus::before {
     border-width: 15px; }
   .work__img {
-    width: 300px; } }
+    width: 25vw; } }
+
+@media (min-width: 2000px) {
+  .work__slogan {
+    padding-top: 16vh; } }
 
 .team {
   background: #F4F2F0; }
