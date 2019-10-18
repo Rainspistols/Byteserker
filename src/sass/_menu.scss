@@ -11,7 +11,6 @@
   @extend %transition--05_easy_in_out;
   .company-name {
     @extend %myriad--black;
-    color: $white;
     line-height: 36px;
     color: $cherry;
     text-transform: uppercase;
@@ -61,9 +60,9 @@
 @media (max-width: $mobile-only) {
   .menu {
     .company-name {
-      padding-top: 115px;
-      font-size: 40px;
-      margin-bottom: 50px;
+      padding-top: 20vh;
+      font-size: 12vw;
+      margin-bottom: 12vh;
       text-align: center;
     }
     &__list {
@@ -77,19 +76,19 @@
         background: $grey;
       }
       &::after {
-        width: calc(50% + 30px);
-        right: calc(0px - 30px);
+        width: 50%;
+        right: -10vw;
         bottom: -20px;
       }
       &::before {
-        width: calc(50% + 30px);
-        left: calc(0px - 30px);
+        width: 50%;
+        left: -10vw;
         top: -20px;
       }
     }
     &__item__link {
-      font-size: 42px;
-      line-height: 42px;
+      font-size: 8vh;
+      line-height: 12vh;
     }
   }
 }
@@ -97,11 +96,11 @@
 @media (min-width: $tablet) {
   .menu {
     .company-name {
-      font-size: 60px;
+      font-size: 6vh;
     }
     &__item__link {
-      font-size: 125px;
-      line-height: 100px;
+      font-size: 12.5vh;
+      line-height: 10vh;
     }
   }
 }
@@ -109,28 +108,29 @@
 @media (min-width: $tablet) and (max-width: $tablet-only) {
   .menu {
     .company-name {
-      padding-top: 250px;
-      margin-bottom: 110px;
+      padding-top: 25vh;
+      margin-bottom: 12vh;
       text-align: left;
-      padding-left: 75px;
+      padding-left: 0;
     }
     &__list {
-      padding-left: 75px;
+      padding-left: 0;
     }
   }
-} 
+}
 
 @media (min-width: $desktop) {
   .menu {
     .company-name {
-      padding-top: 190px;  
-      margin-bottom: 20px;
+      padding-top: 28vh;
+      margin-bottom: 4vh;
       width: 50%;
       text-align: right;
     }
     &__list {
-      width: 50%;
-      right: -50%;
+      width: 100%;
+      right: 0%;
+      padding: 0;
     }
   }
 }
