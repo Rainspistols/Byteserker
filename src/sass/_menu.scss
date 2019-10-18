@@ -58,7 +58,7 @@
   }
 }
 
-@media (max-width: $mobile-width-only) {
+@media (max-width: $mobile-only) {
   .menu {
     .company-name {
       padding-top: 115px;
@@ -94,7 +94,7 @@
   }
 }
 
-@media (min-width: $tablet-width) {
+@media (min-width: $tablet) {
   .menu {
     .company-name {
       font-size: 60px;
@@ -106,7 +106,7 @@
   }
 }
 
-@media (min-width: $tablet-width) and (max-width: $tablet-width-only) {
+@media (min-width: $tablet) and (max-width: $tablet-only) {
   .menu {
     .company-name {
       padding-top: 250px;
@@ -120,7 +120,7 @@
   }
 } 
 
-@media (min-width: $desktop-width) {
+@media (min-width: $desktop) {
   .menu {
     .company-name {
       padding-top: 190px;  

@@ -58,7 +58,7 @@
   }
 }
 
-@media (max-width: $mobile-width-only) {
+@media (max-width: $mobile-only) {
   .contact-page {
     &__boy-img {
       padding-top: 100px;
@@ -70,7 +70,7 @@
   }
 }
 
-@media (min-width: $tablet-width) {
+@media (min-width: $tablet) {
   .contact-page {
     .container {
       display: flex;
@@ -87,7 +87,7 @@
   }
 }
 
-@media (min-width: $tablet-width) and (max-width: $tablet-width-only) {
+@media (min-width: $tablet) and (max-width: $tablet-only) {
   .contact-page {
     &__boy-img {
       width: 355px;
@@ -95,7 +95,7 @@
   }
 }
 
-@media (min-width: $desktop-width) {
+@media (min-width: $desktop) {
   .contact-page {
     .contact-form {
       width: 40%;

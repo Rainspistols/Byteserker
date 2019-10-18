@@ -46,7 +46,7 @@
   }
 }
 
-@media (max-width: $mobile-width-only) {
+@media (max-width: $mobile-only) {
   .team {
     &__slogan {
       margin: 0 0 42px;
@@ -80,7 +80,7 @@
   }
 }
 
-@media (min-width: $tablet-width) {
+@media (min-width: $tablet) {
   .team {
     &__slogan {
       padding-top: 180px;
@@ -100,10 +100,10 @@
   }
 }
 
-@media (min-width: $tablet-width) and (max-width: $tablet-width-only) {
+@media (min-width: $tablet) and (max-width: $tablet-only) {
   .team {
     &__list {
-      width: $tablet-width;
+      width: $tablet;
     }
     &__item {
       width: 300px;
@@ -121,7 +121,7 @@
   }
 }
 
-@media (max-width: $tablet-width-only) {
+@media (max-width: $tablet-only) {
   .team {
     &__icons {
       height: auto;
@@ -138,10 +138,10 @@
   }
 }
 
-@media (min-width: $desktop-width) {
+@media (min-width: $desktop) {
   .team {
     &__list {
-      width: $desktop-width;
+      width: $desktop;
     }
     &__item {
       position: relative;

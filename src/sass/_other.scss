@@ -1,54 +1,91 @@
 %text_index_big {
   @extend %myriad--black;
-  font-size: 12.5vw;
-  line-height: 12.5vw;
   color: $white;
-  margin: 0;
-  margin-bottom: 10vw;
-  padding-top: 35vw;
-  text-align: left;
   position: relative;
   &::after {
     position: absolute;
     content: '';
-    width: 50%;
-    height: 1px;
+    height: 0.3vw;
     background: $white;
-    bottom: -7vw;
     left: 0;
   }
-  letter-spacing: -0.03em;
-  text-shadow: 0px 2px 4px $cherry;
-
-  @media (min-width: $tablet-width) {
-    font-size: 65px;
-    margin-bottom: 45px;
-    padding-top: 240px;
-    text-align: left;
-    position: relative;
-    line-height: 40px;
+  @media (max-width: $mobile-only) {
+    font-size: 12.5vw;
+    line-height: 12.5vw;
+    margin: 0 0 10vw 0;
+    padding-top: 16vh;
+    text-shadow: 0px 2px 4px $cherry;
+    letter-spacing: -0.03em;
     &::after {
-      width: 0;
-      height: 0;
+      bottom: -6vw;
+      width: 50%;
+    }
+  }
+  @media (min-width: $tablet) {
+    line-height: 12vh;
+    letter-spacing: -0.5vh;
+    text-shadow: 0px 0.4vw 0.6vw $cherry;
+    font-size: 11vh;
+    &::after {
+      width: 10vw;
+    }
+  }
+  @media (min-width: $tablet) and (max-width: $tablet-only) {
+    width: 50vw;
+    margin: 0 0 10vh;
+    padding-top: 14vh;
+    &::after {
+      bottom: -7vw;
+    }
+  }
+  @media (min-width: $desktop) {
+    width: 20vw;
+    padding-top: 18vh;
+    margin: 0 0 8vh;
+    &::after {
+      bottom: -4vh;
     }
   }
 
-  @media (min-width: $desktop-width) {
-    padding-top: 215px;
+  @media(min-width:$desktop2k) {
+    font-size: 7vw;
+    line-height: 7vw;
+    padding-top: 11vw;
+    margin: 0 0 6vw 0;
+    &::after {
+      bottom: -3vw;
+    }
   }
 }
 
 %text_index_small {
-  @extend %myriad--regular;
-  font-size: 6.5vw;
-  line-height: 10vw;
   color: $white;
-  margin: 0 0 3.75vw;
-  width: 70vw;
-
-  @media (min-width: $tablet-width) {
-    font-size: 20px;
-    line-height: 20px;
+  @extend %myriad--regular;
+  @media (max-width: $mobile-only) {
+    margin: 0 0 3.75vw;
+    font-size: 6.5vw;
+    line-height: 10vw;
+    width: 70vw;
+  }
+  @media (min-width: $tablet) {
+    width: 40vw;
+  }
+  @media (min-width: $tablet) and (max-width: $tablet-only) {
+    margin: 0 0 7vh;
+    line-height: 4vh;
+    font-size: 2.5vh;
+  }
+  @media (min-width: $desktop) and (max-width: $desktop-only) {
+    margin: 0 0 4vh;
+    line-height: 210%;
+    font-size: 200%;
+    width: 35vw;
+  }
+  @media(min-width:$desktop2k) {
+    font-size: 2vw;
+    line-height: 3vw;
+    margin: 0 0 3vw 0;
+    width: 40%;
   }
 }
 
@@ -57,33 +94,22 @@
 }
 
 .container {
-  margin: auto;
   position: relative;
   height: 100%;
   box-sizing: border-box;
 }
 
-@media (max-width: $mobile-width-only) {
+@media (max-width: $mobile-only) {
   .container {
     min-width: 320px;
-    padding-left: 10vw;
-    padding-right: 10vw;
+    padding: 0 10vw;
   }
 }
 
-@media (min-width:$tablet-width) and (max-width:$tablet-width-only) {
+@media (min-width: $tablet) {
   .container {
-    width: $tablet-width;
-    padding-left: 40px;
-    padding-right: 40px;
-  }
-}
-
-@media(min-width: $desktop-width) {
-  .container {
-    width: $desktop-width;
-    padding-left: 100px;
-    padding-right: 100px;
+    width: 75%;
+    margin: 0 auto;
   }
 }
 

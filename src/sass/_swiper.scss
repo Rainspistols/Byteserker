@@ -27,7 +27,7 @@
   &__text1 {
     @extend %myriad--black;
     color: $white;
-    letter-spacing: -0.1em;
+    letter-spacing: -0.08em;
     width: 100%;
     position: absolute;
     margin: 0 0 0 -10px;
@@ -38,7 +38,6 @@
     letter-spacing: -0.08em;
     position: absolute;
     width: 100%;
-    bottom: 30px;
     margin: 0 auto;
     & span {
       display: block;
@@ -53,6 +52,7 @@
     bottom: 0px;
     left: 50%;
     background: $white;
+    max-width: 8px;
   }
 }
 
@@ -83,7 +83,7 @@
   }
 }
 
-@media (max-width: $mobile-width-only) {
+@media (max-width: $mobile-only) {
   .swiper {
     &__slide1 {
       &__text1 {
@@ -94,111 +94,127 @@
       &__text2 {
         font-size: 5.5vw;
         line-height: 5vw;
+        bottom: 30px;
       }
     }
     &__slide2 {
       &__img {
-        left: -30vw;
+        left: -35vw;
         top: 150vw;
-        width: 160vw;
+        width: 170vw;
       }
     }
     &__slide3 {
       &__img {
-        left: -30vw;
-        top: 125vw;
+        left: -34vw;
+        top: 111vw;
         width: 160vw;
       }
     }
     &__slide4 {
       &__img {
         left: -30vw;
-        top: 125vw;
+        top: 108vw;
         width: 160vw;
       }
     }
   }
 }
 
-@media (min-width: $tablet-width) {
+@media (min-width: $tablet) {
   .swiper {
     &__slide1 {
+      &__text1 {
+        top: calc(50% - 14vw);
+        font-size: 30vw;
+        line-height: 24vw;
+      }
       &__text2 {
         font-size: 27px;
         line-height: 24px;
+        bottom: 35px;
+      }
+    }
+    &__slide2 {
+      &__img {
+        transform: rotate(90deg);
+        top: 25vh;
+      }
+    }
+    &__slide4 {
+      .swiper__slide__text1 {
+        width: 60vw !important;
+      }
+    }
+  }
+}
+@media (min-width: $tablet) and (max-width: $tablet-only) {
+  .swiper {
+    &__slide2 {
+      &__img {
+        width: 110vh;
+        left: 8vw;
+      }
+    }
+    &__slide3 {
+      &__img {
+        top: 19vh;
+        left: 33vw;
+        width: 36vh;
+      }
+    }
+    &__slide4 {
+      &__img {
+        top: 35vh;
+        left: 40vw;
+        width: 60vh;
       }
     }
   }
 }
 
-@media (min-width: $tablet-width) and (max-width: $tablet-width-only) {
+@media (min-width: $desktop) {
   .swiper {
-    &__slide__text2 {
-      width: 50%;
-    }
     &__slide2 {
       &__img {
-        width: 600px;
-        left: 260px;
-        top: 452px;
+        width: 200%;
+        right: -105%;
       }
     }
     &__slide3 {
       &__img {
-        top: 450px;
-        left: 302px;
-        width: 500px;
+        top: 10vh;
+        left: 45%;
+        width: 50vh;
       }
     }
     &__slide4 {
       &__img {
-        top: 410px;
-        left: 314px;
-        width: 600px;
+        top: 20vh;
+        left: 45vw;
+        width: auto;
+        height: 67vh;
       }
     }
   }
 }
 
-@media (max-width: $tablet-width-only) {
-  // .swiper {
-  //   &__slide1 {
-  //     &__text1 {
-
-  //     }
-  //   }
-  // }
-}
-
-@media (min-width: $desktop-width) {
+@media (min-width: $desktop2k) {
   .swiper {
-    &__slide1__text1 {
-      font-size: 250px;
-      line-height: 190px;
-      top: calc(50% - 85px);
-    }
-    &__slide__text2 {
-      width: 33%;
-    }
-    &__slide2 {
-      &__img {
-        width: 700px;
-        left: 484px;
-        top: 209px;
-      }
+    &__slide1__text2 {
+      font-size: 1.5vw;
+      line-height: 1.5vw;
     }
     &__slide3 {
       &__img {
-        top: 212px;
-        left: 498px;
-        width: 600px;
+        left: 58%;
       }
     }
     &__slide4 {
       &__img {
-        top: 210px;
-        left: 515px;
-        width: 600px;
+        top: 12vh;
+        left: 32vw;
+        height: 75vh;
       }
     }
   }
