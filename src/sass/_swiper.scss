@@ -113,8 +113,8 @@
     }
     &__slide4 {
       &__img {
-        left: -30vw;
-        top: 108vw;
+        left: -27vw;
+        top: 130vw;
         width: 160vw;
       }
     }
@@ -126,7 +126,7 @@
     &__slide1 {
       &__text1 {
         top: calc(50% - 14vw);
-        font-size: 30vw;
+        font-size: 24vw;
         line-height: 24vw;
       }
       &__text2 {
@@ -137,8 +137,16 @@
     }
     &__slide2 {
       &__img {
-        transform: rotate(90deg);
-        top: 25vh;
+        top: -5vh;
+        left: 60%;
+      }
+    }
+    &__slide3 {
+      &__img {
+        top: -5vh;
+        left: 42vw;
+        height: 110vh;
+        width: auto;
       }
     }
     &__slide4 {
@@ -152,22 +160,16 @@
   .swiper {
     &__slide2 {
       &__img {
-        width: 110vh;
-        left: 8vw;
-      }
-    }
-    &__slide3 {
-      &__img {
-        top: 19vh;
-        left: 33vw;
-        width: 36vh;
+        width: auto;
+        height: 110vh;
       }
     }
     &__slide4 {
       &__img {
-        top: 35vh;
-        left: 40vw;
+        top: 52vh;
+        left: 25vw;
         width: 60vh;
+        transform: rotate(-61deg);
       }
     }
   }
@@ -177,21 +179,16 @@
   .swiper {
     &__slide2 {
       &__img {
-        width: 200%;
-        right: -105%;
-      }
-    }
-    &__slide3 {
-      &__img {
-        top: 10vh;
-        left: 45%;
-        width: 50vh;
+        max-width: 60vw;
+        height: auto;
+        min-height: 110vh;
+        width: 80%;
       }
     }
     &__slide4 {
       &__img {
-        top: 20vh;
-        left: 45vw;
+        top: 22vh;
+        left: 38vw;
         width: auto;
         height: 67vh;
       }

@@ -218,21 +218,22 @@
 
 .btn_halfround {
   background-color: transparent;
-  border: 0.3vw solid rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.5);
   cursor: pointer;
   color: $cherry;
   width: 50%;
   box-sizing: border-box;
   @extend %myriad--black;
   z-index: 1;
-  display: block;
   text-transform: uppercase;
   outline: none;
   overflow: hidden;
   position: relative;
-  text-align: center;
   text-decoration: none;
   transition: border 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   & span {
     position: relative;
     z-index: 2;
@@ -245,9 +246,6 @@
     top: 0;
     background: $cherry;
     @extend %transition--05_easy_in_out;
-    transform: translateX(-100%) translateY(-16vw) rotate(45deg);
-    height: 62.5vw;
-    width: 62.5vw;
   }
   &:hover:after,
   &:focus:after {
@@ -267,41 +265,60 @@
 @media (max-width: $mobile-only) {
   .btn_halfround {
     font-size: 4vw;
-    padding-top: 2vw;
-    padding-bottom: 2vw;
-    padding: 2vw 0;
     height: 10vw;
     box-shadow: 0 2px 4px 0 $black;
     border-radius: 0 50px 50px 0;
+    &::after {
+      transform: translateX(-260px) translateY(-40px) rotate(45deg);
+      height: 300px;
+      width: 300px;
+    }
   }
 }
 
 @media (min-width: $tablet) {
   .btn_halfround {
-    font-size: 2.5vh;
-    height: 6%;
     border-radius: 0 20px 20px 0;
     box-shadow: 0 4px 8px 0 $black;
-    padding: 1.3vh 0;
   }
 }
 
-@media (min-width:$desktop) {
+@media (min-width: $tablet) and (max-width: $tablet-only) {
   .btn_halfround {
-    font-size: 3.5vh;
-    line-height: 3vh;
+    font-size: 35px;
+    height: 65px;
+    &::after {
+      transform: translateX(-460px) translateY(-80px) rotate(45deg);
+      height: 500px;
+      width: 500px;
+    }
+  }
+}
+
+@media (min-width: $desktop) and (max-width:$desktop-only) {
+  .btn_halfround {
+    font-size: 35px;
+    line-height: 35px;
+    width: 30vw;
+    height: 65px;
+    &::after {
+      transform: translateX(-880px) translateY(-160px) rotate(45deg);
+      height: 1000px;
+      width: 1000px;
+    }
   }
 }
 
 @media (min-width: $desktop2k) {
   .btn_halfround {
     width: 40%;
-    height: 4vw;
+    height: 10vw;
     font-size: 2vw;
-    padding: 1vw 0;
     border-radius: 0 1.5vw 1.5vw 0;
     &::after {
-      transform: translateX(-100%) translateY(-27%) rotate(45deg);
+      transform: translateX(-47vw) translateY(-10vw) rotate(45deg);
+      width: 50vw;
+      height: 50vw;
     }
   }
 }

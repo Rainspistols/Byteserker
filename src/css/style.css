@@ -20,7 +20,7 @@
   .swiper__slide__text1::after {
     position: absolute;
     content: '';
-    height: 0.3vw;
+    height: 1px;
     background: #ffffff;
     left: 0; }
   @media (max-width: 767px) {
@@ -36,26 +36,28 @@
         width: 50%; } }
   @media (min-width: 768px) {
     .swiper__slide__text1 {
-      line-height: 12vh;
       letter-spacing: -0.5vh;
-      text-shadow: 0px 0.4vw 0.6vw #f90d3e;
-      font-size: 11vh; }
+      text-shadow: 0px 0.4vw 0.6vw #f90d3e; }
       .swiper__slide__text1::after {
         width: 10vw; } }
   @media (min-width: 768px) and (max-width: 999px) {
     .swiper__slide__text1 {
       width: 50vw;
       margin: 0 0 10vh;
-      padding-top: 14vh; }
+      padding-top: 14vh;
+      line-height: 12vh;
+      font-size: 11vh; }
       .swiper__slide__text1::after {
         bottom: -7vw; } }
   @media (min-width: 1000px) {
     .swiper__slide__text1 {
       width: 20vw;
-      padding-top: 18vh;
-      margin: 0 0 8vh; }
+      padding-top: 22vh;
+      margin: 0 0 60px;
+      line-height: 100px;
+      font-size: 90px; }
       .swiper__slide__text1::after {
-        bottom: -4vh; } }
+        bottom: -30px; } }
   @media (min-width: 2000px) {
     .swiper__slide__text1 {
       font-size: 7vw;
@@ -83,9 +85,9 @@
       font-size: 2.5vh; } }
   @media (min-width: 1000px) and (max-width: 1999px) {
     .swiper__slide__text2 {
-      margin: 0 0 4vh;
-      line-height: 210%;
-      font-size: 200%;
+      margin: 0 0 30px;
+      line-height: 38px;
+      font-size: 26px;
       width: 35vw; } }
   @media (min-width: 2000px) {
     .swiper__slide__text2 {
@@ -195,49 +197,49 @@
     top: 111vw;
     width: 160vw; }
   .swiper__slide4__img {
-    left: -30vw;
-    top: 108vw;
+    left: -27vw;
+    top: 130vw;
     width: 160vw; } }
 
 @media (min-width: 768px) {
   .swiper__slide1__text1 {
     top: calc(50% - 14vw);
-    font-size: 30vw;
+    font-size: 24vw;
     line-height: 24vw; }
   .swiper__slide1__text2 {
     font-size: 27px;
     line-height: 24px;
     bottom: 35px; }
   .swiper__slide2__img {
-    transform: rotate(90deg);
-    top: 25vh; }
+    top: -5vh;
+    left: 60%; }
+  .swiper__slide3__img {
+    top: -5vh;
+    left: 42vw;
+    height: 110vh;
+    width: auto; }
   .swiper__slide4 .swiper__slide__text1 {
     width: 60vw !important; } }
 
 @media (min-width: 768px) and (max-width: 999px) {
   .swiper__slide2__img {
-    width: 110vh;
-    left: 8vw; }
-  .swiper__slide3__img {
-    top: 19vh;
-    left: 33vw;
-    width: 36vh; }
+    width: auto;
+    height: 110vh; }
   .swiper__slide4__img {
-    top: 35vh;
-    left: 40vw;
-    width: 60vh; } }
+    top: 52vh;
+    left: 25vw;
+    width: 60vh;
+    transform: rotate(-61deg); } }
 
 @media (min-width: 1000px) {
   .swiper__slide2__img {
-    width: 200%;
-    right: -105%; }
-  .swiper__slide3__img {
-    top: 10vh;
-    left: 45%;
-    width: 50vh; }
+    max-width: 60vw;
+    height: auto;
+    min-height: 110vh;
+    width: 80%; }
   .swiper__slide4__img {
-    top: 20vh;
-    left: 45vw;
+    top: 22vh;
+    left: 38vw;
     width: auto;
     height: 67vh; } }
 
@@ -420,20 +422,21 @@
 
 .btn_halfround {
   background-color: transparent;
-  border: 0.3vw solid rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.5);
   cursor: pointer;
   color: #f90d3e;
   width: 50%;
   box-sizing: border-box;
   z-index: 1;
-  display: block;
   text-transform: uppercase;
   outline: none;
   overflow: hidden;
   position: relative;
-  text-align: center;
   text-decoration: none;
-  transition: border 0.3s ease; }
+  transition: border 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
   .btn_halfround span {
     position: relative;
     z-index: 2; }
@@ -442,10 +445,7 @@
     position: absolute;
     left: -8px;
     top: 0;
-    background: #f90d3e;
-    transform: translateX(-100%) translateY(-16vw) rotate(45deg);
-    height: 62.5vw;
-    width: 62.5vw; }
+    background: #f90d3e; }
   .btn_halfround:hover:after, .btn_halfround:focus:after {
     transform: translateX(-10%) translateY(-25%) rotate(45deg); }
   .btn_halfround:hover span,
@@ -458,35 +458,49 @@
 @media (max-width: 767px) {
   .btn_halfround {
     font-size: 4vw;
-    padding-top: 2vw;
-    padding-bottom: 2vw;
-    padding: 2vw 0;
     height: 10vw;
     box-shadow: 0 2px 4px 0 #000000;
-    border-radius: 0 50px 50px 0; } }
+    border-radius: 0 50px 50px 0; }
+    .btn_halfround::after {
+      transform: translateX(-260px) translateY(-40px) rotate(45deg);
+      height: 300px;
+      width: 300px; } }
 
 @media (min-width: 768px) {
   .btn_halfround {
-    font-size: 2.5vh;
-    height: 6%;
     border-radius: 0 20px 20px 0;
-    box-shadow: 0 4px 8px 0 #000000;
-    padding: 1.3vh 0; } }
+    box-shadow: 0 4px 8px 0 #000000; } }
 
-@media (min-width: 1000px) {
+@media (min-width: 768px) and (max-width: 999px) {
   .btn_halfround {
-    font-size: 3.5vh;
-    line-height: 3vh; } }
+    font-size: 35px;
+    height: 65px; }
+    .btn_halfround::after {
+      transform: translateX(-460px) translateY(-80px) rotate(45deg);
+      height: 500px;
+      width: 500px; } }
+
+@media (min-width: 1000px) and (max-width: 1999px) {
+  .btn_halfround {
+    font-size: 35px;
+    line-height: 35px;
+    width: 30vw;
+    height: 65px; }
+    .btn_halfround::after {
+      transform: translateX(-880px) translateY(-160px) rotate(45deg);
+      height: 1000px;
+      width: 1000px; } }
 
 @media (min-width: 2000px) {
   .btn_halfround {
     width: 40%;
-    height: 4vw;
+    height: 10vw;
     font-size: 2vw;
-    padding: 1vw 0;
     border-radius: 0 1.5vw 1.5vw 0; }
     .btn_halfround::after {
-      transform: translateX(-100%) translateY(-27%) rotate(45deg); } }
+      transform: translateX(-47vw) translateY(-10vw) rotate(45deg);
+      width: 50vw;
+      height: 50vw; } }
 
 .footer {
   position: relative;
