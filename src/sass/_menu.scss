@@ -73,7 +73,8 @@
         position: absolute;
         content: '';
         height: 1px;
-        background: $grey;
+        background: rgb(92, 88, 88);
+        box-shadow:0 1px 0 0 rgb(158, 155, 155);
       }
       &::after {
         width: 50%;
@@ -97,6 +98,19 @@
   .menu {
     .company-name {
       font-size: 6vh;
+      &::after,
+      &::before {
+        position: absolute;
+        content: '';
+        height: 1px;
+        width: 100vw;
+        left: -12.5vw;
+      }
+      &::after {
+        bottom: -6vh;
+        background: rgb(92, 88, 88);
+        box-shadow:0 1px 0 0 rgb(158, 155, 155);
+      }
     }
     &__item__link {
       font-size: 12.5vh;
@@ -122,15 +136,15 @@
 @media (min-width: $desktop) {
   .menu {
     .company-name {
-      padding-top: 28vh;
-      margin-bottom: 4vh;
-      width: 50%;
-      text-align: right;
+      padding-top: 22vh;
+      margin-bottom: 14vh;
+      text-align: center;
     }
     &__list {
       width: 100%;
       right: 0%;
       padding: 0;
+      text-align: center;
     }
   }
 }
