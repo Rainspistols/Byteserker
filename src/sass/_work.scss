@@ -76,6 +76,7 @@
         bottom: 30px;
         left: 30px;
         line-height: 25px;
+        width: 50%;
       }
     }
     &__img {
@@ -160,10 +161,14 @@
   }
 }
 
-@media (min-width:$desktop2k) {
+@media (min-width: $desktop2k) {
   .work {
     &__slogan {
       padding-top: 16vh;
+    }
+    &__item:hover::before,
+    &__item:focus::before {
+      border-width: 1vw;
     }
   }
 }
