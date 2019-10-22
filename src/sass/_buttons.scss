@@ -195,11 +195,11 @@
       top: -0.5vw;
     }
     &__sandwitch {
-      top: calc(50% - 1vw);
-      left: calc(50% - 1vw);
+      top: calc(50% - 1.1vw);
+      left: calc(50% - 1.1vw);
       &__bar {
-        width: 2vw;
-        height: 0.6vw;
+        width: 2.2vw;
+        height: 1.2vh;
         margin: 0 0 0.1vw 0;
       }
     }

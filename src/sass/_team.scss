@@ -4,7 +4,6 @@
     @extend %myriad--black;
     text-transform: uppercase;
     color: $cherry;
-    font-size: 40px;
     line-height: 30px;
   }
   &__name {
@@ -58,6 +57,7 @@
       margin: 0 0 5vh;
       padding-top: 15vh;
       text-align: center;
+      font-size: 40px;
     }
     &__img {
       margin: auto auto 1vh;
@@ -83,54 +83,37 @@
 @media (min-width: $tablet) {
   .team {
     &__slogan {
-      padding-top: 14vh;
-      margin: 0 0 18vh;
       text-align: right;
       padding-right: 12.5vw;
     }
     &__list {
-      width: 75%;
       justify-content: space-between;
       margin: auto;
       display: flex;
       flex-flow: row wrap;
     }
     &__item {
-      width: 30vw;
       position: relative;
       margin-bottom: 0;
-      &:first-child {
-        margin-top: -20vh;
-      }
-      &:last-child {
-        margin-bottom: 4vh;
+      &:nth-child(2) {
+        margin-top: 18vh;
       }
       &:nth-child(3n) {
-        margin-top: -12vh;
+        margin-top: -10vh;
+        margin-bottom: 4vh;
       }
     }
     &__img {
       width: 100%;
-      margin: 0 0 1vh;
-      box-shadow: 5px 5px 5px 0 gray;
     }
     &__name {
-      font-size: 4vh;
+
       line-height: 3vh;
-      margin-bottom: 0.5vh;
       position: absolute;
-      width: 100%;
       left: -5vw;
-      text-align: right;
-      transform: rotate(-90deg);
       top: 0;
       writing-mode: tb-rl;
       transform: rotate(180deg);
-    }
-    &__about {
-      font-size: 1.8vh;
-      line-height: 2vh;
-      margin-bottom: 1vh;
     }
     &__icon {
       margin-bottom: 1px;
@@ -142,43 +125,66 @@
   }
 }
 
-// @media (min-width: $tablet) and (max-width: $tablet-only) {
-//   .team {
-//   }
-// }
+@media (min-width: $tablet) and (max-width: $tablet-only) {
+  .team {
+    &__about {
+      font-size: 1.8vh;
+      line-height: 2vh;
+      margin-bottom: 1vh;
+    }
+    &__name {
+      font-size: 4vh;
+      margin-bottom: 0.5vh;
+    }
+    &__list {
+      width: 75%;
+    }
+    &__item {
+      width: 42%;
+    }
+    &__slogan {
+      padding-top: 14vh;
+      margin: -2vh 0;
+    }
+    &__img {
+      margin: 0 0 1vh;
+      box-shadow: 5px 5px 5px 0 gray;
+    }
+  }
+}
 
 @media (min-width: $desktop) {
   .team {
     &__slogan {
       padding-top: 160px;
       font-size: 50px;
-      margin: 0 0 78px;
+      margin: 0 0 -2vh;
     }
     &__list {
       padding-top: 0;
+      width: 70%;
     }
     &__item {
       width: 25%;
-      &:first-child {
-        margin-top: -14vh;
+      &:nth-child(2) {
+        margin-top: 10vh;
       }
       &:nth-child(3n) {
-        padding-top: 28vh;
-        .team__name {
-          top: 345px;
-        }
+        margin-top: 20vh;
       }
     }
     &__name {
-      left: -12vw;
-      top: 150px;
-      font-size: 40px;
+      font-size: 2.5vw;
       margin: 0;
     }
     &__about {
-      font-size: 20px;
-      line-height: 16px;
+      font-size: 1.5vw;
+      line-height: 1.5vw;
       margin-bottom: 16px;
+    }
+    &__img {
+      box-shadow: 8px 8px 8px 0 gray;
+      margin: 0 0 2vh;
     }
   }
 }
