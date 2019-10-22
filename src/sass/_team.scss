@@ -1,44 +1,41 @@
 .team {
-  background: #F4F2F0;
+  background: #f4f2f0;
   &__slogan {
     @extend %myriad--black;
     text-transform: uppercase;
-    text-align: center;
-    color: $gold;
+    color: $cherry;
     font-size: 40px;
     line-height: 30px;
-  }
-  &__list {
-    margin: auto;
-  }
-  &__img {
-    display: block;
   }
   &__name {
     @extend %myriad--black;
     display: block;
-    color: $gold;
-    text-align: center;
+    color: $grey;
   }
   &__about {
     @extend %myriad--regular;
     color: $grey;
     display: block;
-    margin-bottom: 20px;
     text-align: center;
   }
   &__icons {
     display: flex;
-    align-items: center;
     flex-wrap: wrap;
     @extend %transition--05_easy_in_out;
-    margin: auto;
   }
   &__icon {
     cursor: pointer;
     @extend %transition--05_easy_in_out;
     outline: 0;
-    height: 30px;
+    width: calc(20% - 0.8px);
+    margin-right: 1px;
+    & img {
+      display: block;
+      width: 100%;
+    }
+    &:nth-child(5n) {
+      margin-right: 0;
+    }
   }
   &__icon:active,
   &__icon:focus {
@@ -48,34 +45,37 @@
 
 @media (max-width: $mobile-only) {
   .team {
-    &__slogan {
-      margin: 0 0 42px;
-      padding-top: 115px; 
-    }
     &__list {
-      width: 300px;
+      justify-content: space-around;
+    }
+    &__item {
+      margin-bottom: 6vh;
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+    &__slogan {
+      margin: 0 0 5vh;
+      padding-top: 15vh;
+      text-align: center;
     }
     &__img {
-      margin: auto auto 16px;
+      margin: auto auto 1vh;
+      width: 100%;
     }
     &__name {
-      font-size: 18px;
-      line-height: 14px;
-      margin-bottom: 5px;
+      font-size: 4vh;
+      line-height: 4vh;
+      margin-bottom: 1vh;
+      text-align: center;
     }
     &__about {
-      font-size: 15px;
-      line-height: 15px;
-    }
-    &__icons {
-      width: 300px;
+      font-size: 2.5vh;
+      line-height: 2vh;
+      margin-bottom: 2vh;
     }
     &__icon {
-      margin-right: 24px;
-      margin-bottom: 10px;
-      &:nth-child(6n) {
-        margin-right: 0;
-      }
+      height: 20vw;
     }
   }
 }
@@ -83,155 +83,102 @@
 @media (min-width: $tablet) {
   .team {
     &__slogan {
-      padding-top: 180px;
-      margin: 0 0 30px;
+      padding-top: 14vh;
+      margin: 0 0 18vh;
+      text-align: right;
+      padding-right: 12.5vw;
     }
     &__list {
+      width: 75%;
+      justify-content: space-between;
+      margin: auto;
       display: flex;
       flex-flow: row wrap;
-      justify-content: space-around;
-    }
-    &__img {
-      margin: 0 0 16px;
-    }
-    &__name {
-      line-height: 18px;
-    }
-  }
-}
-
-@media (min-width: $tablet) and (max-width: $tablet-only) {
-  .team {
-    &__list {
-      width: $tablet;
     }
     &__item {
-      width: 300px;
+      width: 30vw;
+      position: relative;
+      margin-bottom: 0;
+      &:first-child {
+        margin-top: -20vh;
+      }
+      &:last-child {
+        margin-bottom: 4vh;
+      }
+      &:nth-child(3n) {
+        margin-top: -12vh;
+      }
     }
     &__img {
-      width: 300px;
+      width: 100%;
+      margin: 0 0 1vh;
+      box-shadow: 5px 5px 5px 0 gray;
     }
     &__name {
-      font-size: 22px;
+      font-size: 4vh;
+      line-height: 3vh;
+      margin-bottom: 0.5vh;
+      position: absolute;
+      width: 100%;
+      left: -5vw;
+      text-align: right;
+      transform: rotate(-90deg);
+      top: 0;
+      writing-mode: tb-rl;
+      transform: rotate(180deg);
     }
     &__about {
-      font-size: 18px;
-      line-height: 18px;
+      font-size: 1.8vh;
+      line-height: 2vh;
+      margin-bottom: 1vh;
+    }
+    &__icon {
+      margin-bottom: 1px;
+      height: auto;
+    }
+    &__icons {
+      margin-bottom: 0;
     }
   }
 }
 
-@media (max-width: $tablet-only) {
-  .team {
-    &__icons {
-      height: auto;
-      padding-bottom: 50px;
-    }
-    &__icon {
-      opacity: 0.7;
-      margin-right: 24px;
-      margin-bottom: 10px;
-      &:nth-child(6n) {
-        margin-right: 0;
-      }
-    }
-  }
-}
+// @media (min-width: $tablet) and (max-width: $tablet-only) {
+//   .team {
+//   }
+// }
 
 @media (min-width: $desktop) {
   .team {
+    &__slogan {
+      padding-top: 160px;
+      font-size: 50px;
+      margin: 0 0 78px;
+    }
     &__list {
-      width: $desktop;
+      padding-top: 0;
     }
     &__item {
-      position: relative;
-      width: 325px;
-      cursor: pointer;
-    }
-    &__img {
-      width: 325px;
-      height: 420px;
+      width: 25%;
+      &:first-child {
+        margin-top: -14vh;
+      }
+      &:nth-child(3n) {
+        padding-top: 28vh;
+        .team__name {
+          top: 345px;
+        }
+      }
     }
     &__name {
-      font-size: 30px;
-      margin-bottom: 15px;
+      left: -12vw;
+      top: 150px;
+      font-size: 40px;
+      margin: 0;
     }
     &__about {
-      font-size: 22px;
-      line-height: 20px;
-      margin-bottom: 25px;
-    }
-    &__icons {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: calc(100% - 114px);
-      background: $black;
-      padding: 0 60px;
-      box-sizing: border-box;
-      align-content: flex-start;
-      opacity: 0;
-      & img {
-        z-index: 3;
-        position: relative;
-        width: 40px;
-      }
-    }
-    &__icon {
-      position: relative;
-      margin-right: 40px;
-      margin-top: 75px;
-      opacity: 1;
-      &:nth-child(3n) {
-        margin-right: 0;
-      }
-      // white circle
-      &::before {
-        content: "";
-        position: absolute;
-        width: 60px;
-        height: 60px;
-        background: $white;
-        border-radius: 50px;
-        opacity: 1;
-        right: -10px;
-        top: -10px;
-      }
-      // title of icon
-      &::after {
-        position: absolute;
-        top: -40px;
-        left: -40px;
-        color: $white;
-        font-size: 18px;
-        @include myriad--black;
-        opacity: 0;
-        white-space: nowrap;
-        transition: all 0.5s ease-in-out;
-      }
-    }
-    &__icon__about::after {
-      content: "About me";
-      left: -18px;
-    }
-    &__icon__linked::after {
-      content: "Linkedin";
-      left: -18px;
-    }
-    &__icon__pinterest::after {
-      content: "Pinterest";
-      left: -18px;
-    }
-    &__icon__github::after {
-      content: "Github";
-      left: -9px;
-    }
-    &__icon:hover::after {
-      opacity: 1;
-    }
-    &__item:hover &__icons {
-      opacity: 1;
+      font-size: 20px;
+      line-height: 16px;
+      margin-bottom: 16px;
     }
   }
 }

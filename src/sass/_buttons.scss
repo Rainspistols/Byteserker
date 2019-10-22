@@ -164,7 +164,7 @@
 
 @media (min-width: $desktop) {
   .main-btn {
-    top: 75px;
+    top: 50px;
   }
 }
 
@@ -295,12 +295,12 @@
   }
 }
 
-@media (min-width: $desktop) and (max-width:$desktop-only) {
+@media (min-width: $desktop) and (max-width: $desktop-only) {
   .btn_halfround {
-    font-size: 35px;
-    line-height: 35px;
-    width: 30vw;
-    height: 65px;
+    font-size: 25px;
+    line-height: 25px;
+    width: 30%;
+    height: 50px;
     &::after {
       transform: translateX(-880px) translateY(-160px) rotate(45deg);
       height: 1000px;
