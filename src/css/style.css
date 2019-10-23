@@ -680,18 +680,19 @@
   overflow: hidden; }
 
 .contact-page {
-  background: #F4F3F1; }
+  background: #f4f3f1;
+  padding-bottom: 30px; }
   .contact-page__boy-img {
     display: block;
-    color: black; }
+    color: #000000; }
   .contact-page__slogan {
     color: #616160;
     letter-spacing: -0.03em;
-    margin: 20px 0 50px; }
+    margin: 2vh 0 8vh; }
   .contact-page input,
   .contact-page textarea {
     width: 100%;
-    font-size: 20px;
+    font-size: 3.5vh;
     color: #616160;
     border: none;
     background: transparent; }
@@ -712,13 +713,9 @@
   .contact-page__btn {
     width: 50%;
     font-size: 26px;
-    background: #f90d3e;
-    border: none;
-    height: 40px;
-    color: #ffffff;
-    border-radius: 0 10px 10px 0;
-    margin-bottom: 30px;
     cursor: pointer; }
+    .contact-page__btn span {
+      height: 0; }
   .contact-page__btn:focus, .contact-page__btn:active {
     opacity: 0.5;
     outline: none; }
@@ -727,10 +724,10 @@
 
 @media (max-width: 767px) {
   .contact-page__boy-img {
-    padding-top: 100px;
-    margin: 0 auto 20px; }
+    padding-top: 12vh;
+    margin: 0 auto 2vh; }
   .contact-page__slogan {
-    font-size: 40px; } }
+    font-size: 5vh; } }
 
 @media (min-width: 768px) {
   .contact-page .container {
@@ -741,7 +738,15 @@
   .contact-page__boy-img {
     padding: 0; }
   .contact-page__slogan {
-    font-size: 50px; } }
+    font-size: 50px; }
+  .contact-page .contact-form {
+    padding-left: 40px; }
+  .contact-page__btn {
+    height: 50px;
+    width: 75%; }
+  .contact-page input,
+  .contact-page textarea {
+    font-size: 2vh; } }
 
 @media (min-width: 768px) and (max-width: 999px) {
   .contact-page__boy-img {
@@ -756,6 +761,18 @@
   .contact-page input,
   .contact-page textarea {
     font-size: 26px; } }
+
+@media (min-width: 2000px) {
+  .contact-page__slogan {
+    font-size: 5vw; }
+  .contact-page input,
+  .contact-page textarea {
+    font-size: 3.5vh;
+    margin-bottom: 2.5vh; }
+  .contact-page__btn {
+    height: 6vh;
+    font-size: 4vh;
+    align-items: baseline; } }
 
 .work {
   background: #000000; }

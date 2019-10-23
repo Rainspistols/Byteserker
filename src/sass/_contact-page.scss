@@ -1,19 +1,20 @@
 .contact-page {
-  background: #F4F3F1;
+  background: #f4f3f1;
+  padding-bottom: 30px;
   &__boy-img {
     display: block;
-    color: black;
+    color: $black;
   }
   &__slogan {
     @extend %myriad--black;
     color: #616160;
     letter-spacing: -0.03em;
-    margin: 20px 0 50px;
+    margin: 2vh 0 8vh;
   }
   & input,
   & textarea {
     width: 100%;
-    font-size: 20px;
+    font-size: 3.5vh;
     @extend %myriad--black;
     color: #616160;
     &::-webkit-input-placeholder {
@@ -39,14 +40,11 @@
     width: 50%;
     @extend %myriad--black;
     font-size: 26px;
-    background: $cherry;
-    border: none;
-    height: 40px;
-    color: $white;
-    border-radius: 0 10px 10px 0;
-    margin-bottom: 30px;
     @extend %transition--05_easy_in_out;
     cursor: pointer;
+    & span {
+      height: 0;
+    }
   }
   &__btn:focus,
   &__btn:active {
@@ -61,11 +59,11 @@
 @media (max-width: $mobile-only) {
   .contact-page {
     &__boy-img {
-      padding-top: 100px;
-      margin: 0 auto 20px;
+      padding-top: 12vh;
+      margin: 0 auto 2vh;
     }
     &__slogan {
-      font-size: 40px;
+      font-size: 5vh;
     }
   }
 }
@@ -83,6 +81,17 @@
     }
     &__slogan {
       font-size: 50px;
+    }
+    .contact-form {
+      padding-left: 40px;
+    }
+    &__btn {
+      height: 50px;
+      width: 75%;
+    }
+    & input,
+    & textarea {
+      font-size: 2vh;
     }
   }
 }
@@ -107,6 +116,24 @@
     & input,
     & textarea {
       font-size: 26px;
+    }
+  }
+}
+
+@media (min-width: $desktop2k) {
+  .contact-page {
+    &__slogan {
+      font-size: 5vw;
+    }
+    & input,
+    & textarea {
+      font-size: 3.5vh;
+      margin-bottom: 2.5vh;
+    }
+    &__btn {
+      height: 6vh;
+      font-size: 4vh;
+      align-items: baseline;
     }
   }
 }
