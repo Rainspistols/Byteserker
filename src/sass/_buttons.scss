@@ -31,49 +31,49 @@
   &:active::after {
     box-shadow: 0 0 2px 0px black;
   }
-  &:active &__sandwitch__bar {
+  &:active &__bar {
     box-shadow: inset 0 0 1px 0px rgba(0, 0, 0, 0.3);
   }
-  &:hover &__sandwitch__bar {
+  &:hover &__bar {
     background: $cherry;
   }
   &__sandwitch {
     cursor: pointer;
     position: absolute;
     z-index: 3;
-    &__bar {
-      background-color: $white;
-      border-radius: 50px;
-      box-shadow: inset 0 0 1px 0px rgba(0, 0, 0, 0.3);
-      @extend %transition--05_easy_in_out;
-      margin: 0 0 2px 0;
-    }
-    &__bar:last-child {
-      margin-bottom: 0px;
-    }
+  }
+  &__bar {
+    background-color: $white;
+    border-radius: 50px;
+    box-shadow: inset 0 0 1px 0px rgba(0, 0, 0, 0.3);
+    @extend %transition--05_easy_in_out;
+    margin: 0 0 2px 0;
+  }
+  &__bar:last-child {
+    margin-bottom: 0px;
   }
   // Animation for menu
   /* Rotate first bar */
-  .change &__sandwitch__bar1 {
+  .change &__bar1 {
     transform: rotate(-45deg) translate(-2.5vw, 2.5vw);
     box-shadow: none;
     margin: 0;
   }
   /* Fade out the second bar */
-  .change &__sandwitch__bar2 {
+  .change &__bar2 {
     opacity: 0;
     margin: 0;
   }
   /* Rotate last bar */
-  .change &__sandwitch__bar3 {
+  .change &__bar3 {
     transform: rotate(45deg) translate(-1vw, -1vw);
     box-shadow: none;
     margin: 0;
   }
   &__sandwitch--grey {
-    .main-btn__sandwitch__bar1,
-    .main-btn__sandwitch__bar2,
-    .main-btn__sandwitch__bar3 {
+    .main-btn__bar1,
+    .main-btn__bar2,
+    .main-btn__bar3 {
       background-color: $grey;
     }
   }
@@ -108,11 +108,11 @@
     &__sandwitch {
       top: calc(50% - 4vw);
       left: calc(50% - 5vw);
-      &__bar {
-        width: 10vw;
-        height: 2.5vw;
-        margin: 0 0 0.6vw 0;
-      }
+    }
+    &__bar {
+      width: 10vw;
+      height: 2.5vw;
+      margin: 0 0 0.6vw 0;
     }
   }
 }
@@ -141,16 +141,16 @@
     &__sandwitch {
       top: calc(50% - 17px);
       left: calc(50% - 21px);
-      &__bar {
-        width: 42px;
-        height: 11px;
-      }
     }
-    .change &__sandwitch__bar1 {
+    &__bar {
+      width: 42px;
+      height: 11px;
+    }
+    .change &__bar1 {
       transform: rotate(-45deg) translate(-9px, 9px);
     }
     /* Rotate last bar */
-    .change &__sandwitch__bar3 {
+    .change &__bar3 {
       transform: rotate(45deg) translate(-6px, -6px);
     }
   }
@@ -197,17 +197,17 @@
     &__sandwitch {
       top: calc(50% - 1.1vw);
       left: calc(50% - 1.1vw);
-      &__bar {
-        width: 2.2vw;
-        height: 1.2vh;
-        margin: 0 0 0.1vw 0;
-      }
     }
-    .change &__sandwitch__bar1 {
+    &__bar {
+      width: 2.2vw;
+      height: 1.2vh;
+      margin: 0 0 0.1vw 0;
+    }
+    .change &__bar1 {
       transform: rotate(-45deg) translate(-0.5vw, 0.5vw);
     }
     /* Rotate last bar */
-    .change &__sandwitch__bar3 {
+    .change &__bar3 {
       transform: rotate(45deg) translate(-0.3vw, -0.3vw);
     }
     &:hover {
@@ -216,7 +216,7 @@
   }
 }
 
-.btn_halfround {
+.btn-halfround {
   background-color: transparent;
   border: 1px solid rgba(255, 255, 255, 0.5);
   cursor: pointer;
@@ -263,7 +263,7 @@
 }
 
 @media (max-width: $mobile-only) {
-  .btn_halfround {
+  .btn-halfround {
     font-size: 4vw;
     height: 10vw;
     box-shadow: 0 2px 4px 0 $black;
@@ -277,14 +277,14 @@
 }
 
 @media (min-width: $tablet) {
-  .btn_halfround {
+  .btn-halfround {
     border-radius: 0 20px 20px 0;
     box-shadow: 0 4px 8px 0 $black;
   }
 }
 
 @media (min-width: $tablet) and (max-width: $tablet-only) {
-  .btn_halfround {
+  .btn-halfround {
     font-size: 35px;
     height: 65px;
     &::after {
@@ -296,7 +296,7 @@
 }
 
 @media (min-width: $desktop) and (max-width: $desktop-only) {
-  .btn_halfround {
+  .btn-halfround {
     font-size: 25px;
     line-height: 25px;
     width: 30%;
@@ -310,7 +310,7 @@
 }
 
 @media (min-width: $desktop2k) {
-  .btn_halfround {
+  .btn-halfround {
     width: 40%;
     height: 4vw;
     font-size: 2vw;
