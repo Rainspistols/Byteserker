@@ -13,80 +13,114 @@
   </head>
 
   <body>
+    <h1 class="visually-hidden">Welcome page</h1>
     <nav class="nav">
-      <button class="main-btn">
+      <button class="main-btn" aria-label="menu button">
         <div class="main-btn__sandwitch">
-          <div class="main-btn__sandwitch__bar main-btn__sandwitch__bar1"></div>
-          <div class="main-btn__sandwitch__bar main-btn__sandwitch__bar2"></div>
-          <div class="main-btn__sandwitch__bar main-btn__sandwitch__bar3"></div>
+          <div class="main-btn__bar main-btn__bar1"></div>
+          <div class="main-btn__bar main-btn__bar2"></div>
+          <div class="main-btn__bar main-btn__bar3"></div>
         </div>
       </button>
+
+      <section class="menu">
+        <h2 class="visually-hidden">Byteserker menu</h2>
+        <div class="container">
+          <p class="company-name">Byteserker</p>
+          <ul class="menu__list">
+            <li class="menu__item">
+              <a href="index.html" class="menu__link">Salute.</a>
+            </li>
+            <li class="menu__item">
+              <a href="pages/work.html" class="menu__link">Work.</a>
+            </li>
+            <li class="menu__item">
+              <a href="pages/team.html" class="menu__link">Team.</a>
+            </li>
+            <li class="menu__item">
+              <a href="pages/contact.html" class="menu__link">Contact.</a>
+            </li>
+          </ul>
+        </div>
+      </section>
     </nav>
 
     <main class="swiper__snap">
       <!-- main first slide\page -->
       <section class="swiper__slide swiper__slide1">
+        <h2 class="visually-hidden">Welcome-page</h2>
         <p class="swiper__slide1__text1"></p>
         <p class="swiper__slide1__text2">explore<br />Byteserker</p>
       </section>
 
       <section class="swiper__slide swiper__slide2">
+        <h2 class="visually-hidden">Our first advantage</h2>
         <div class="container">
-          <p class="swiper__slide__text1">Digital First</p>
+          <p class="swiper__slide__text1" aria-hidden="true">Digital First</p>
           <p class="swiper__slide__text2">
             We create
             <b class="swiper__slide__text--vital">digital-first</b>
             products, content, and campaigns through carefully crafted
             partnerships with the great brands of today and tomorrow.
           </p>
-          <button class="btn_halfround"><span>GET STARTED NOW</span></button>
-          <img
-            src="img/354725-PB9YZI-103.svg"
-            alt="how we work"
+          <a href="pages/work.html" class="btn-halfround"
+            ><span>OUR WORKS</span></a
+          >
+          <picture>
+            <source srcset="img/digital-first-background--180.svg" media="(min-width:768px)" />
+            <img
+            src="img/digital-first-background.svg"
+            alt="digital-first"
             class="swiper__slide2__img"
-            width="205px"
-            height="auto"
+            width="320"
           />
+          </picture>
         </div>
       </section>
 
       <section class="swiper__slide swiper__slide3">
+        <h2 class="visually-hidden">Our second advantage</h2>
         <div class="container">
           <p class="swiper__slide__text1">
             Young <b class="swiper__slide__text--vital">Blood</b>
           </p>
           <p class="swiper__slide__text2">
-            Being a relatively young team, our main goals are building
-            relationships with our customers and rapid development. We will find
-            something to surprise you.
+            Our team is constantly studying <b class="swiper__slide__text--vital">the latest technologies</b> and is in a
+            hurry to apply them in your projects.
           </p>
-          <button class="btn_halfround"><span>MORE ABOUT US</span></button>
-          <img
-            src="img/team-picture.svg"
-            alt=""
-            class="swiper__slide3__img"
-            width="188px"
-            height="auto"
-          />
+          <a href="pages/team.html" class="btn-halfround"
+            ><span>ABOUT US</span></a
+          >
+          <picture>
+            <source srcset="img/coffee.svg" media="(min-width:768px)" />
+            <img
+              src="img/teamwork.svg"
+              alt=""
+              class="swiper__slide3__img"
+              width="320"
+            />
+          </picture>
         </div>
       </section>
 
       <section class="swiper__slide swiper__slide4">
+        <h2 class="visually-hidden">Our third advantage</h2>
         <div class="container">
           <p class="swiper__slide__text1">
-            Ready for <b class="swiper__slide__text--vital">Challenge</b>
+            Ready for <br><b class="swiper__slide__text--vital">Challenge</b>
           </p>
           <p class="swiper__slide__text2">
             If you have a difficult and unusual project - we will be happy to
             help you. If simple - too.
           </p>
-          <button class="btn_halfround"><span>CONTACT US</span></button>
+          <a href="pages/contact.html" class="btn-halfround"
+            ><span>CONTACT US</span></a
+          >
           <img
-            src="img/goal.svg"
+            src="img/labyrinth.svg"
             alt=""
             class="swiper__slide4__img"
-            width="169px"
-            height="auto"
+            width="169"
           />
         </div>
       </section>
@@ -94,17 +128,17 @@
       <footer class="footer">
         <div class="container">
           <p class="footer__slogan"><span>BYTESERKER</span> | Get Real</p>
-          <nav class="footer__nav">
-            <a class="footer__nav__item">Salute</a>
-            <a class="footer__nav__item" href="pages/work.html">Work</a>
-            <a class="footer__nav__item" href="pages/team.html">Team</a>
-            <a class="footer__nav__item" href="pages/contact.html">Contact</a>
+          <nav class="footer-nav">
+            <a class="footer-nav__item">Salute</a>
+            <a class="footer-nav__item" href="pages/work.html">Work</a>
+            <a class="footer-nav__item" href="pages/team.html">Team</a>
+            <a class="footer-nav__item" href="pages/contact.html">Contact</a>
           </nav>
         </div>
       </footer>
     </main>
 
-    <script src="js/nav.js"></script>
     <script src="js/text-writer.js"></script>
+    <script src="js/main-menu.js"></script>
   </body>
 </html>

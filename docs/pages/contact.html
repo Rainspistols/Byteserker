@@ -11,25 +11,45 @@
       rel="stylesheet"
     />
   </head>
-  <body>
+  <body class="lol">
+    <h1 class="visually-hidden">Contact us page</h1>
     <nav class="nav">
-      <button class="main-btn main-btn--absolute">
+      <button class="main-btn main-btn--absolute" aria-label="menu button">
         <div class="main-btn__sandwitch main-btn__sandwitch--grey">
-          <div class="main-btn__sandwitch__bar main-btn__sandwitch__bar1"></div>
-          <div class="main-btn__sandwitch__bar main-btn__sandwitch__bar2"></div>
-          <div class="main-btn__sandwitch__bar main-btn__sandwitch__bar3"></div>
+          <div class="main-btn__bar main-btn__bar1"></div>
+          <div class="main-btn__bar main-btn__bar2"></div>
+          <div class="main-btn__bar main-btn__bar3"></div>
         </div>
       </button>
+
+      <section class="menu">
+        <h2 class="visually-hidden">Byteserker menu</h2>
+        <div class="container">
+          <p class="company-name">Byteserker</p>
+          <ul class="menu__list">
+            <li class="menu__item">
+              <a href="../index.html" class="menu__link">Salute.</a>
+            </li>
+            <li class="menu__item">
+              <a href="work.html" class="menu__link">Work.</a>
+            </li>
+            <li class="menu__item">
+              <a href="team.html" class="menu__link">Team.</a>
+            </li>
+            <li class="menu__item">
+              <a href="contact.html" class="menu__link">Contact.</a>
+            </li>
+          </ul>
+        </div>
+      </section>
     </nav>
     <main class="contact-page">
-      <h1 class="visually-hidden">Contact Us</h1>
       <div class="container">
         <img
           class="contact-page__boy-img"
           src="../img/boy-with-pen.svg"
           alt=""
-          width="138px"
-          height="auto"
+          width="138"
         />
         <form
           class="contact-form"
@@ -37,39 +57,58 @@
           method="get"
         >
           <p class="contact-page__slogan">Drop us a line.</p>
-          <input
-            type="text"
-            name="name"
-            id="name"
-            placeholder="Full Name"
-            required
-            autofocus
-          />
-          <span></span>
-          <input
-            type="email"
-            name="email"
-            id="email"
-            placeholder="Email Address"
-            required
-          />
-          <span></span>
-          <input
-            type="text"
-            name="company"
-            id="company"
-            placeholder="Company"
-            required
-          />
-          <span></span>
-          <textarea
-            type="textarea"
-            name="message"
-            rows="2"
-            placeholder="Message"
-          ></textarea>
-          <span></span>
-          <button class="contact-page__btn" type="submit">Submit</button>
+          <div class="input-box">
+            <input
+              class="input-box__input"
+              type="text"
+              name="name"
+              autocomplete="off"
+              required
+            />
+            <label class="input-box__label-name">
+              <span class="input-box__content-name">Full Name</span>
+            </label>
+          </div>
+          <div class="input-box">
+            <input
+              class="input-box__input"
+              type="text"
+              name="email"
+              autocomplete="off"
+              required
+            />
+            <label class="input-box__label-name">
+              <span class="input-box__content-name">Email Address</span>
+            </label>
+          </div>
+          <div class="input-box">
+            <input
+              class="input-box__input"
+              type="text"
+              name="company"
+              autocomplete="off"
+              required
+            />
+            <label class="input-box__label-name">
+              <span class="input-box__content-name">Company</span>
+            </label>
+          </div>
+          <div class="input-box input-box--textarea">
+            <textarea
+              rows="2"
+              class="input-box__input"
+              type="text"
+              name="message"
+              autocomplete="off"
+              required
+            ></textarea>
+            <label class="input-box__label-name">
+              <span class="input-box__content-name">Message</span>
+            </label>
+          </div>
+          <button class="btn-halfround contact-page__btn" type="submit">
+            <span>Submit</span>
+          </button>
         </form>
       </div>
     </main>
@@ -77,15 +116,15 @@
     <footer class="footer">
       <div class="container">
         <p class="footer__slogan"><span>BYTESERKER</span> | Get Real</p>
-        <nav class="footer__nav">
-          <a class="footer__nav__item" href="../index.html">Salute</a>
-          <a class="footer__nav__item" href="work.html">Work</a>
-          <a class="footer__nav__item" href="team.html">Team</a>
-          <a class="footer__nav__item">Contact</a>
+        <nav class="footer-nav">
+          <a class="footer-nav__item" href="../index.html">Salute</a>
+          <a class="footer-nav__item" href="work.html">Work</a>
+          <a class="footer-nav__item" href="team.html">Team</a>
+          <a class="footer-nav__item">Contact</a>
         </nav>
       </div>
     </footer>
 
-    <script src="../js/nav.js"></script>
+    <script src="../js/main-menu.js"></script>
   </body>
 </html>

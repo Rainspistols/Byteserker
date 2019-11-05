@@ -57,33 +57,55 @@
           method="get"
         >
           <p class="contact-page__slogan">Drop us a line.</p>
-          <input
-            type="text"
-            name="name"
-            id="name"
-            placeholder="Full Name"
-            required
-            autofocus
-          />
-          <span></span>
-          <input
-            type="email"
-            name="email"
-            id="email"
-            placeholder="Email Address"
-            required
-          />
-          <span></span>
-          <input
-            type="text"
-            name="company"
-            id="company"
-            placeholder="Company"
-            required
-          />
-          <span></span>
-          <textarea name="message" rows="2" placeholder="Message"></textarea>
-          <span></span>
+          <div class="input-box">
+            <input
+              class="input-box__input"
+              type="text"
+              name="name"
+              autocomplete="off"
+              required
+            />
+            <label class="input-box__label-name">
+              <span class="input-box__content-name">Full Name</span>
+            </label>
+          </div>
+          <div class="input-box">
+            <input
+              class="input-box__input"
+              type="text"
+              name="email"
+              autocomplete="off"
+              required
+            />
+            <label class="input-box__label-name">
+              <span class="input-box__content-name">Email Address</span>
+            </label>
+          </div>
+          <div class="input-box">
+            <input
+              class="input-box__input"
+              type="text"
+              name="company"
+              autocomplete="off"
+              required
+            />
+            <label class="input-box__label-name">
+              <span class="input-box__content-name">Company</span>
+            </label>
+          </div>
+          <div class="input-box input-box--textarea">
+            <textarea
+              rows="2"
+              class="input-box__input"
+              type="text"
+              name="message"
+              autocomplete="off"
+              required
+            ></textarea>
+            <label class="input-box__label-name">
+              <span class="input-box__content-name">Message</span>
+            </label>
+          </div>
           <button class="btn-halfround contact-page__btn" type="submit">
             <span>Submit</span>
           </button>
