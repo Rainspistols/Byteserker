@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Byteserker</title>
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="./style-mob.bundle.css" />
+    <link rel="stylesheet" href="./style-tab.bundle.css" media="(min-width: 768px)"/>
+    <link rel="stylesheet" href="./style-desk.bundle.css" media="(min-width: 1000px)" />
+    <link rel="stylesheet" href="./style-2k.bundle.css"  media="(min-width: 2000px)"/>
     <link
       href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300i,400,900&display=swap"
       rel="stylesheet"
@@ -13,37 +16,39 @@
   </head>
 
   <body>
-    <h1 class="visually-hidden">Welcome page</h1>
-    <nav class="nav">
-      <button class="main-btn" aria-label="menu button">
-        <div class="main-btn__sandwitch">
-          <div class="main-btn__bar main-btn__bar1"></div>
-          <div class="main-btn__bar main-btn__bar2"></div>
-          <div class="main-btn__bar main-btn__bar3"></div>
-        </div>
-      </button>
+    <header>
+      <h1 class="visually-hidden">Welcome page</h1>
+      <nav class="nav">
+        <button class="main-btn" aria-label="menu button">
+          <div class="main-btn__sandwitch">
+            <div class="main-btn__bar main-btn__bar1"></div>
+            <div class="main-btn__bar main-btn__bar2"></div>
+            <div class="main-btn__bar main-btn__bar3"></div>
+          </div>
+        </button>
 
-      <section class="menu">
-        <h2 class="visually-hidden">Byteserker menu</h2>
-        <div class="container">
-          <p class="company-name">Byteserker</p>
-          <ul class="menu__list">
-            <li class="menu__item">
-              <a href="index.html" class="menu__link">Salute.</a>
-            </li>
-            <li class="menu__item">
-              <a href="pages/work.html" class="menu__link">Work.</a>
-            </li>
-            <li class="menu__item">
-              <a href="pages/team.html" class="menu__link">Team.</a>
-            </li>
-            <li class="menu__item">
-              <a href="pages/contact.html" class="menu__link">Contact.</a>
-            </li>
-          </ul>
-        </div>
-      </section>
-    </nav>
+        <section class="menu">
+          <h2 class="visually-hidden">Byteserker menu</h2>
+          <div class="container">
+            <p class="company-name">Byteserker</p>
+            <ul class="menu__list">
+              <li class="menu__item">
+                <a href="index.html" class="menu__link">Salute.</a>
+              </li>
+              <li class="menu__item">
+                <a href="pages/work.html" class="menu__link">Work.</a>
+              </li>
+              <li class="menu__item">
+                <a href="pages/team.html" class="menu__link">Team.</a>
+              </li>
+              <li class="menu__item">
+                <a href="pages/contact.html" class="menu__link">Contact.</a>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </nav>
+    </header>
 
     <main class="swiper__snap">
       <!-- main first slide\page -->
@@ -67,13 +72,16 @@
             ><span>OUR WORKS</span></a
           >
           <picture>
-            <source srcset="img/digital-first-background--180.svg" media="(min-width:768px)" />
+            <source
+              srcset="img/digital-first-background--180.svg"
+              media="(min-width:768px)"
+            />
             <img
-            src="img/digital-first-background.svg"
-            alt="digital-first"
-            class="swiper__slide2__img"
-            width="320"
-          />
+              src="img/digital-first-background.svg"
+              alt="digital-first"
+              class="swiper__slide2__img"
+              width="320"
+            />
           </picture>
         </div>
       </section>
@@ -85,8 +93,9 @@
             Young <b class="swiper__slide__text--vital">Blood</b>
           </p>
           <p class="swiper__slide__text2">
-            Our team is constantly studying <b class="swiper__slide__text--vital">the latest technologies</b> and is in a
-            hurry to apply them in your projects.
+            Our team is constantly studying
+            <b class="swiper__slide__text--vital">the latest technologies</b>
+            and is in a hurry to apply them in your projects.
           </p>
           <a href="pages/team.html" class="btn-halfround"
             ><span>ABOUT US</span></a
@@ -107,7 +116,7 @@
         <h2 class="visually-hidden">Our third advantage</h2>
         <div class="container">
           <p class="swiper__slide__text1">
-            Ready for <br><b class="swiper__slide__text--vital">Challenge</b>
+            Ready for <br /><b class="swiper__slide__text--vital">Challenge</b>
           </p>
           <p class="swiper__slide__text2">
             If you have a difficult and unusual project - we will be happy to

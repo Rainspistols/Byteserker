@@ -1,3 +1,6 @@
+@import "fonts";
+@import "colors";
+
 %text_index_big {
   @extend %myriad--black;
   color: $white;
@@ -96,26 +99,4 @@
   transition: all 0.5s ease-in-out;
 }
 
-.container {
-  position: relative;
-  height: 100%;
-  box-sizing: border-box;
-}
 
-@media (max-width: $mobile-only) {
-  .container {
-    min-width: 320px;
-    padding: 0 10vw;
-  }
-}
-
-@media (min-width: $tablet) {
-  .container {
-    width: 75%;
-    margin: 0 auto;
-  }
-}
-
-.js-overflow-hidden {
-  overflow: hidden;
-}

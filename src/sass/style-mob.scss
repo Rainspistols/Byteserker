@@ -5,19 +5,6 @@ $desktop: 1000px;
 $desktop-only: 1999px;
 $desktop2k: 2000px;
 
-
-
-@import "fonts";
-@import "colors";
-@import "other";
-@import "swiper";
-@import "buttons";
-@import "footer"; 
-@import "menu";
-@import "contact-page";
-@import "work";
-@import "team";
-
 body {
   margin: 0;
   padding: 0;
@@ -34,4 +21,34 @@ body {
   width: 1px !important;
   overflow: hidden;
 }
+
+.container {
+  position: relative;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+@media (max-width: $mobile-only) {
+  .container {
+    min-width: 320px;
+    padding: 0 10vw;
+  }
+}
+
+@media (min-width: $tablet) {
+  .container {
+    width: 75%;
+    margin: 0 auto;
+  }
+}
+
+.js-overflow-hidden {
+  overflow: hidden;
+}
+
+@import "other";
+@import "buttons-mob"; 
+@import "header-mob";
+@import "main-mob";
+@import "footer-mob"; 
 

@@ -1,0 +1,24 @@
+@media (min-width: $desktop) {
+  .menu {
+    .company-name {
+      padding-top: 22vh;
+      margin-bottom: 14vh;
+      text-align: center;
+    }
+    &__list {
+      width: 100%;
+      right: 0%;
+      padding: 0;
+      text-align: center;
+    }
+  }
+}
+
+.menu__active-js {
+  height: 100%;
+  overflow: hidden;
+}
+
+.menu__active-js + body {
+  overflow: hidden;
+}

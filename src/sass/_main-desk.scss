@@ -1,0 +1,97 @@
+@media (min-width: $desktop) {
+  .swiper {
+    &__slide2 {
+      &__img {
+        max-width: 60vw;
+        height: auto;
+        min-height: 110vh;
+        width: 80%;
+      }
+    }
+    &__slide4 {
+      &__img {
+        top: 22vh;
+        left: 38vw;
+        width: auto;
+        height: 67vh;
+      }
+    }
+  }
+}
+
+@media (min-width: $desktop) {
+  .team {
+    &__slogan {
+      padding-top: 160px;
+      font-size: 50px;
+      margin: 0 0 -2vh;
+    }
+    &__list {
+      padding-top: 0;
+      width: 70%;
+    }
+    &__item {
+      width: 25%;
+      &:nth-child(2) {
+        margin-top: 10vh;
+      }
+      &:nth-child(3n) {
+        margin-top: 20vh;
+      }
+    }
+    &__name {
+      font-size: 2.5vw;
+      margin: 0;
+    }
+    &__about {
+      font-size: 1.5vw;
+      line-height: 1.5vw;
+      margin-bottom: 16px;
+    }
+    &__img {
+      box-shadow: 8px 8px 8px 0 gray;
+      margin: 0 0 2vh;
+    }
+  }
+}
+
+@media (min-width: $desktop) {
+  .work {
+    &__slogan {
+      margin-bottom: 3vh;
+      font-size: 3vw;
+      line-height: 3vw;
+      padding-top: 180px;
+    }
+    &__item {
+      width: 20vw;
+      &::after {
+        font-size: 2.5vw;
+        bottom: 3vh;
+        left: 3vh;
+        line-height: 2vw;
+      }
+    }
+    &__item:hover::before,
+    &__item:focus::before {
+      border-width: 15px;
+    }
+    &__img {
+      width: 25vw;
+    }
+  }
+}
+
+
+@media (min-width: $desktop) {
+  .contact-page {
+    .contact-form {
+      width: 40%;
+      padding-top: 30px;
+    }
+    &__boy-img {
+      width: 20%;
+      margin: auto;
+    }
+  }
+}

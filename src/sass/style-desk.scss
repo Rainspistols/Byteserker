@@ -1,0 +1,14 @@
+$mobile-only: 767px;
+$tablet: 768px;
+$tablet-only: 999px;
+$desktop: 1000px;
+$desktop-only: 1999px;
+$desktop2k: 2000px;
+
+@import "other";
+@import "buttons-desk"; 
+@import "header-desk";
+@import "main-desk";
+@import "footer-desk"; 
+
+
