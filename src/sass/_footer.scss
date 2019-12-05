@@ -38,3 +38,41 @@
     }
   }
 }
+
+@media (max-width: $tablet-only) {
+  .footer {
+    &__slogan {
+      font-size: 8vw;
+      line-height: 8vw;
+      margin: 0 0 3.25vw;
+      padding-top: 8vw;
+    }
+    &-nav__item {
+      font-size: 6vw;
+      margin-bottom: 8vw;
+    }
+  }
+}
+
+@media (min-width: $desktop) {
+  .footer {
+    min-height: 200px;
+    height: 10vw;
+    .container {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      align-items: center;
+    }
+    &__slogan {
+      padding: 0;
+      margin: 0;
+      font-size: 3vw;
+      line-height: 4vw;
+    }
+    &-nav__item {
+      margin: 0.5vw 1vw 0 0;
+      font-size: 2.5vw;
+    }
+  }
+}

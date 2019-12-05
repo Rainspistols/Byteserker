@@ -93,3 +93,67 @@
     }
   }
 }
+
+@media (min-width: $tablet) {
+  .menu {
+    .company-name {
+      font-size: 6vh;
+      &::after,
+      &::before {
+        position: absolute;
+        content: '';
+        height: 1px;
+        width: 100vw;
+        left: -12.5vw;
+      }
+      &::after {
+        bottom: -6vh;
+        background: rgb(92, 88, 88);
+        box-shadow: 0 1px 0 0 rgb(158, 155, 155);
+      }
+    }
+    &__link {
+      font-size: 12.5vh;
+      line-height: 10vh;
+    }
+  }
+}
+
+@media (min-width: $tablet) and (max-width: $tablet-only) {
+  .menu {
+    .company-name {
+      padding-top: 25vh;
+      margin-bottom: 12vh;
+      text-align: left;
+      padding-left: 0;
+    }
+    &__list {
+      padding-left: 0;
+    }
+  }
+}
+
+@media (min-width: $desktop) {
+  .menu {
+    .company-name {
+      padding-top: 22vh;
+      margin-bottom: 14vh;
+      text-align: center;
+    }
+    &__list {
+      width: 100%;
+      right: 0%;
+      padding: 0;
+      text-align: center;
+    }
+  }
+}
+
+.menu__active-js {
+  height: 100%;
+  overflow: hidden;
+}
+
+.menu__active-js + body {
+  overflow: hidden;
+}
