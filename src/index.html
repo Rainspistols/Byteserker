@@ -51,6 +51,22 @@
         <h2 class="visually-hidden">Welcome-page</h2>
         <p class="swiper__slide1__text1"></p>
         <p class="swiper__slide1__text2">explore<br />Byteserker</p>
+        <a class="animated fadeInDown infinite slow" href="#">
+          <svg
+            class="swiper__slide1-arrows"
+            width="14"
+            height="14"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 192.701 192.701"
+          >
+            <path
+              d="M171.955 88.526l-75.61 74.528-75.61-74.54c-4.74-4.704-12.439-4.704-17.179 0-4.74 4.704-4.74 12.319 0 17.011l84.2 82.997c4.559 4.511 12.608 4.535 17.191 0l84.2-83.009a11.952 11.952 0 000-17.011c-4.753-4.679-12.452-4.679-17.192.024z"
+            />
+            <path
+              d="M87.755 104.322c4.559 4.511 12.608 4.535 17.191 0l84.2-82.997c4.74-4.704 4.74-12.319 0-17.011-4.74-4.704-12.439-4.704-17.179 0L96.345 78.842 20.734 4.314C15.994-.39 8.295-.39 3.555 4.314c-4.74 4.704-4.74 12.319 0 17.011l84.2 82.997z"
+            />
+          </svg>
+        </a>
       </section>
 
       <section class="swiper__slide swiper__slide2">
@@ -67,13 +83,16 @@
             ><span>OUR WORKS</span></a
           >
           <picture>
-            <source srcset="img/digital-first-background--180.svg" media="(min-width:768px)" />
+            <source
+              srcset="img/digital-first-background--180.svg"
+              media="(min-width:768px)"
+            />
             <img
-            src="img/digital-first-background.svg"
-            alt="digital-first"
-            class="swiper__slide2__img"
-            width="320"
-          />
+              src="img/digital-first-background.svg"
+              alt="digital-first"
+              class="swiper__slide2__img"
+              width="320"
+            />
           </picture>
         </div>
       </section>
@@ -85,8 +104,9 @@
             Young <b class="swiper__slide__text--vital">Blood</b>
           </p>
           <p class="swiper__slide__text2">
-            Our team is constantly studying <b class="swiper__slide__text--vital">the latest technologies</b> and is in a
-            hurry to apply them in your projects.
+            Our team is constantly studying
+            <b class="swiper__slide__text--vital">the latest technologies</b>
+            and is in a hurry to apply them in your projects.
           </p>
           <a href="pages/team.html" class="btn-halfround"
             ><span>ABOUT US</span></a
@@ -107,7 +127,7 @@
         <h2 class="visually-hidden">Our third advantage</h2>
         <div class="container">
           <p class="swiper__slide__text1">
-            Ready for <br><b class="swiper__slide__text--vital">Challenge</b>
+            Ready for <br /><b class="swiper__slide__text--vital">Challenge</b>
           </p>
           <p class="swiper__slide__text2">
             If you have a difficult and unusual project - we will be happy to
@@ -124,10 +144,11 @@
           />
         </div>
       </section>
-
       <footer class="footer">
         <div class="container">
-          <p class="footer__slogan"><span>BYTESERKER</span> | Get Real</p>
+          <a href="./index.html" class="footer__slogan"
+            ><span>BYTESERKER</span> | Get Real</a
+          >
           <nav class="footer-nav">
             <a class="footer-nav__item">Salute</a>
             <a class="footer-nav__item" href="pages/work.html">Work</a>
@@ -138,7 +159,10 @@
       </footer>
     </main>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/libs.min.js"></script>
     <script src="js/text-writer.js"></script>
     <script src="js/main-menu.js"></script>
+    <script src="js/index-slider.js"></script>
   </body>
 </html>

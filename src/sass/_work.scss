@@ -44,6 +44,9 @@
   &__item--device::after {
     content: 'Device';
   }
+  &__item--go-surf::after {
+    content: 'Go surf';
+  }
   &__item--cat-energy-logo {
     width: 87px;
     height: 72px;
@@ -143,7 +146,7 @@
       padding-top: 180px;
     }
     &__item {
-      width: 20vw;
+      width: 25vw;
       &::after {
         font-size: 2.5vw;
         bottom: 3vh;

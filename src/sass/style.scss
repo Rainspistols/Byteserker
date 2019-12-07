@@ -5,18 +5,18 @@ $desktop: 1000px;
 $desktop-only: 1999px;
 $desktop2k: 2000px;
 
-
-
-@import "fonts";
-@import "colors";
-@import "other";
-@import "swiper";
-@import "buttons";
-@import "footer"; 
-@import "menu";
-@import "contact-page";
-@import "work";
-@import "team";
+@import 'libs';
+@import 'fonts';
+@import 'fonts';
+@import 'colors';
+@import 'other';
+@import 'swiper';
+@import 'buttons';
+@import 'footer';
+@import 'menu';
+@import 'contact-page';
+@import 'work';
+@import 'team';
 
 body {
   margin: 0;
@@ -35,3 +35,6 @@ body {
   overflow: hidden;
 }
 
+a {
+  text-decoration: none;
+}

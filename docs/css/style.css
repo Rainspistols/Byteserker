@@ -13,6 +13,21 @@
   font-style: normal;
   font-weight: 400; }
 
+.swiper__slide__text1, .swiper__slide1__text1, .btn-halfround, .footer__slogan, .footer-nav__item, .menu .company-name, .menu__link, .contact-page__slogan, .contact-page__btn, .work__slogan, .work__item::after, .team__slogan, .team__name {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-style: normal;
+  font-weight: 900; }
+
+.swiper__slide1__text2 {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-style: italic;
+  font-weight: 400; }
+
+.swiper__slide__text2, .contact-page .input-box, .contact-page .input-box__input, .team__about {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-style: normal;
+  font-weight: 400; }
+
 .swiper__slide__text1 {
   color: #ffffff;
   position: relative; }
@@ -117,13 +132,13 @@
 .js-overflow-hidden {
   overflow: hidden; }
 
+.slick-slide {
+  height: 100vh; }
+
 .swiper__snap {
+  width: 100%;
   height: 100vh;
-  overflow-y: scroll;
-  scroll-snap-type: y mandatory; }
-  .swiper__snap .swiper__slide,
-  .swiper__snap .footer {
-    scroll-snap-align: end; }
+  box-sizing: border-box; }
 
 .swiper__slide {
   width: 100%;
@@ -153,16 +168,12 @@
     margin: 0 auto; }
     .swiper__slide1__text2 span {
       display: block; }
-  .swiper__slide1::after {
+  .swiper__slide1-arrows {
     position: absolute;
-    content: '';
-    width: 0.6vw;
-    height: 25px;
-    border-radius: 50px 50px 0 0;
-    bottom: 0px;
+    bottom: 10px;
     left: 50%;
-    background: #ffffff;
-    max-width: 8px; }
+    fill: #ffffff;
+    transform: translateX(-50%); }
 
 .swiper__slide2 {
   background: #051a22; }
@@ -509,7 +520,8 @@
     position: relative;
     letter-spacing: -0.05em;
     text-align: center;
-    color: #ffffff; }
+    color: #ffffff;
+    display: block; }
     .footer__slogan span {
       color: #f90d3e; }
   .footer-nav {
@@ -531,14 +543,15 @@
       color: #f90d3e; }
 
 @media (max-width: 999px) {
-  .footer__slogan {
-    font-size: 8vw;
-    line-height: 8vw;
-    margin: 0 0 3.25vw;
+  .footer {
     padding-top: 8vw; }
-  .footer-nav__item {
-    font-size: 6vw;
-    margin-bottom: 8vw; } }
+    .footer__slogan {
+      font-size: 8vw;
+      line-height: 8vw;
+      margin: 0 0 3.25vw; }
+    .footer-nav__item {
+      font-size: 7vw;
+      margin-bottom: 8vw; } }
 
 @media (min-width: 1000px) {
   .footer {
@@ -1069,3 +1082,6 @@ body {
   height: 1px !important;
   width: 1px !important;
   overflow: hidden; }
+
+a {
+  text-decoration: none; }

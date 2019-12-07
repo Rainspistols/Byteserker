@@ -7,6 +7,7 @@
     letter-spacing: -0.05em;
     text-align: center;
     color: $white;
+    display: block;
     & span {
       color: $cherry;
     }
@@ -41,14 +42,14 @@
 
 @media (max-width: $tablet-only) {
   .footer {
+    padding-top: 8vw;
     &__slogan {
       font-size: 8vw;
       line-height: 8vw;
       margin: 0 0 3.25vw;
-      padding-top: 8vw;
     }
     &-nav__item {
-      font-size: 6vw;
+      font-size: 7vw;
       margin-bottom: 8vw;
     }
   }

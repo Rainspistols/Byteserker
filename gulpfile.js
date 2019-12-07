@@ -8,6 +8,8 @@ const rename = require('gulp-rename');
 const del = require('del');
 const browserSync = require('browser-sync');
 const { series } = require('gulp');
+const concat = require('gulp-concat');
+const uglify = require('gulp-uglify');
 
 function imageMinify() {
   return gulp
@@ -92,32 +94,33 @@ function sassFunc() {
     .pipe(browserSync.stream());
 }
 
-function js() {
+function jsFunc() {
   return gulp
-    .src(["node_modules/slick-carousel/slick/slick.js"])
-    .pipe(concat("libs.min.js"))
+    .src(['node_modules/slick-carousel/slick/slick.js'])
+    .pipe(concat('libs.min.js'))
     .pipe(uglify())
-    .pipe(gulp.dest("src/js"))
+    .pipe(gulp.dest('src/js'))
     .pipe(browserSync.stream());
-};
+}
 
-function css() {
+function cssFunc() {
   return gulp
     .src([
-      "node_modules/normalize.css/normalize.css",
-      "node_modules/slick-carousel/slick/slick.css",
-      "node_modules/animate.css/animate.css"
+      'node_modules/normalize.css/normalize.css',
+      'node_modules/slick-carousel/slick/slick.css',
+      'node_modules/animate.css/animate.css',
     ])
-    .pipe(concat("_libs.scss"))
-    .pipe(gulp.dest("app/scss"))
+    .pipe(concat('_libs.scss'))
+    .pipe(gulp.dest('src/sass'))
     .pipe(browserSync.stream());
-};
+}
 
 
-exports.
+exports.js = jsFunc;
+exports.css = cssFunc;
 exports.watch = watchFunc;
 exports.copy = copyToDocs;
 exports.clean = cleanUp;
 exports.imgMin = imageMinify;
-exports.build = series(cleanUp, cssMinify, copyToDocs, imageMinify);
+exports.build = series(cleanUp, cssFunc, jsFunc, cssMinify, copyToDocs, imageMinify);
 exports.sass = sassFunc;
