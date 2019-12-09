@@ -1,23 +1,16 @@
-// const slider = $('.swiper__snap');
-// slider.slick({
-//   vertical: true,
-//   arrows: false,
-//   verticalSwiping: true,
-//   slidesToScroll: 1,
-//   slidesToShow: 1,
-//   infinite: false,
-//   adaptiveHeight: true,
-// });
+new fullpage('#fullPage', {
+  autoScrolling: true,
+});
 
-// slider.on('wheel', function(e) {
-//   e.preventDefault();
-//   console.log(e.originalEvent.deltaY);
+let footer = document.querySelector('.footer');
+let mainBtn = document.querySelector('.main-btn');
 
-//   if (e.originalEvent.deltaY < 0) {
-//     $(this).slick('slickPrev');
-//   } else {
-//     $(this).slick('slickNext');
-//   }
-// });
-
-
+document.querySelector('#fullPage').addEventListener('wheel', function() {
+  if (footer.classList.contains('active')) {
+    mainBtn.classList.add('js-hide');
+  } else {
+    if (mainBtn.classList.contains('js-hide')) {
+      mainBtn.classList.remove('js-hide');
+    }
+  }
+});

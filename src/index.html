@@ -5,7 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Byteserker</title>
-    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.8/fullpage.min.css"
+      integrity="sha256-+dIh4jG2jQTHZwW81yUo8h6tzXWcNumyNL5XPZbwp1E="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./style.bundle.css" />
     <link
       href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300i,400,900&display=swap"
       rel="stylesheet"
@@ -45,9 +51,9 @@
       </section>
     </nav>
 
-    <main class="swiper__snap">
+    <main class="swiper__snap" id="fullPage">
       <!-- main first slide\page -->
-      <section class="swiper__slide swiper__slide1">
+      <section class="swiper__slide swiper__slide1 section">
         <h2 class="visually-hidden">Welcome-page</h2>
         <p class="swiper__slide1__text1"></p>
         <p class="swiper__slide1__text2">explore<br />Byteserker</p>
@@ -69,7 +75,7 @@
         </a>
       </section>
 
-      <section class="swiper__slide swiper__slide2">
+      <section class="swiper__slide swiper__slide2 section">
         <h2 class="visually-hidden">Our first advantage</h2>
         <div class="container">
           <p class="swiper__slide__text1" aria-hidden="true">Digital First</p>
@@ -97,7 +103,7 @@
         </div>
       </section>
 
-      <section class="swiper__slide swiper__slide3">
+      <section class="swiper__slide swiper__slide3 section">
         <h2 class="visually-hidden">Our second advantage</h2>
         <div class="container">
           <p class="swiper__slide__text1">
@@ -123,7 +129,7 @@
         </div>
       </section>
 
-      <section class="swiper__slide swiper__slide4">
+      <section class="swiper__slide swiper__slide4 section">
         <h2 class="visually-hidden">Our third advantage</h2>
         <div class="container">
           <p class="swiper__slide__text1">
@@ -144,7 +150,7 @@
           />
         </div>
       </section>
-      <footer class="footer">
+      <footer class="footer section fp-auto-height">
         <div class="container">
           <a href="./index.html" class="footer__slogan"
             ><span>BYTESERKER</span> | Get Real</a
@@ -159,10 +165,12 @@
       </footer>
     </main>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="js/libs.min.js"></script>
-    <script src="js/text-writer.js"></script>
-    <script src="js/main-menu.js"></script>
-    <script src="js/index-slider.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.8/fullpage.min.js"
+      integrity="sha256-caNcSA0LvOCX90PTuEbwl+V09xPMca13CJUasl+VCtk="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./main.bundle.js"></script>
+    <!-- <script src="main.bundle.js"></script> -->
   </body>
 </html>
