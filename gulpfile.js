@@ -132,9 +132,10 @@ function createCssLibs() {
 }
 
 function getJslibs() {
-  return src(['node_modules/slick-carousel/slick/slick.js'])
+  return src([
+    'node_modules/slick-carousel/slick/slick.js'
+  ])
     .pipe(concat('libs.min.js'))
-    .pipe(uglify())
     .pipe(dest('./src/js/'))
     .pipe(browserSync.reload({ stream: true }));
 }
