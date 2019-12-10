@@ -1,5 +1,8 @@
 new fullpage('#fullPage', {
   autoScrolling: true,
+  navigation: true,
+  lazyLoading: true,
+  navigationPosition: 'left',
 });
 
 let footer = document.querySelector('.footer');
