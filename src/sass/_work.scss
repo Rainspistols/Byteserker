@@ -14,6 +14,7 @@
     cursor: pointer;
     display: flex;
     outline: none;
+    overflow: hidden;
     &::after {
       position: absolute;
       @extend %myriad--black;
@@ -46,6 +47,12 @@
   }
   &__item--go-surf::after {
     content: 'Go surf';
+  }
+  &__item--sedona::after {
+    content: 'Sedona';
+  }
+  &__item--code-and-magic::after {
+    content: 'Code and magic';
   }
   &__item--cat-energy-logo {
     width: 87px;
