@@ -178,6 +178,9 @@
       }
     }
   }
+  #fp-nav.fp-left{
+    left: 40px;
+  }
 }
 
 @media (min-width: $desktop) {
@@ -199,6 +202,9 @@
       }
     }
   }
+  #fp-nav.fp-left{
+    left: 60px;
+  }
 }
 
 @media (min-width: $desktop2k) {
@@ -219,5 +225,8 @@
         height: 75vh;
       }
     }
+  }
+  #fp-nav.fp-left{
+    left: 80px;
   }
 }
