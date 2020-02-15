@@ -59,6 +59,12 @@
   &__item--cakeBooking::after {
     content: 'Cake booking';
   }
+  &__item--react-quiz::after {
+    content: 'ReactQuiz';
+  }
+  &__item--react-hooks::after {
+    content: 'react-hooks';
+  }
   &__item--cat-energy-logo {
     width: 87px;
     height: 72px;
