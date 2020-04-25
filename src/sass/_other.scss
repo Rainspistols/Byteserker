@@ -50,15 +50,7 @@
     }
   }
 
-  @media (min-width: $desktop2k) {
-    font-size: 7vw;
-    line-height: 7vw;
-    padding-top: 11vw;
-    margin: 0 0 6vw 0;
-    &::after {
-      bottom: -3vw;
-    }
-  }
+  
 }
 
 %text_index_small {
@@ -83,12 +75,6 @@
     line-height: 32px;
     font-size: 20px;
     width: 35%;
-  }
-  @media (min-width: $desktop2k) {
-    font-size: 2vw;
-    line-height: 3vw;
-    margin: 0 0 3vw 0;
-    width: 40%;
   }
 }
 

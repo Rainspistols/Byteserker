@@ -57,13 +57,14 @@
 
 @media (min-width: $desktop) {
   .footer {
-    min-height: 200px;
-    height: 10vw;
+    padding-top: 0;
+    height: auto;
     .container {
       display: flex;
       flex-flow: row nowrap;
       justify-content: space-between;
       align-items: center;
+      min-height: 300px;
     }
     &__slogan {
       padding: 0;

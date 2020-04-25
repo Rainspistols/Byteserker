@@ -157,20 +157,4 @@
   }
 }
 
-@media (min-width: $desktop2k) {
-  .contact-page {
-    &__slogan {
-      font-size: 5vw;
-    }
-    & input,
-    & textarea {
-      font-size: 3.5vh;
-      margin-bottom: 2.5vh;
-    }
-    &__btn {
-      height: 6vh;
-      font-size: 4vh;
-      align-items: baseline;
-    }
-  }
-}
+

@@ -1,5 +1,9 @@
 .work {
   background: $black;
+  &__list {
+    max-width: 1920px;
+    margin: 0 auto;
+  }
   &__slogan {
     @extend %myriad--black;
     color: $white;
@@ -178,19 +182,8 @@
       border-width: 15px;
     }
     &__img {
-      width: 25vw;
+      width: 100%;
     }
   }
 }
 
-@media (min-width: $desktop2k) {
-  .work {
-    &__slogan {
-      padding-top: 16vh;
-    }
-    &__item:hover::before,
-    &__item:focus::before {
-      border-width: 1vw;
-    }
-  }
-}

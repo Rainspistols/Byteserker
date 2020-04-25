@@ -3,7 +3,6 @@ $tablet: 768px;
 $tablet-only: 999px;
 $desktop: 1000px;
 $desktop-only: 1999px;
-$desktop2k: 2000px;
 
 @import 'libs';
 @import 'fonts';
@@ -22,6 +21,7 @@ body {
   margin: 0;
   padding: 0;
   min-width: 320px;
+  background: black;
 }
 
 .visually-hidden {

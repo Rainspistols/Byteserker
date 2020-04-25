@@ -156,8 +156,8 @@
 .fp-slidesNav ul li a span {
   background: $white !important;
 }
-@media (max-width:$mobile-only) {
-  #fp-nav.fp-left{
+@media (max-width: $mobile-only) {
+  #fp-nav.fp-left {
     left: calc(100vw - 30px);
   }
 }
@@ -172,19 +172,26 @@
     &__slide4 {
       &__img {
         top: 52vh;
-        left: 25vw;
         width: 60vh;
-        transform: rotate(-61deg);
+        left: 40vw;
       }
     }
   }
-  #fp-nav.fp-left{
+  #fp-nav.fp-left {
     left: 40px;
   }
 }
 
 @media (min-width: $desktop) {
   .swiper {
+    &__slide__text1 {
+      line-height: 1.1em;
+      font-size: 110px;
+    }
+    &__slide__text2 {
+      font-size: 30px;
+      line-height: 1.2em;
+    }
     &__slide2 {
       &__img {
         max-width: 60vw;
@@ -202,31 +209,8 @@
       }
     }
   }
-  #fp-nav.fp-left{
+  #fp-nav.fp-left {
     left: 60px;
   }
 }
 
-@media (min-width: $desktop2k) {
-  .swiper {
-    &__slide1__text2 {
-      font-size: 1.5vw;
-      line-height: 1.5vw;
-    }
-    &__slide3 {
-      &__img {
-        left: 58%;
-      }
-    }
-    &__slide4 {
-      &__img {
-        top: 12vh;
-        left: 32vw;
-        height: 75vh;
-      }
-    }
-  }
-  #fp-nav.fp-left{
-    left: 80px;
-  }
-}
