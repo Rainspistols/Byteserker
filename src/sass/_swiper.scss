@@ -185,6 +185,7 @@
 @media (min-width: $desktop) {
   .swiper {
     &__slide__text1 {
+      padding-top: 100px;
       line-height: 1.1em;
       font-size: 110px;
     }
@@ -214,3 +215,19 @@
   }
 }
 
+
+@media (min-width: 1440px) {
+  .swiper {
+    &__slide__text1 {
+      padding-top: 150px;
+    }
+  }
+}
+
+@media (min-width: 1920px) {
+  .swiper {
+    &__slide__text1 {
+      padding-top: 250px;
+    }
+  }
+}
