@@ -52,7 +52,7 @@
   },
   "dependencies": {
     "bash": "0.0.1",
-    "fullpage.js": "^3.0.8",
+    "fullpage.js": "^4.0.5",
     "vue-carousel-3d": "^0.2.0"
   }
 }
